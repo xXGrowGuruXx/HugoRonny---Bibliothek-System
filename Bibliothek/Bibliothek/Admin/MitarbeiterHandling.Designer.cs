@@ -1,4 +1,4 @@
-﻿namespace Bibliothek.Admin.MitarbeiterHandling
+﻿namespace Bibliothek.Admin
 {
     partial class MitarbeiterHandling
     {
@@ -179,6 +179,7 @@
             mitarbeiterHandling_Save.TabIndex = 11;
             mitarbeiterHandling_Save.Text = "Anwenden";
             mitarbeiterHandling_Save.UseVisualStyleBackColor = false;
+            mitarbeiterHandling_Save.Click += mitarbeiterHandling_Save_Click;
             mitarbeiterHandling_Save.MouseEnter += mitarbeiterHandling_MouseEnter;
             mitarbeiterHandling_Save.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 
@@ -206,6 +207,7 @@
             mitarbeiterHandling_Choose.Name = "mitarbeiterHandling_Choose";
             mitarbeiterHandling_Choose.Size = new Size(305, 36);
             mitarbeiterHandling_Choose.TabIndex = 13;
+            mitarbeiterHandling_Choose.SelectedIndexChanged += mitarbeiterHandling_Choose_SelectedIndexChanged;
             mitarbeiterHandling_Choose.MouseEnter += mitarbeiterHandling_MouseEnter;
             mitarbeiterHandling_Choose.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 

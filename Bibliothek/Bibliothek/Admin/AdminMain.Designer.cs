@@ -102,6 +102,7 @@
             adminMain_Mitarbeiter.TabIndex = 11;
             adminMain_Mitarbeiter.Text = "Mitarbeiter";
             adminMain_Mitarbeiter.UseVisualStyleBackColor = false;
+            adminMain_Mitarbeiter.Click += adminMain_Mitarbeiter_Click;
             adminMain_Mitarbeiter.MouseEnter += adminMain_Buttons_MouseEnter;
             adminMain_Mitarbeiter.MouseLeave += adminMain_Buttons_MouseLeave;
             // 
@@ -117,6 +118,7 @@
             adminMain_Statistik.TabIndex = 12;
             adminMain_Statistik.Text = "Statistik";
             adminMain_Statistik.UseVisualStyleBackColor = false;
+            adminMain_Statistik.Click += adminMain_Statistik_Click;
             adminMain_Statistik.MouseEnter += adminMain_Buttons_MouseEnter;
             adminMain_Statistik.MouseLeave += adminMain_Buttons_MouseLeave;
             // 

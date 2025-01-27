@@ -65,7 +65,8 @@
             // statistik_Optionen
             // 
             statistik_Optionen.FormattingEnabled = true;
-            statistik_Optionen.Location = new Point(388, 95);
+            statistik_Optionen.Items.AddRange(new object[] { "Bücher", "Strafen", "Alles" });
+            statistik_Optionen.Location = new Point(362, 92);
             statistik_Optionen.Name = "statistik_Optionen";
             statistik_Optionen.Size = new Size(312, 36);
             statistik_Optionen.TabIndex = 2;
@@ -76,7 +77,7 @@
             statistik_Label_Optionen.BackColor = Color.Transparent;
             statistik_Label_Optionen.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             statistik_Label_Optionen.ForeColor = SystemColors.ButtonFace;
-            statistik_Label_Optionen.Location = new Point(225, 95);
+            statistik_Label_Optionen.Location = new Point(199, 92);
             statistik_Label_Optionen.Name = "statistik_Label_Optionen";
             statistik_Label_Optionen.Size = new Size(121, 41);
             statistik_Label_Optionen.TabIndex = 3;

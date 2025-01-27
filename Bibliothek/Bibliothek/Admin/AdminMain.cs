@@ -1,13 +1,5 @@
 ﻿using Bibliothek.utils;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using Bibliothek.Admin;
 
 namespace Bibliothek.Admin
 {
@@ -73,6 +65,18 @@ namespace Bibliothek.Admin
             }
         }
 
-        
+        private void adminMain_Mitarbeiter_Click(object sender, EventArgs e)
+        {
+            MitarbeiterHandling mitarbeiterHandling = new MitarbeiterHandling();
+            mitarbeiterHandling.Show();
+            this.Hide();
+        }
+
+        private void adminMain_Statistik_Click(object sender, EventArgs e)
+        {
+            Statistik statistik = new Statistik();
+            statistik.Show();
+            this.Hide();
+        }
     }
 }

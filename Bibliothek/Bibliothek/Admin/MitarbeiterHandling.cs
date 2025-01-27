@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Bibliothek.Admin.MitarbeiterHandling
+namespace Bibliothek.Admin
 {
     public partial class MitarbeiterHandling : Form
     {
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
         static Font label = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
-        static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
+        static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
 
         public MitarbeiterHandling()
         {
@@ -43,6 +43,9 @@ namespace Bibliothek.Admin.MitarbeiterHandling
             mitarbeiterHandling_Löschen.Font = button;
             mitarbeiterHandling_Save.Font = button;
             mitarbeiterHandling_Abbrechen.Font = button;
+
+            ManageMitarbeiterHandling manageMitarbeiterHandling = new ManageMitarbeiterHandling();
+            manageMitarbeiterHandling.LoadMitarbeiter(mitarbeiterHandling_Choose);
         }
 
         private void mitarbeiterHandling_MouseEnter(object sender, EventArgs e)
@@ -122,6 +125,31 @@ namespace Bibliothek.Admin.MitarbeiterHandling
                     mitarbeiterHandling_Label_Passwort.ForeColor = Color.White;
                     mitarbeiterHandling_Label_Passwort.BackColor = Color.FromArgb(0);
                 }
+            }
+        }
+
+        private void mitarbeiterHandling_Choose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (mitarbeiterHandling_Choose.SelectedItem.ToString() != "* NEU *")
+            {
+                ManageMitarbeiterHandling manageMitarbeiterHandling = new ManageMitarbeiterHandling();
+                manageMitarbeiterHandling.LoadSelectedInformation(mitarbeiterHandling_Choose, mitarbeiterHandling_Vorname, mitarbeiterHandling_Nachname, mitarbeiterHandling_Username, mitarbeiterHandling_Passwort);
+            }
+            else
+            {
+                mitarbeiterHandling_Vorname.Text = string.Empty;
+                mitarbeiterHandling_Nachname.Text = string.Empty;
+                mitarbeiterHandling_Username.Text = string.Empty;
+                mitarbeiterHandling_Passwort.Text = string.Empty;
+            }
+        }
+
+        private void mitarbeiterHandling_Save_Click(object sender, EventArgs e)
+        {
+            if (mitarbeiterHandling_Choose.SelectedItem.ToString() == "* NEU *")
+            {
+                ManageMitarbeiterHandling manageMitarbeiterHandling = new ManageMitarbeiterHandling();
+                manageMitarbeiterHandling.CreateNewMitarbeiter(mitarbeiterHandling_Vorname, mitarbeiterHandling_Nachname, mitarbeiterHandling_Username, mitarbeiterHandling_Passwort);
             }
         }
     }

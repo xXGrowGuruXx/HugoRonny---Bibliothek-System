@@ -42,9 +42,6 @@ namespace Bibliothek
             login_Label_Password.Font = label;
             login_Login.Font = button;
             login_RememberMe.Font = label;
-            login_Username.Font = label;
-            login_Password.Font = label;
-
         }
 
         /// <summary>

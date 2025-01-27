@@ -44,7 +44,7 @@
             login_Name.BackColor = Color.Transparent;
             login_Name.Font = new Font("Vacaciones", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             login_Name.ForeColor = Color.White;
-            login_Name.Location = new Point(103, 15);
+            login_Name.Location = new Point(101, 9);
             login_Name.Name = "login_Name";
             login_Name.Size = new Size(232, 55);
             login_Name.TabIndex = 0;
@@ -76,19 +76,19 @@
             // 
             // login_Username
             // 
-            login_Username.Font = new Font("Vacaciones", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            login_Username.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             login_Username.Location = new Point(160, 63);
             login_Username.Name = "login_Username";
-            login_Username.Size = new Size(251, 35);
+            login_Username.Size = new Size(251, 34);
             login_Username.TabIndex = 3;
             login_Username.TextAlign = HorizontalAlignment.Center;
             // 
             // login_Password
             // 
-            login_Password.Font = new Font("Vacaciones", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            login_Password.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             login_Password.Location = new Point(160, 105);
             login_Password.Name = "login_Password";
-            login_Password.Size = new Size(251, 35);
+            login_Password.Size = new Size(251, 34);
             login_Password.TabIndex = 4;
             login_Password.TextAlign = HorizontalAlignment.Center;
             // 
