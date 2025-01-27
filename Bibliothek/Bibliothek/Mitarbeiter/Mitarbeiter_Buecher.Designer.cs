@@ -68,7 +68,6 @@
             buecher_Label_Titel.Size = new Size(43, 20);
             buecher_Label_Titel.TabIndex = 12;
             buecher_Label_Titel.Text = "Titel";
-            buecher_Label_Titel.Click += login_Label_Username_Click;
             // 
             // buecher_Titel
             // 
@@ -78,6 +77,8 @@
             buecher_Titel.Size = new Size(377, 26);
             buecher_Titel.TabIndex = 13;
             buecher_Titel.TextAlign = HorizontalAlignment.Center;
+            buecher_Titel.MouseEnter += mitarbeiter_Buecher_MouseEnter;
+            buecher_Titel.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // buecher_Zurueck
             // 
@@ -91,6 +92,9 @@
             buecher_Zurueck.TabIndex = 26;
             buecher_Zurueck.Text = "Zurück";
             buecher_Zurueck.UseVisualStyleBackColor = false;
+            buecher_Zurueck.Click += mitarbeiter_Buecher_Abbrechen_Click;
+            buecher_Zurueck.MouseEnter += mitarbeiter_Buecher_MouseEnter;
+            buecher_Zurueck.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // buecher_Loeschen
             // 
@@ -104,6 +108,8 @@
             buecher_Loeschen.TabIndex = 27;
             buecher_Loeschen.Text = "Löschen";
             buecher_Loeschen.UseVisualStyleBackColor = false;
+            buecher_Loeschen.MouseEnter += mitarbeiter_Buecher_MouseEnter;
+            buecher_Loeschen.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // buecher_Speichern
             // 
@@ -117,6 +123,8 @@
             buecher_Speichern.TabIndex = 28;
             buecher_Speichern.Text = "Speichern";
             buecher_Speichern.UseVisualStyleBackColor = false;
+            buecher_Speichern.MouseEnter += mitarbeiter_Buecher_MouseEnter;
+            buecher_Speichern.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // buecher_Label_ISBN
             // 
@@ -162,6 +170,8 @@
             buecher_ISBN.Size = new Size(377, 26);
             buecher_ISBN.TabIndex = 34;
             buecher_ISBN.TextAlign = HorizontalAlignment.Center;
+            buecher_ISBN.MouseEnter += mitarbeiter_Buecher_MouseEnter;
+            buecher_ISBN.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // buecher_Titel_Autor
             // 
@@ -171,6 +181,8 @@
             buecher_Titel_Autor.Size = new Size(202, 24);
             buecher_Titel_Autor.TabIndex = 35;
             buecher_Titel_Autor.Text = "buecher_Titel_Autor";
+            buecher_Titel_Autor.MouseEnter += mitarbeiter_Buecher_MouseEnter;
+            buecher_Titel_Autor.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // buecher_Autor
             // 
@@ -189,6 +201,8 @@
             buecher_Genre.Size = new Size(377, 26);
             buecher_Genre.TabIndex = 37;
             buecher_Genre.TextAlign = HorizontalAlignment.Center;
+            buecher_Genre.MouseEnter += mitarbeiter_Buecher_MouseEnter;
+            buecher_Genre.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // Mitarbeiter_Buecher
             // 
@@ -214,6 +228,7 @@
             MinimizeBox = false;
             Name = "Mitarbeiter_Buecher";
             Text = "Mitarbeiter_Buecher";
+            FormClosing += mitarbeiter_Buecher;
             Load += Mitarbeiter_Buecher_Load;
             ResumeLayout(false);
             PerformLayout();

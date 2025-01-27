@@ -62,7 +62,6 @@
             kunden_Seitenname.TabIndex = 6;
             kunden_Seitenname.Text = "Kunden ";
             kunden_Seitenname.TextAlign = ContentAlignment.MiddleCenter;
-            kunden_Seitenname.Click += mitarbeiter_Name_Click;
             // 
             // kunden_Label_Username
             // 
@@ -84,6 +83,8 @@
             kunden_Username.Size = new Size(251, 26);
             kunden_Username.TabIndex = 9;
             kunden_Username.TextAlign = HorizontalAlignment.Center;
+            kunden_Username.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_Username.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_Auswahl_neu
             // 
@@ -93,6 +94,8 @@
             kunden_Auswahl_neu.Size = new Size(399, 23);
             kunden_Auswahl_neu.TabIndex = 10;
             kunden_Auswahl_neu.Text = "Kunde auswählen";
+            kunden_Auswahl_neu.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_Auswahl_neu.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_Label_Name
             // 
@@ -162,6 +165,8 @@
             kunden_Name.Size = new Size(251, 26);
             kunden_Name.TabIndex = 16;
             kunden_Name.TextAlign = HorizontalAlignment.Center;
+            kunden_Name.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_Name.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_Vorname
             // 
@@ -171,6 +176,8 @@
             kunden_Vorname.Size = new Size(251, 26);
             kunden_Vorname.TabIndex = 17;
             kunden_Vorname.TextAlign = HorizontalAlignment.Center;
+            kunden_Vorname.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_Vorname.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_Strasse
             // 
@@ -180,6 +187,8 @@
             kunden_Strasse.Size = new Size(251, 26);
             kunden_Strasse.TabIndex = 18;
             kunden_Strasse.TextAlign = HorizontalAlignment.Center;
+            kunden_Strasse.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_Strasse.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_Ort
             // 
@@ -189,6 +198,8 @@
             kunden_Ort.Size = new Size(251, 26);
             kunden_Ort.TabIndex = 19;
             kunden_Ort.TextAlign = HorizontalAlignment.Center;
+            kunden_Ort.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_Ort.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_PLZ
             // 
@@ -198,6 +209,8 @@
             kunden_PLZ.Size = new Size(251, 26);
             kunden_PLZ.TabIndex = 20;
             kunden_PLZ.TextAlign = HorizontalAlignment.Center;
+            kunden_PLZ.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_PLZ.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_Speichern
             // 
@@ -211,6 +224,8 @@
             kunden_Speichern.TabIndex = 23;
             kunden_Speichern.Text = "Speichern";
             kunden_Speichern.UseVisualStyleBackColor = false;
+            kunden_Speichern.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_Speichern.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_deaktivieren
             // 
@@ -224,6 +239,8 @@
             kunden_deaktivieren.TabIndex = 24;
             kunden_deaktivieren.Text = "Konto deaktivieren";
             kunden_deaktivieren.UseVisualStyleBackColor = false;
+            kunden_deaktivieren.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_deaktivieren.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_Zurueck
             // 
@@ -237,6 +254,9 @@
             kunden_Zurueck.TabIndex = 25;
             kunden_Zurueck.Text = "Zurück";
             kunden_Zurueck.UseVisualStyleBackColor = false;
+            kunden_Zurueck.Click += mitarbeiter_Kunden_Abbrechen_Click;
+            kunden_Zurueck.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_Zurueck.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_Reservierungen
             // 
@@ -250,6 +270,8 @@
             kunden_Reservierungen.TabIndex = 26;
             kunden_Reservierungen.Text = "Reservierungen anzeigen";
             kunden_Reservierungen.UseVisualStyleBackColor = false;
+            kunden_Reservierungen.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_Reservierungen.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // kunden_Ausgeliehen
             // 
@@ -263,6 +285,8 @@
             kunden_Ausgeliehen.TabIndex = 27;
             kunden_Ausgeliehen.Text = "Ausgeliehen anzeigen";
             kunden_Ausgeliehen.UseVisualStyleBackColor = false;
+            kunden_Ausgeliehen.MouseEnter += mitarbeiter_Kunden_MouseEnter;
+            kunden_Ausgeliehen.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
             // Mitarbeiter_Kunden
             // 
@@ -295,6 +319,7 @@
             MinimizeBox = false;
             Name = "Mitarbeiter_Kunden";
             Text = "Mitarbeiter_Kunden";
+            FormClosing += mitarbeiter_Kunden;
             Load += Mitarbeiter_Kunden_Load;
             ResumeLayout(false);
             PerformLayout();
