@@ -17,9 +17,28 @@ namespace Bibliothek.Admin
         static Font logoutButton = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
 
+        private static AdminMain instance;
+
+        public static AdminMain GetInstance()
+        {
+            return instance;
+        }
+
         public AdminMain()
         {
+            instance = this;
             InitializeComponent();
+        }
+
+        private void AdminMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Login login = Login.GetInstance();
+            login.Show();
+        }
+
+        private void adminMain_Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void AdminMain_Load(object sender, EventArgs e)
@@ -53,5 +72,7 @@ namespace Bibliothek.Admin
                 button.ForeColor = Color.White;
             }
         }
+
+        
     }
 }

@@ -118,6 +118,8 @@
             mitarbeiterHandling_Vorname.Size = new Size(305, 34);
             mitarbeiterHandling_Vorname.TabIndex = 5;
             mitarbeiterHandling_Vorname.TextAlign = HorizontalAlignment.Center;
+            mitarbeiterHandling_Vorname.MouseEnter += mitarbeiterHandling_MouseEnter;
+            mitarbeiterHandling_Vorname.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 
             // mitarbeiterHandling_Nachname
             // 
@@ -126,6 +128,8 @@
             mitarbeiterHandling_Nachname.Size = new Size(305, 34);
             mitarbeiterHandling_Nachname.TabIndex = 6;
             mitarbeiterHandling_Nachname.TextAlign = HorizontalAlignment.Center;
+            mitarbeiterHandling_Nachname.MouseEnter += mitarbeiterHandling_MouseEnter;
+            mitarbeiterHandling_Nachname.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 
             // mitarbeiterHandling_Username
             // 
@@ -134,6 +138,8 @@
             mitarbeiterHandling_Username.Size = new Size(305, 34);
             mitarbeiterHandling_Username.TabIndex = 7;
             mitarbeiterHandling_Username.TextAlign = HorizontalAlignment.Center;
+            mitarbeiterHandling_Username.MouseEnter += mitarbeiterHandling_MouseEnter;
+            mitarbeiterHandling_Username.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 
             // mitarbeiterHandling_Passwort
             // 
@@ -142,6 +148,8 @@
             mitarbeiterHandling_Passwort.Size = new Size(305, 34);
             mitarbeiterHandling_Passwort.TabIndex = 8;
             mitarbeiterHandling_Passwort.TextAlign = HorizontalAlignment.Center;
+            mitarbeiterHandling_Passwort.MouseEnter += mitarbeiterHandling_MouseEnter;
+            mitarbeiterHandling_Passwort.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 
             // panel1
             // 
@@ -171,6 +179,8 @@
             mitarbeiterHandling_Save.TabIndex = 11;
             mitarbeiterHandling_Save.Text = "Anwenden";
             mitarbeiterHandling_Save.UseVisualStyleBackColor = false;
+            mitarbeiterHandling_Save.MouseEnter += mitarbeiterHandling_MouseEnter;
+            mitarbeiterHandling_Save.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 
             // mitarbeiterHandling_Abbrechen
             // 
@@ -184,15 +194,19 @@
             mitarbeiterHandling_Abbrechen.TabIndex = 12;
             mitarbeiterHandling_Abbrechen.Text = "Abbrechen";
             mitarbeiterHandling_Abbrechen.UseVisualStyleBackColor = false;
+            mitarbeiterHandling_Abbrechen.MouseEnter += mitarbeiterHandling_MouseEnter;
+            mitarbeiterHandling_Abbrechen.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 
             // mitarbeiterHandling_Choose
             // 
             mitarbeiterHandling_Choose.DropDownStyle = ComboBoxStyle.DropDownList;
             mitarbeiterHandling_Choose.FormattingEnabled = true;
-            mitarbeiterHandling_Choose.Location = new Point(403, 91);
+            mitarbeiterHandling_Choose.Location = new Point(403, 104);
             mitarbeiterHandling_Choose.Name = "mitarbeiterHandling_Choose";
             mitarbeiterHandling_Choose.Size = new Size(305, 36);
             mitarbeiterHandling_Choose.TabIndex = 13;
+            mitarbeiterHandling_Choose.MouseEnter += mitarbeiterHandling_MouseEnter;
+            mitarbeiterHandling_Choose.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 
             // mitarbeiterHandling_Label_Choose
             // 
@@ -218,6 +232,8 @@
             mitarbeiterHandling_Löschen.TabIndex = 15;
             mitarbeiterHandling_Löschen.Text = "Löschen";
             mitarbeiterHandling_Löschen.UseVisualStyleBackColor = false;
+            mitarbeiterHandling_Löschen.MouseEnter += mitarbeiterHandling_MouseEnter;
+            mitarbeiterHandling_Löschen.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 
             // MitarbeiterHandling
             // 

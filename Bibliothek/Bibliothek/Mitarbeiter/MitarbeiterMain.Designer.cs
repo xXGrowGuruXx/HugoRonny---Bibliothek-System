@@ -114,6 +114,7 @@
             mitarbeiter_Abmelden.TabIndex = 4;
             mitarbeiter_Abmelden.Text = "Abmelden";
             mitarbeiter_Abmelden.UseVisualStyleBackColor = false;
+            mitarbeiter_Abmelden.Click += mitarbeiter_Abmelden_Click;
             mitarbeiter_Abmelden.MouseEnter += mitarbeiter_Buttons_MouseEnter;
             mitarbeiter_Abmelden.MouseLeave += mitarbeiter_Buttons_MouseLeave;
             // 
@@ -149,6 +150,7 @@
             Name = "MitarbeiterMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Mitarbeiter";
+            FormClosing += MitarbeiterMain_FormClosing;
             Load += Mitarbeiter_Load;
             ResumeLayout(false);
             PerformLayout();

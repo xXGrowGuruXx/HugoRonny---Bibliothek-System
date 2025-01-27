@@ -28,7 +28,7 @@ namespace Bibliothek.Admin
             statistik_Erstellen.Font = button;
         }
 
-        private void statistik_Buttons_MouseEnter(object sender, EventArgs e)
+        private void statistik_MouseEnter(object sender, EventArgs e)
         {
             // Casten des Senders zu einem Button
             Button? button = sender as Button;
@@ -47,7 +47,7 @@ namespace Bibliothek.Admin
             }
         }
 
-        private void statistik_Buttons_MouseLeave(object sender, EventArgs e)
+        private void statistik_MouseLeave(object sender, EventArgs e)
         {
             // Casten des Senders zu einem Button
             Button? button = sender as Button;

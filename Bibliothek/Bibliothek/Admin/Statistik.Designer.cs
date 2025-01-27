@@ -93,8 +93,8 @@
             statistik_Erstellen.TabIndex = 4;
             statistik_Erstellen.Text = "Erstellen";
             statistik_Erstellen.UseVisualStyleBackColor = false;
-            statistik_Erstellen.MouseEnter += statistik_Buttons_MouseEnter;
-            statistik_Erstellen.MouseLeave += statistik_Buttons_MouseLeave;
+            statistik_Erstellen.MouseEnter += statistik_MouseEnter;
+            statistik_Erstellen.MouseLeave += statistik_MouseLeave;
             // 
             // Statistik
             // 

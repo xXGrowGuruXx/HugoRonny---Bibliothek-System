@@ -86,6 +86,7 @@
             adminMain_Logout.TabIndex = 10;
             adminMain_Logout.Text = "Logout";
             adminMain_Logout.UseVisualStyleBackColor = false;
+            adminMain_Logout.Click += adminMain_Logout_Click;
             adminMain_Logout.MouseEnter += adminMain_Buttons_MouseEnter;
             adminMain_Logout.MouseLeave += adminMain_Buttons_MouseLeave;
             // 
@@ -141,6 +142,7 @@
             Name = "AdminMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin Main";
+            FormClosing += AdminMain_FormClosing;
             Load += AdminMain_Load;
             ResumeLayout(false);
             PerformLayout();

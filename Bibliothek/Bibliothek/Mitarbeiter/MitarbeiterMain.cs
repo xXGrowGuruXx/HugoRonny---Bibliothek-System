@@ -20,6 +20,17 @@ namespace Bibliothek.Mitarbeiter
             InitializeComponent();
         }
 
+        private void MitarbeiterMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Login login = Login.GetInstance();
+            login.Show();
+        }
+
+        private void mitarbeiter_Abmelden_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void Mitarbeiter_Load(object sender, EventArgs e)
         {
             mitarbeiter_Name.Font = überschrift;
@@ -53,5 +64,7 @@ namespace Bibliothek.Mitarbeiter
                 button.ForeColor = Color.White;
             }
         }
+
+        
     }
 }
