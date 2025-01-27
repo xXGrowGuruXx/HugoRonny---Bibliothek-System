@@ -9,6 +9,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\BiblioDB.db" />
+    <None Remove="utils\Monserga-regular-FFP.ttf" />
+    <None Remove="utils\Mont Royal.ttf" />
+    <None Remove="utils\Vacaciones-font-ffp-defharo.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BiblioDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Vacaciones-font-ffp-defharo.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
   </ItemGroup>
 

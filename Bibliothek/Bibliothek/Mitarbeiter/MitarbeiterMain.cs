@@ -9,28 +9,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Bibliothek.Admin
+namespace Bibliothek.Mitarbeiter
 {
-    public partial class AdminMain : Form
+    public partial class MitarbeiterMain : Form
     {
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font logoutButton = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
-        static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
-
-        public AdminMain()
+        static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
+        public MitarbeiterMain()
         {
             InitializeComponent();
         }
 
-        private void AdminMain_Load(object sender, EventArgs e)
+        private void Mitarbeiter_Load(object sender, EventArgs e)
         {
-            adminMain_Name.Font = überschrift;
-            adminMain_Mitarbeiter.Font = button;
-            adminMain_Statistik.Font = button;
-            adminMain_Logout.Font = logoutButton;
+            mitarbeiter_Name.Font = überschrift;
+            mitarbeiter_Kunden.Font = button;
+            mitarbeiter_Bücher.Font = button;
+            mitarbeiter_Autoren.Font = button;
+            mitarbeiter_Genres.Font = button;
+            mitarbeiter_Abmelden.Font = button;
         }
 
-        private void adminMain_Buttons_MouseEnter(object sender, EventArgs e)
+        private void mitarbeiter_Buttons_MouseEnter(object sender, EventArgs e)
         {
             // Casten des Senders zu einem Button
             Button? button = sender as Button;
@@ -42,7 +42,7 @@ namespace Bibliothek.Admin
             }
         }
 
-        private void adminMain_Buttons_MouseLeave(object sender, EventArgs e)
+        private void mitarbeiter_Buttons_MouseLeave(object sender, EventArgs e)
         {
             // Casten des Senders zu einem Button
             Button? button = sender as Button;
