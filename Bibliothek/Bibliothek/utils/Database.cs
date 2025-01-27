@@ -36,14 +36,23 @@ namespace Bibliothek.utils
                 // Erstelle den Pfad für die Datenbankdatei im gleichen Verzeichnis wie die EXE
                 string databaseFilePath = Path.Combine(exeDirectory, "BiblioDB.db");
 
-                // Schreibe den Inhalt des Streams in die Datei
-                using (var fileStream = new FileStream(databaseFilePath, FileMode.Create, FileAccess.Write))
+                // Überprüfen, ob die Datei bereits existiert
+                if (!File.Exists(databaseFilePath))
                 {
-                    stream.CopyTo(fileStream);
-                }
+                    // Schreibe den Inhalt des Streams in die Datei, wenn sie noch nicht existiert
+                    using (var fileStream = new FileStream(databaseFilePath, FileMode.Create, FileAccess.Write))
+                    {
+                        stream.CopyTo(fileStream);
+                    }
 
-                // Verwende den Pfad zur gespeicherten Datei für die Verbindung
-                _connection = new SQLiteConnection($"Data Source={databaseFilePath};Version=3;");
+                    // Verwende den Pfad zur gespeicherten Datei für die Verbindung
+                    _connection = new SQLiteConnection($"Data Source={databaseFilePath};Version=3;");
+                }
+                else
+                {
+                    // Datei existiert bereits, also verwende die vorhandene Datenbank
+                    _connection = new SQLiteConnection($"Data Source={databaseFilePath};Version=3;");
+                }
             }
         }
 
@@ -81,7 +90,7 @@ namespace Bibliothek.utils
         /// </summary>
         /// <param name="query">Das SQL-Query.</param>
         /// <param name="parameters">Optionale Parameter für das Query.</param>
-        public static void ExecuteNonQuery(string query, params SQLiteParameter[] parameters)
+        public static bool ExecuteNonQuery(string query, params SQLiteParameter[] parameters)
         {
             if (_connection == null)
             {
@@ -98,13 +107,15 @@ namespace Bibliothek.utils
                         command.Parameters.AddRange(parameters);
                     }
 
-                    command.ExecuteNonQuery();
+                    int affectedRows = command.ExecuteNonQuery();
+                    return affectedRows > 0;
                 }
             }
             finally
             {
                 _connection.Close();
             }
+
         }
     }
 }

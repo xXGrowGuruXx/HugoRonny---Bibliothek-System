@@ -114,22 +114,22 @@ namespace Bibliothek.Mitarbeiter
                 if (textBox == buecher_Titel)
                 {
                     buecher_Titel.ForeColor = Color.White;
-                    buecher_Titel.BackColor = FromArgb(0);
+                    buecher_Titel.BackColor = Color.FromArgb(0);
                 }
                 else if (textBox == buecher_Autor)
                 {
                     buecher_Autor.ForeColor = Color.White;
-                    buecher_Autor.BackColor = FromArgb(0);
+                    buecher_Autor.BackColor = Color.FromArgb(0);
                 }
                 else if (textBox == buecher_Genre)
                 {
                     buecher_Genre.ForeColor = Color.White;
-                    buecher_Genre.BackColor = FromArgb(0);
+                    buecher_Genre.BackColor = Color.FromArgb(0);
                 }
                 else if (textBox == buecher_ISBN)
                 {
                     buecher_ISBN.ForeColor = Color.White;
-                    buecher_ISBN.BackColor = FromArgb(0);
+                    buecher_ISBN.BackColor = Color.FromArgb(0);
                 }
 
             }

@@ -235,6 +235,7 @@
             mitarbeiterHandling_Löschen.TabIndex = 15;
             mitarbeiterHandling_Löschen.Text = "Löschen";
             mitarbeiterHandling_Löschen.UseVisualStyleBackColor = false;
+            mitarbeiterHandling_Löschen.Click += mitarbeiterHandling_Löschen_Click;
             mitarbeiterHandling_Löschen.MouseEnter += mitarbeiterHandling_MouseEnter;
             mitarbeiterHandling_Löschen.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 

@@ -146,10 +146,31 @@ namespace Bibliothek.Admin
 
         private void mitarbeiterHandling_Save_Click(object sender, EventArgs e)
         {
-            if (mitarbeiterHandling_Choose.SelectedItem.ToString() == "* NEU *")
+            ManageMitarbeiterHandling manageMitarbeiterHandling = new ManageMitarbeiterHandling();
+            if (mitarbeiterHandling_Choose == null)
+            {
+                MessageBox.Show("Bitte wähle erst in der ComboBox was du tun möchtest!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (mitarbeiterHandling_Choose.SelectedItem.ToString() == "* NEU *")
+            {
+                manageMitarbeiterHandling.CreateNewMitarbeiter(mitarbeiterHandling_Choose, mitarbeiterHandling_Vorname, mitarbeiterHandling_Nachname, mitarbeiterHandling_Username, mitarbeiterHandling_Passwort);
+            }
+            else
+            {
+                manageMitarbeiterHandling.UpdateMitarbeiter(mitarbeiterHandling_Choose, mitarbeiterHandling_Vorname, mitarbeiterHandling_Nachname, mitarbeiterHandling_Username, mitarbeiterHandling_Passwort);
+            }
+        }
+
+        private void mitarbeiterHandling_Löschen_Click(object sender, EventArgs e)
+        {
+            if (mitarbeiterHandling_Choose.SelectedItem.ToString() != "* NEU *")
             {
                 ManageMitarbeiterHandling manageMitarbeiterHandling = new ManageMitarbeiterHandling();
-                manageMitarbeiterHandling.CreateNewMitarbeiter(mitarbeiterHandling_Vorname, mitarbeiterHandling_Nachname, mitarbeiterHandling_Username, mitarbeiterHandling_Passwort);
+                manageMitarbeiterHandling.DeleteMitarbeiter(mitarbeiterHandling_Choose, mitarbeiterHandling_Vorname, mitarbeiterHandling_Nachname, mitarbeiterHandling_Username, mitarbeiterHandling_Passwort);
+            }
+            else
+            {
+                MessageBox.Show("Bitte wähle erst den Mitarbeiter den du Löschen möchtest!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
