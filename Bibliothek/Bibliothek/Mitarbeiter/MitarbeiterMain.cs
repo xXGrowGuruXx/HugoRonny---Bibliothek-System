@@ -13,10 +13,18 @@ namespace Bibliothek.Mitarbeiter
 {
     public partial class MitarbeiterMain : Form
     {
+        private static MitarbeiterMain instance;
+
+        public static MitarbeiterMain GetInstance()
+        { 
+            return instance; 
+        }
+
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
         public MitarbeiterMain()
         {
+            instance = this;
             InitializeComponent();
         }
 
