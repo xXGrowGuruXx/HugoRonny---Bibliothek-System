@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MitarbeiterHandling));
-            addMitarbeiter_Name = new Label();
+            mitarbeiterHandling_Name = new Label();
             mitarbeiterHandling_Label_Vorname = new Label();
             mitarbeiterHandling_Label_Nachname = new Label();
             mitarbeiterHandling_Label_Username = new Label();
@@ -47,17 +47,17 @@
             mitarbeiterHandling_Löschen = new Button();
             SuspendLayout();
             // 
-            // addMitarbeiter_Name
+            // mitarbeiterHandling_Name
             // 
-            addMitarbeiter_Name.AutoSize = true;
-            addMitarbeiter_Name.BackColor = Color.Transparent;
-            addMitarbeiter_Name.Font = new Font("Vacaciones", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            addMitarbeiter_Name.ForeColor = SystemColors.ButtonHighlight;
-            addMitarbeiter_Name.Location = new Point(184, 17);
-            addMitarbeiter_Name.Name = "addMitarbeiter_Name";
-            addMitarbeiter_Name.Size = new Size(448, 55);
-            addMitarbeiter_Name.TabIndex = 0;
-            addMitarbeiter_Name.Text = "Mitarbeiter Handling";
+            mitarbeiterHandling_Name.AutoSize = true;
+            mitarbeiterHandling_Name.BackColor = Color.Transparent;
+            mitarbeiterHandling_Name.Font = new Font("Vacaciones", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterHandling_Name.ForeColor = SystemColors.ButtonHighlight;
+            mitarbeiterHandling_Name.Location = new Point(184, 17);
+            mitarbeiterHandling_Name.Name = "mitarbeiterHandling_Name";
+            mitarbeiterHandling_Name.Size = new Size(448, 55);
+            mitarbeiterHandling_Name.TabIndex = 0;
+            mitarbeiterHandling_Name.Text = "Mitarbeiter Handling";
             // 
             // mitarbeiterHandling_Label_Vorname
             // 
@@ -194,6 +194,7 @@
             mitarbeiterHandling_Abbrechen.TabIndex = 12;
             mitarbeiterHandling_Abbrechen.Text = "Abbrechen";
             mitarbeiterHandling_Abbrechen.UseVisualStyleBackColor = false;
+            mitarbeiterHandling_Abbrechen.Click += mitarbeiterHandling_Abbrechen_Click;
             mitarbeiterHandling_Abbrechen.MouseEnter += mitarbeiterHandling_MouseEnter;
             mitarbeiterHandling_Abbrechen.MouseLeave += mitarbeiterHandling_MouseLeave;
             // 
@@ -256,7 +257,7 @@
             Controls.Add(mitarbeiterHandling_Label_Username);
             Controls.Add(mitarbeiterHandling_Label_Nachname);
             Controls.Add(mitarbeiterHandling_Label_Vorname);
-            Controls.Add(addMitarbeiter_Name);
+            Controls.Add(mitarbeiterHandling_Name);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -266,6 +267,8 @@
             Name = "MitarbeiterHandling";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add Mitarbeiter";
+            FormClosing += MitarbeiterHandling_FormClosing;
+            Load += MitarbeiterHandling_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -283,7 +286,7 @@
         private Panel panel2;
         private Button mitarbeiterHandling_Save;
         private Button mitarbeiterHandling_Abbrechen;
-        public Label addMitarbeiter_Name;
+        public Label mitarbeiterHandling_Name;
         private ComboBox mitarbeiterHandling_Choose;
         private Label mitarbeiterHandling_Label_Choose;
         private Button mitarbeiterHandling_Löschen;

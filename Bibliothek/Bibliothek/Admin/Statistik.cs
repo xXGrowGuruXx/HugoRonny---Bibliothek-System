@@ -26,6 +26,18 @@ namespace Bibliothek.Admin
             statistik_Name.Font = überschrift;
             statistik_Label_Optionen.Font = label;
             statistik_Erstellen.Font = button;
+            statistik_Abbrechen.Font = button;
+        }
+
+        private void statistik_Abbrechen_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Statistik_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            AdminMain adminMain = AdminMain.GetInstance();
+            adminMain.Show();
         }
 
         private void statistik_MouseEnter(object sender, EventArgs e)

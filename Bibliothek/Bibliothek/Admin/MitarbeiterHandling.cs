@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bibliothek.utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,36 @@ namespace Bibliothek.Admin.MitarbeiterHandling
 {
     public partial class MitarbeiterHandling : Form
     {
+        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
+        static Font label = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
+        static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
+
         public MitarbeiterHandling()
         {
             InitializeComponent();
+        }
+
+        private void MitarbeiterHandling_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            AdminMain adminMain = AdminMain.GetInstance();
+            adminMain.Show();
+        }
+
+        private void mitarbeiterHandling_Abbrechen_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MitarbeiterHandling_Load(object sender, EventArgs e)
+        {
+            mitarbeiterHandling_Name.Font = überschrift;
+            mitarbeiterHandling_Label_Choose.Font = label;
+            mitarbeiterHandling_Label_Nachname.Font = label;
+            mitarbeiterHandling_Label_Username.Font = label;
+            mitarbeiterHandling_Label_Passwort.Font = label;
+            mitarbeiterHandling_Löschen.Font = button;
+            mitarbeiterHandling_Save.Font = button;
+            mitarbeiterHandling_Abbrechen.Font = button;
         }
 
         private void mitarbeiterHandling_MouseEnter(object sender, EventArgs e)
@@ -22,7 +50,7 @@ namespace Bibliothek.Admin.MitarbeiterHandling
             ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
             Button? button = sender as Button;
-            if (button != null) 
+            if (button != null)
             {
                 button.ForeColor = Color.Black;
                 button.BackColor = Color.FromArgb(128, Color.White);
