@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Resources\BiblioDB.db" />
+    <None Remove="Resources\Hintergrund800x600.jpg" />
     <None Remove="utils\Monserga-regular-FFP.ttf" />
     <None Remove="utils\Mont Royal.ttf" />
     <None Remove="utils\Vacaciones-font-ffp-defharo.ttf" />
@@ -17,6 +18,9 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\BiblioDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Hintergrund800x600.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Vacaciones-font-ffp-defharo.ttf">

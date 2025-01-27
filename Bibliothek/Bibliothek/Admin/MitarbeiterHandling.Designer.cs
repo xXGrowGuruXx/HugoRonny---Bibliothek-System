@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MitarbeiterHandling));
             addMitarbeiter_Name = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            mitarbeiterHandling_Label_Vorname = new Label();
+            mitarbeiterHandling_Label_Nachname = new Label();
+            mitarbeiterHandling_Label_Username = new Label();
+            mitarbeiterHandling_Label_Passwort = new Label();
             mitarbeiterHandling_Vorname = new TextBox();
             mitarbeiterHandling_Nachname = new TextBox();
             mitarbeiterHandling_Username = new TextBox();
@@ -42,75 +42,78 @@
             panel2 = new Panel();
             mitarbeiterHandling_Save = new Button();
             mitarbeiterHandling_Abbrechen = new Button();
+            mitarbeiterHandling_Choose = new ComboBox();
+            mitarbeiterHandling_Label_Choose = new Label();
+            mitarbeiterHandling_Löschen = new Button();
             SuspendLayout();
             // 
             // addMitarbeiter_Name
             // 
             addMitarbeiter_Name.AutoSize = true;
             addMitarbeiter_Name.BackColor = Color.Transparent;
-            addMitarbeiter_Name.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addMitarbeiter_Name.Font = new Font("Vacaciones", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMitarbeiter_Name.ForeColor = SystemColors.ButtonHighlight;
-            addMitarbeiter_Name.Location = new Point(225, 18);
+            addMitarbeiter_Name.Location = new Point(184, 17);
             addMitarbeiter_Name.Name = "addMitarbeiter_Name";
-            addMitarbeiter_Name.Size = new Size(348, 41);
+            addMitarbeiter_Name.Size = new Size(448, 55);
             addMitarbeiter_Name.TabIndex = 0;
-            addMitarbeiter_Name.Text = "Mitarbeiter hinzufügen";
+            addMitarbeiter_Name.Text = "Mitarbeiter Handling";
             // 
-            // label1
+            // mitarbeiterHandling_Label_Vorname
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(63, 138);
-            label1.Name = "label1";
-            label1.Size = new Size(96, 28);
-            label1.TabIndex = 1;
-            label1.Text = "Vorname";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            mitarbeiterHandling_Label_Vorname.AutoSize = true;
+            mitarbeiterHandling_Label_Vorname.BackColor = Color.Transparent;
+            mitarbeiterHandling_Label_Vorname.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterHandling_Label_Vorname.ForeColor = SystemColors.ButtonHighlight;
+            mitarbeiterHandling_Label_Vorname.Location = new Point(63, 184);
+            mitarbeiterHandling_Label_Vorname.Name = "mitarbeiterHandling_Label_Vorname";
+            mitarbeiterHandling_Label_Vorname.Size = new Size(155, 41);
+            mitarbeiterHandling_Label_Vorname.TabIndex = 1;
+            mitarbeiterHandling_Label_Vorname.Text = "Vorname";
+            mitarbeiterHandling_Label_Vorname.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // mitarbeiterHandling_Label_Nachname
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(63, 219);
-            label2.Name = "label2";
-            label2.Size = new Size(113, 28);
-            label2.TabIndex = 2;
-            label2.Text = "Nachname";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            mitarbeiterHandling_Label_Nachname.AutoSize = true;
+            mitarbeiterHandling_Label_Nachname.BackColor = Color.Transparent;
+            mitarbeiterHandling_Label_Nachname.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterHandling_Label_Nachname.ForeColor = SystemColors.ButtonHighlight;
+            mitarbeiterHandling_Label_Nachname.Location = new Point(63, 250);
+            mitarbeiterHandling_Label_Nachname.Name = "mitarbeiterHandling_Label_Nachname";
+            mitarbeiterHandling_Label_Nachname.Size = new Size(173, 41);
+            mitarbeiterHandling_Label_Nachname.TabIndex = 2;
+            mitarbeiterHandling_Label_Nachname.Text = "Nachname";
+            mitarbeiterHandling_Label_Nachname.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // mitarbeiterHandling_Label_Username
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(63, 297);
-            label3.Name = "label3";
-            label3.Size = new Size(106, 28);
-            label3.TabIndex = 3;
-            label3.Text = "Username";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            mitarbeiterHandling_Label_Username.AutoSize = true;
+            mitarbeiterHandling_Label_Username.BackColor = Color.Transparent;
+            mitarbeiterHandling_Label_Username.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterHandling_Label_Username.ForeColor = SystemColors.ButtonHighlight;
+            mitarbeiterHandling_Label_Username.Location = new Point(63, 322);
+            mitarbeiterHandling_Label_Username.Name = "mitarbeiterHandling_Label_Username";
+            mitarbeiterHandling_Label_Username.Size = new Size(172, 41);
+            mitarbeiterHandling_Label_Username.TabIndex = 3;
+            mitarbeiterHandling_Label_Username.Text = "Username";
+            mitarbeiterHandling_Label_Username.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // mitarbeiterHandling_Label_Passwort
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(63, 375);
-            label4.Name = "label4";
-            label4.Size = new Size(98, 28);
-            label4.TabIndex = 4;
-            label4.Text = "Passwort";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
+            mitarbeiterHandling_Label_Passwort.AutoSize = true;
+            mitarbeiterHandling_Label_Passwort.BackColor = Color.Transparent;
+            mitarbeiterHandling_Label_Passwort.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterHandling_Label_Passwort.ForeColor = SystemColors.ButtonHighlight;
+            mitarbeiterHandling_Label_Passwort.Location = new Point(63, 394);
+            mitarbeiterHandling_Label_Passwort.Name = "mitarbeiterHandling_Label_Passwort";
+            mitarbeiterHandling_Label_Passwort.Size = new Size(163, 41);
+            mitarbeiterHandling_Label_Passwort.TabIndex = 4;
+            mitarbeiterHandling_Label_Passwort.Text = "Passwort";
+            mitarbeiterHandling_Label_Passwort.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // mitarbeiterHandling_Vorname
             // 
-            mitarbeiterHandling_Vorname.Location = new Point(403, 135);
+            mitarbeiterHandling_Vorname.Location = new Point(403, 181);
             mitarbeiterHandling_Vorname.Name = "mitarbeiterHandling_Vorname";
             mitarbeiterHandling_Vorname.Size = new Size(305, 34);
             mitarbeiterHandling_Vorname.TabIndex = 5;
@@ -118,7 +121,7 @@
             // 
             // mitarbeiterHandling_Nachname
             // 
-            mitarbeiterHandling_Nachname.Location = new Point(403, 216);
+            mitarbeiterHandling_Nachname.Location = new Point(403, 247);
             mitarbeiterHandling_Nachname.Name = "mitarbeiterHandling_Nachname";
             mitarbeiterHandling_Nachname.Size = new Size(305, 34);
             mitarbeiterHandling_Nachname.TabIndex = 6;
@@ -126,7 +129,7 @@
             // 
             // mitarbeiterHandling_Username
             // 
-            mitarbeiterHandling_Username.Location = new Point(403, 294);
+            mitarbeiterHandling_Username.Location = new Point(403, 319);
             mitarbeiterHandling_Username.Name = "mitarbeiterHandling_Username";
             mitarbeiterHandling_Username.Size = new Size(305, 34);
             mitarbeiterHandling_Username.TabIndex = 7;
@@ -134,7 +137,7 @@
             // 
             // mitarbeiterHandling_Passwort
             // 
-            mitarbeiterHandling_Passwort.Location = new Point(403, 372);
+            mitarbeiterHandling_Passwort.Location = new Point(403, 391);
             mitarbeiterHandling_Passwort.Name = "mitarbeiterHandling_Passwort";
             mitarbeiterHandling_Passwort.Size = new Size(305, 34);
             mitarbeiterHandling_Passwort.TabIndex = 8;
@@ -158,21 +161,63 @@
             // 
             // mitarbeiterHandling_Save
             // 
-            mitarbeiterHandling_Save.Location = new Point(63, 487);
+            mitarbeiterHandling_Save.BackColor = Color.Transparent;
+            mitarbeiterHandling_Save.FlatStyle = FlatStyle.Popup;
+            mitarbeiterHandling_Save.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterHandling_Save.ForeColor = SystemColors.ButtonFace;
+            mitarbeiterHandling_Save.Location = new Point(24, 487);
             mitarbeiterHandling_Save.Name = "mitarbeiterHandling_Save";
             mitarbeiterHandling_Save.Size = new Size(212, 44);
             mitarbeiterHandling_Save.TabIndex = 11;
             mitarbeiterHandling_Save.Text = "Anwenden";
-            mitarbeiterHandling_Save.UseVisualStyleBackColor = true;
+            mitarbeiterHandling_Save.UseVisualStyleBackColor = false;
             // 
             // mitarbeiterHandling_Abbrechen
             // 
-            mitarbeiterHandling_Abbrechen.Location = new Point(496, 487);
+            mitarbeiterHandling_Abbrechen.BackColor = Color.Transparent;
+            mitarbeiterHandling_Abbrechen.FlatStyle = FlatStyle.Popup;
+            mitarbeiterHandling_Abbrechen.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterHandling_Abbrechen.ForeColor = Color.White;
+            mitarbeiterHandling_Abbrechen.Location = new Point(540, 487);
             mitarbeiterHandling_Abbrechen.Name = "mitarbeiterHandling_Abbrechen";
             mitarbeiterHandling_Abbrechen.Size = new Size(212, 44);
             mitarbeiterHandling_Abbrechen.TabIndex = 12;
             mitarbeiterHandling_Abbrechen.Text = "Abbrechen";
-            mitarbeiterHandling_Abbrechen.UseVisualStyleBackColor = true;
+            mitarbeiterHandling_Abbrechen.UseVisualStyleBackColor = false;
+            // 
+            // mitarbeiterHandling_Choose
+            // 
+            mitarbeiterHandling_Choose.DropDownStyle = ComboBoxStyle.DropDownList;
+            mitarbeiterHandling_Choose.FormattingEnabled = true;
+            mitarbeiterHandling_Choose.Location = new Point(403, 91);
+            mitarbeiterHandling_Choose.Name = "mitarbeiterHandling_Choose";
+            mitarbeiterHandling_Choose.Size = new Size(305, 36);
+            mitarbeiterHandling_Choose.TabIndex = 13;
+            // 
+            // mitarbeiterHandling_Label_Choose
+            // 
+            mitarbeiterHandling_Label_Choose.AutoSize = true;
+            mitarbeiterHandling_Label_Choose.BackColor = Color.Transparent;
+            mitarbeiterHandling_Label_Choose.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterHandling_Label_Choose.ForeColor = SystemColors.ButtonHighlight;
+            mitarbeiterHandling_Label_Choose.Location = new Point(63, 99);
+            mitarbeiterHandling_Label_Choose.Name = "mitarbeiterHandling_Label_Choose";
+            mitarbeiterHandling_Label_Choose.Size = new Size(196, 41);
+            mitarbeiterHandling_Label_Choose.TabIndex = 14;
+            mitarbeiterHandling_Label_Choose.Text = "Mitarbeiter";
+            // 
+            // mitarbeiterHandling_Löschen
+            // 
+            mitarbeiterHandling_Löschen.BackColor = Color.Transparent;
+            mitarbeiterHandling_Löschen.FlatStyle = FlatStyle.Popup;
+            mitarbeiterHandling_Löschen.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterHandling_Löschen.ForeColor = Color.White;
+            mitarbeiterHandling_Löschen.Location = new Point(288, 487);
+            mitarbeiterHandling_Löschen.Name = "mitarbeiterHandling_Löschen";
+            mitarbeiterHandling_Löschen.Size = new Size(212, 44);
+            mitarbeiterHandling_Löschen.TabIndex = 15;
+            mitarbeiterHandling_Löschen.Text = "Löschen";
+            mitarbeiterHandling_Löschen.UseVisualStyleBackColor = false;
             // 
             // MitarbeiterHandling
             // 
@@ -180,6 +225,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
             ClientSize = new Size(782, 553);
+            Controls.Add(mitarbeiterHandling_Löschen);
+            Controls.Add(mitarbeiterHandling_Label_Choose);
+            Controls.Add(mitarbeiterHandling_Choose);
             Controls.Add(mitarbeiterHandling_Abbrechen);
             Controls.Add(mitarbeiterHandling_Save);
             Controls.Add(panel2);
@@ -188,10 +236,10 @@
             Controls.Add(mitarbeiterHandling_Username);
             Controls.Add(mitarbeiterHandling_Nachname);
             Controls.Add(mitarbeiterHandling_Vorname);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(mitarbeiterHandling_Label_Passwort);
+            Controls.Add(mitarbeiterHandling_Label_Username);
+            Controls.Add(mitarbeiterHandling_Label_Nachname);
+            Controls.Add(mitarbeiterHandling_Label_Vorname);
             Controls.Add(addMitarbeiter_Name);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -207,10 +255,10 @@
         }
 
         #endregion
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label mitarbeiterHandling_Label_Vorname;
+        private Label mitarbeiterHandling_Label_Nachname;
+        private Label mitarbeiterHandling_Label_Username;
+        private Label mitarbeiterHandling_Label_Passwort;
         private TextBox mitarbeiterHandling_Vorname;
         private TextBox mitarbeiterHandling_Nachname;
         private TextBox mitarbeiterHandling_Username;
@@ -220,5 +268,8 @@
         private Button mitarbeiterHandling_Save;
         private Button mitarbeiterHandling_Abbrechen;
         public Label addMitarbeiter_Name;
+        private ComboBox mitarbeiterHandling_Choose;
+        private Label mitarbeiterHandling_Label_Choose;
+        private Button mitarbeiterHandling_Löschen;
     }
 }

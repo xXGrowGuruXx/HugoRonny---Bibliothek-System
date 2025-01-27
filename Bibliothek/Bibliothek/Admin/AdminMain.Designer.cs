@@ -77,7 +77,7 @@
             // adminMain_Logout
             // 
             adminMain_Logout.BackColor = Color.Transparent;
-            adminMain_Logout.FlatStyle = FlatStyle.Flat;
+            adminMain_Logout.FlatStyle = FlatStyle.Popup;
             adminMain_Logout.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             adminMain_Logout.ForeColor = SystemColors.Control;
             adminMain_Logout.Location = new Point(110, 449);
@@ -107,7 +107,7 @@
             // adminMain_Statistik
             // 
             adminMain_Statistik.BackColor = Color.Transparent;
-            adminMain_Statistik.FlatStyle = FlatStyle.Flat;
+            adminMain_Statistik.FlatStyle = FlatStyle.Popup;
             adminMain_Statistik.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             adminMain_Statistik.ForeColor = SystemColors.Control;
             adminMain_Statistik.Location = new Point(207, 308);
