@@ -77,5 +77,17 @@ namespace Bibliothek.Admin
                 statistik_Label_Optionen.ForeColor = Color.Black;
             }
         }
+
+        private void statistik_Optionen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ManageStatistik manageStatistik = new ManageStatistik();
+            manageStatistik.LoadStatistik(statistik_Optionen, statistik_DataGrid, statistik_Erstellen);
+        }
+
+        private void statistik_Erstellen_Click(object sender, EventArgs e)
+        {
+            ManageStatistik manageStatistik = new ManageStatistik();
+            manageStatistik.ExportStatistik();
+        }
     }
 }

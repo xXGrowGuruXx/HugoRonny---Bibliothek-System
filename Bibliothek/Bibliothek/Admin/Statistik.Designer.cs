@@ -40,6 +40,8 @@
             // 
             // statistik_DataGrid
             // 
+            statistik_DataGrid.AllowUserToAddRows = false;
+            statistik_DataGrid.AllowUserToDeleteRows = false;
             statistik_DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             statistik_DataGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             statistik_DataGrid.BackgroundColor = SystemColors.Control;
@@ -65,11 +67,12 @@
             // statistik_Optionen
             // 
             statistik_Optionen.FormattingEnabled = true;
-            statistik_Optionen.Items.AddRange(new object[] { "Bücher", "Strafen", "Alles" });
+            statistik_Optionen.Items.AddRange(new object[] { "Bücher", "Strafen", "Nachrichten", "Statistik erstellen" });
             statistik_Optionen.Location = new Point(362, 92);
             statistik_Optionen.Name = "statistik_Optionen";
             statistik_Optionen.Size = new Size(312, 36);
             statistik_Optionen.TabIndex = 2;
+            statistik_Optionen.SelectedIndexChanged += statistik_Optionen_SelectedIndexChanged;
             // 
             // statistik_Label_Optionen
             // 
@@ -95,6 +98,8 @@
             statistik_Erstellen.TabIndex = 4;
             statistik_Erstellen.Text = "Erstellen";
             statistik_Erstellen.UseVisualStyleBackColor = false;
+            statistik_Erstellen.Visible = false;
+            statistik_Erstellen.Click += statistik_Erstellen_Click;
             statistik_Erstellen.MouseEnter += statistik_MouseEnter;
             statistik_Erstellen.MouseLeave += statistik_MouseLeave;
             // 

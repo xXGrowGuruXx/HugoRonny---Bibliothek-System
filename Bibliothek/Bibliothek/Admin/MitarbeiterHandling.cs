@@ -168,7 +168,7 @@ namespace Bibliothek.Admin
                 ManageMitarbeiterHandling manageMitarbeiterHandling = new ManageMitarbeiterHandling();
                 manageMitarbeiterHandling.DeleteMitarbeiter(mitarbeiterHandling_Choose, mitarbeiterHandling_Vorname, mitarbeiterHandling_Nachname, mitarbeiterHandling_Username, mitarbeiterHandling_Passwort);
             }
-            else
+            else if (string.IsNullOrEmpty(mitarbeiterHandling_Choose.SelectedItem.ToString()))
             {
                 MessageBox.Show("Bitte wähle erst den Mitarbeiter den du Löschen möchtest!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
