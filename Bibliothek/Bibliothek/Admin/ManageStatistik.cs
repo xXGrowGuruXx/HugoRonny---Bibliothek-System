@@ -40,6 +40,15 @@ namespace Bibliothek.Admin
 
                 erstellen.Visible = false;
             }
+            else if (selectedItem == "Reservierungen")
+            {
+                grid.Columns.Clear();
+
+                DataTable reservierungen = Reservierung();
+                grid.DataSource = reservierungen;
+
+                erstellen.Visible = false;
+            }
             else if (selectedItem == "Statistik erstellen")
             {
                 grid.DataSource = null;
@@ -92,6 +101,21 @@ namespace Bibliothek.Admin
             return strafen;
         }
 
+        private DataTable Reservierung()
+        {
+            string query =
+                "SELECT Benutzer.Vorname || ' ' || Benutzer.Name AS Kunde, " +
+                "Bücher.Titel, " +
+                "Reservierungen.Reservierungsdatum " +
+                "FROM Reservierungen " +
+                "JOIN Bücher ON Reservierungen.BuchID = Bücher.BuchID " +
+                "JOIN Benutzer ON Reservierungen.BenutzerID = Benutzer.BenutzerID";
+
+            DataTable reservierungen = Database.ExecuteQuery(query);
+
+            return reservierungen;
+        }
+
         private DataTable Nachrichten()
         {
             string query =
@@ -111,6 +135,7 @@ namespace Bibliothek.Admin
             DataTable bücher = Bücher();
             DataTable strafen = Strafen();
             DataTable nachrichten = Nachrichten();
+            DataTable reservierungen = Reservierung();
 
             // SaveFileDialog verwenden
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
@@ -139,6 +164,10 @@ namespace Bibliothek.Admin
                         // Tabelle "Nachrichten" hinzufügen
                         ExcelWorksheet sheetNachrichten = package.Workbook.Worksheets.Add("Nachrichten");
                         sheetNachrichten.Cells["A1"].LoadFromDataTable(nachrichten, true, TableStyles.Medium2);
+
+                        // Tabelle "Nachrichten" hinzufügen
+                        ExcelWorksheet sheetReservierungen = package.Workbook.Worksheets.Add("Reservierungen");
+                        sheetReservierungen.Cells["A1"].LoadFromDataTable(reservierungen, true, TableStyles.Medium2);
 
                         // Datei speichern
                         FileInfo fileInfo = new FileInfo(filePath);

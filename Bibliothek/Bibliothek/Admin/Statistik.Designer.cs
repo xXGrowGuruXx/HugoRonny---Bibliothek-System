@@ -67,7 +67,7 @@
             // statistik_Optionen
             // 
             statistik_Optionen.FormattingEnabled = true;
-            statistik_Optionen.Items.AddRange(new object[] { "Bücher", "Strafen", "Nachrichten", "Statistik erstellen" });
+            statistik_Optionen.Items.AddRange(new object[] { "Bücher", "Strafen", "Nachrichten", "Reservierungen", "Statistik erstellen" });
             statistik_Optionen.Location = new Point(362, 92);
             statistik_Optionen.Name = "statistik_Optionen";
             statistik_Optionen.Size = new Size(312, 36);
