@@ -20,6 +20,7 @@ namespace Bibliothek.Mitarbeiter
         public Mitarbeiter_Kunden()
         {
             InitializeComponent();
+            this.ClientSize = new System.Drawing.Size(800,600);
         }
 
         private void Mitarbeiter_Kunden_Load(object sender, EventArgs e)
