@@ -310,10 +310,9 @@
             // 
             // Mitarbeiter_Kunden
             // 
-            AutoScaleDimensions = new SizeF(120F, 120F);
-            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
-            ClientSize = new Size(782, 553);
+            ClientSize = new Size(800, 600);
             Controls.Add(kunden_Ausgeliehen);
             Controls.Add(kunden_Reservierungen);
             Controls.Add(kunden_Zurueck);
