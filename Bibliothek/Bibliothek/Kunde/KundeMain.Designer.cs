@@ -62,6 +62,8 @@
             Kunde_Suche.TabIndex = 7;
             Kunde_Suche.Text = "Büchersuche";
             Kunde_Suche.UseVisualStyleBackColor = false;
+            Kunde_Suche.MouseEnter += kunde_Buttons_MouseEnter;
+            Kunde_Suche.MouseLeave += kunde_Buttons_MouseLeave;
             // 
             // Kunde_Rueckgabe
             // 
@@ -76,6 +78,8 @@
             Kunde_Rueckgabe.TabIndex = 8;
             Kunde_Rueckgabe.Text = "Rückgabe";
             Kunde_Rueckgabe.UseVisualStyleBackColor = false;
+            Kunde_Rueckgabe.MouseEnter += kunde_Buttons_MouseEnter;
+            Kunde_Rueckgabe.MouseLeave += kunde_Buttons_MouseLeave;
             // 
             // Kunde_Reservierungen
             // 
@@ -90,6 +94,8 @@
             Kunde_Reservierungen.TabIndex = 9;
             Kunde_Reservierungen.Text = "Reservierungen";
             Kunde_Reservierungen.UseVisualStyleBackColor = false;
+            Kunde_Reservierungen.MouseEnter += kunde_Buttons_MouseEnter;
+            Kunde_Reservierungen.MouseLeave += kunde_Buttons_MouseLeave;
             // 
             // Kunde_Abmelden
             // 
@@ -104,6 +110,8 @@
             Kunde_Abmelden.TabIndex = 10;
             Kunde_Abmelden.Text = "Abmelden";
             Kunde_Abmelden.UseVisualStyleBackColor = false;
+            Kunde_Abmelden.MouseEnter += kunde_Buttons_MouseEnter;
+            Kunde_Abmelden.MouseLeave += kunde_Buttons_MouseLeave;
             // 
             // Kunde_Strafen
             // 
@@ -118,6 +126,8 @@
             Kunde_Strafen.TabIndex = 11;
             Kunde_Strafen.Text = "Strafen";
             Kunde_Strafen.UseVisualStyleBackColor = false;
+            Kunde_Strafen.MouseEnter += kunde_Buttons_MouseEnter;
+            Kunde_Strafen.MouseLeave += kunde_Buttons_MouseLeave;
             // 
             // KundeMain
             // 
