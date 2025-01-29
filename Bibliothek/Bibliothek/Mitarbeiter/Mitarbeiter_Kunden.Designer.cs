@@ -48,6 +48,7 @@
             kunden_Zurueck = new Button();
             kunden_Reservierungen = new Button();
             kunden_Ausgeliehen = new Button();
+            Kunden_Testlabel = new Label();
             SuspendLayout();
             // 
             // kunden_Seitenname
@@ -288,12 +289,22 @@
             kunden_Ausgeliehen.MouseEnter += mitarbeiter_Kunden_MouseEnter;
             kunden_Ausgeliehen.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
+            // Kunden_Testlabel
+            // 
+            Kunden_Testlabel.AutoSize = true;
+            Kunden_Testlabel.Location = new Point(517, 31);
+            Kunden_Testlabel.Name = "Kunden_Testlabel";
+            Kunden_Testlabel.Size = new Size(52, 15);
+            Kunden_Testlabel.TabIndex = 28;
+            Kunden_Testlabel.Text = "Testlabel";
+            // 
             // Mitarbeiter_Kunden
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
             ClientSize = new Size(784, 561);
+            Controls.Add(Kunden_Testlabel);
             Controls.Add(kunden_Ausgeliehen);
             Controls.Add(kunden_Reservierungen);
             Controls.Add(kunden_Zurueck);
@@ -346,5 +357,6 @@
         private Button kunden_Zurueck;
         private Button kunden_Reservierungen;
         private Button kunden_Ausgeliehen;
+        private Label Kunden_Testlabel;
     }
 }
