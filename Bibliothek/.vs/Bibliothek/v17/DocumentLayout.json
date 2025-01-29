@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|solutionrelative:bibliothek\\mitarbeiter\\mitarbeiter_kunden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|c:\\users\\ronny\\documents\\github\\bibliothek-system\\bibliothek\\bibliothek\\mitarbeiter\\mitarbeiter_autoren.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\bibliothek\\mitarbeiter\\mitarbeiter_autoren.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|solutionrelative:bibliothek\\mitarbeiter\\mitarbeiter_autoren.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|c:\\users\\ronny\\documents\\github\\bibliothek-system\\bibliothek\\bibliothek\\admin\\mitarbeiterhandling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\bibliothek\\admin\\mitarbeiterhandling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|solutionrelative:bibliothek\\admin\\mitarbeiterhandling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|c:\\users\\ronny\\documents\\github\\bibliothek-system\\bibliothek\\bibliothek\\admin\\adminmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\bibliothek\\admin\\adminmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|solutionrelative:bibliothek\\admin\\adminmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -45,8 +45,7 @@
               "ToolTip": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Mitarbeiter\\Mitarbeiter_Autoren.cs [Entwurf]",
               "RelativeToolTip": "Bibliothek\\Mitarbeiter\\Mitarbeiter_Autoren.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T10:04:35.488Z",
-              "EditorCaption": " [Entwurf]"
+              "WhenOpened": "2025-01-29T10:04:35.488Z"
             },
             {
               "$type": "Document",
@@ -57,8 +56,7 @@
               "ToolTip": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Admin\\AdminMain.cs [Entwurf]",
               "RelativeToolTip": "Bibliothek\\Admin\\AdminMain.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T10:04:11.857Z",
-              "EditorCaption": " [Entwurf]"
+              "WhenOpened": "2025-01-29T10:04:11.857Z"
             },
             {
               "$type": "Document",
@@ -69,8 +67,7 @@
               "ToolTip": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Admin\\MitarbeiterHandling.cs [Entwurf]",
               "RelativeToolTip": "Bibliothek\\Admin\\MitarbeiterHandling.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T10:03:54.847Z",
-              "EditorCaption": " [Entwurf]"
+              "WhenOpened": "2025-01-29T10:03:54.847Z"
             },
             {
               "$type": "Document",

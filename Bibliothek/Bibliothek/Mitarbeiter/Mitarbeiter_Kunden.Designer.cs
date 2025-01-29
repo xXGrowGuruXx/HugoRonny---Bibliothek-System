@@ -199,8 +199,7 @@
             // 
             // Mitarbeiter_Kunden
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
-            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
             ClientSize = new Size(784, 561);
             Controls.Add(kunden_Ausgeliehen);
