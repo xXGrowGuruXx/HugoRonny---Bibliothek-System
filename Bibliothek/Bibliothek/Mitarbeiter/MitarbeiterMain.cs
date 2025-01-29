@@ -16,8 +16,8 @@ namespace Bibliothek.Mitarbeiter
         private static MitarbeiterMain instance;
 
         public static MitarbeiterMain GetInstance()
-        { 
-            return instance; 
+        {
+            return instance;
         }
 
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
@@ -73,6 +73,32 @@ namespace Bibliothek.Mitarbeiter
             }
         }
 
-        
+        private void mitarbeiter_Kunden_Click(object sender, EventArgs e)
+        {
+            Mitarbeiter_Kunden mitarbeiter_Kunden = new Mitarbeiter_Kunden();
+            mitarbeiter_Kunden.Show();
+            this.Hide();
+        }
+
+        private void mitarbeiter_Bücher_Click(object sender, EventArgs e)
+        {
+            Mitarbeiter_Buecher mitarbeiter_Buecher = new Mitarbeiter_Buecher();
+            mitarbeiter_Buecher.Show();
+            this.Hide();
+        }
+
+        private void mitarbeiter_Autoren_Click(object sender, EventArgs e)
+        {
+            Mitarbeiter_Autoren mitarbeiter_Autoren = new Mitarbeiter_Autoren();
+            mitarbeiter_Autoren.Show();
+            this.Hide();
+        }
+
+        private void mitarbeiter_Genres_Click(object sender, EventArgs e)
+        {
+            Mitarbeiter_Genre mitarbeiter_Genre = new Mitarbeiter_Genre();
+            mitarbeiter_Genre.Show();
+            this.Hide();
+        }
     }
 }

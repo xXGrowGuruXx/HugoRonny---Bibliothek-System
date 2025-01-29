@@ -68,8 +68,8 @@ namespace Bibliothek.Mitarbeiter
             }
             else if (comboBox != null)
             {
-                kunden_Auswahl_neu.ForeColor = Color.Black;
-                kunden_Auswahl_neu.BackColor = Color.FromArgb(128, Color.White);
+                kunden_Auswahl.ForeColor = Color.Black;
+                kunden_Auswahl.BackColor = Color.FromArgb(128, Color.White);
             }
             else if (textBox != null)
             {
@@ -119,8 +119,8 @@ namespace Bibliothek.Mitarbeiter
             }
             else if (comboBox != null)
             {
-                kunden_Auswahl_neu.ForeColor = Color.White;
-                kunden_Auswahl_neu.BackColor = Color.FromArgb(0);
+                kunden_Auswahl.ForeColor = Color.White;
+                kunden_Auswahl.BackColor = Color.FromArgb(0);
             }
             else if (textBox != null)
             {
