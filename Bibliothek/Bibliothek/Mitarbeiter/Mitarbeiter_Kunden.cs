@@ -55,7 +55,7 @@ namespace Bibliothek.Mitarbeiter
             this.Close();
         }
 
-        private void mitarbeiter_Kunden_MouseEnter(object sender, EventArgs e) 
+        private void mitarbeiter_Kunden_MouseEnter(object sender, EventArgs e)
         {
             ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
@@ -157,5 +157,9 @@ namespace Bibliothek.Mitarbeiter
             }
         }
 
+        private void kunden_Reservierungen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

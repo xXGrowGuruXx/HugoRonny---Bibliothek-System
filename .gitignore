@@ -403,4 +403,4 @@ FodyWeavers.xsd
 *.user
 *.v2
 /Bibliothek/Bibliothek/obj
-/Bibliothek/Bibliothek/obj
+/Bibliothek/.vs
