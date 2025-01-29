@@ -50,7 +50,6 @@
             mitarbeiter_Kunden.TabIndex = 0;
             mitarbeiter_Kunden.Text = "Kunden";
             mitarbeiter_Kunden.UseVisualStyleBackColor = false;
-            mitarbeiter_Kunden.Click += mitarbeiter_Kunden_Click;
             mitarbeiter_Kunden.MouseEnter += mitarbeiter_Buttons_MouseEnter;
             mitarbeiter_Kunden.MouseLeave += mitarbeiter_Buttons_MouseLeave;
             // 
@@ -67,7 +66,6 @@
             mitarbeiter_Bücher.TabIndex = 1;
             mitarbeiter_Bücher.Text = "Bücher";
             mitarbeiter_Bücher.UseVisualStyleBackColor = false;
-            mitarbeiter_Bücher.Click += mitarbeiter_Bücher_Click;
             mitarbeiter_Bücher.MouseEnter += mitarbeiter_Buttons_MouseEnter;
             mitarbeiter_Bücher.MouseLeave += mitarbeiter_Buttons_MouseLeave;
             // 
@@ -84,7 +82,6 @@
             mitarbeiter_Autoren.TabIndex = 2;
             mitarbeiter_Autoren.Text = "Autoren";
             mitarbeiter_Autoren.UseVisualStyleBackColor = false;
-            mitarbeiter_Autoren.Click += mitarbeiter_Autoren_Click;
             mitarbeiter_Autoren.MouseEnter += mitarbeiter_Buttons_MouseEnter;
             mitarbeiter_Autoren.MouseLeave += mitarbeiter_Buttons_MouseLeave;
             // 
@@ -101,7 +98,6 @@
             mitarbeiter_Genres.TabIndex = 3;
             mitarbeiter_Genres.Text = "Genres";
             mitarbeiter_Genres.UseVisualStyleBackColor = false;
-            mitarbeiter_Genres.Click += mitarbeiter_Genres_Click;
             mitarbeiter_Genres.MouseEnter += mitarbeiter_Buttons_MouseEnter;
             mitarbeiter_Genres.MouseLeave += mitarbeiter_Buttons_MouseLeave;
             // 

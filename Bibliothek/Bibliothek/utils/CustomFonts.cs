@@ -23,15 +23,11 @@ namespace Bibliothek.utils
             {
                 LoadFontFromResource(font);
             }
-
         }
-
-        [DllImport("gdi32.dll")]
-        private static extern int AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, ref uint pcFonts);
 
         private static void LoadFontFromResource(string fontFileName)
         {
-            string resourceName = $"Bibliothek.Resources.{fontFileName}";
+            string resourceName = $"Bibliothek.Resources.{fontFileName}"; // Passe den Namespace an
 
             using (Stream fontStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
             {
@@ -47,11 +43,6 @@ namespace Bibliothek.utils
                 Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
 
                 _fontCollection.AddMemoryFont(fontPtr, fontData.Length);
-
-                // Windows mitteilen, dass eine neue Schrift geladen wurde
-                uint dummy = 0;
-                AddFontMemResourceEx(fontPtr, (uint)fontData.Length, IntPtr.Zero, ref dummy);
-
                 Marshal.FreeCoTaskMem(fontPtr);
             }
         }
@@ -65,10 +56,7 @@ namespace Bibliothek.utils
                 throw new Exception($"Die Schriftart {fontName} ist nicht in der Sammlung geladen.");
             }
 
-            Font customFont = new Font(fontFamily, fontSize, style); 
-            GC.KeepAlive(customFont); 
-            // Sicherstellen, dass die Sammlung nicht vorzeitig aufgeräumt wird
-            return customFont;
+            return new Font(fontFamily, fontSize, style);
         }
     }
 }
