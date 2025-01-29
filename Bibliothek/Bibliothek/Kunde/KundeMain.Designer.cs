@@ -33,6 +33,7 @@
             Kunde_Rueckgabe = new Button();
             Kunde_Reservierungen = new Button();
             Kunde_Abmelden = new Button();
+            Kunde_Strafen = new Button();
             SuspendLayout();
             // 
             // KundenHUB
@@ -41,7 +42,7 @@
             KundenHUB.BackColor = Color.Transparent;
             KundenHUB.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             KundenHUB.ForeColor = Color.Transparent;
-            KundenHUB.Location = new Point(252, 9);
+            KundenHUB.Location = new Point(282, 9);
             KundenHUB.Name = "KundenHUB";
             KundenHUB.Size = new Size(223, 37);
             KundenHUB.TabIndex = 6;
@@ -68,7 +69,7 @@
             Kunde_Rueckgabe.FlatStyle = FlatStyle.Popup;
             Kunde_Rueckgabe.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Kunde_Rueckgabe.ForeColor = SystemColors.ButtonHighlight;
-            Kunde_Rueckgabe.Location = new Point(231, 190);
+            Kunde_Rueckgabe.Location = new Point(231, 185);
             Kunde_Rueckgabe.Margin = new Padding(0);
             Kunde_Rueckgabe.Name = "Kunde_Rueckgabe";
             Kunde_Rueckgabe.Size = new Size(322, 55);
@@ -82,7 +83,7 @@
             Kunde_Reservierungen.FlatStyle = FlatStyle.Popup;
             Kunde_Reservierungen.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Kunde_Reservierungen.ForeColor = SystemColors.ButtonHighlight;
-            Kunde_Reservierungen.Location = new Point(231, 303);
+            Kunde_Reservierungen.Location = new Point(231, 292);
             Kunde_Reservierungen.Margin = new Padding(0);
             Kunde_Reservierungen.Name = "Kunde_Reservierungen";
             Kunde_Reservierungen.Size = new Size(322, 55);
@@ -104,12 +105,27 @@
             Kunde_Abmelden.Text = "Abmelden";
             Kunde_Abmelden.UseVisualStyleBackColor = false;
             // 
+            // Kunde_Strafen
+            // 
+            Kunde_Strafen.BackColor = Color.Transparent;
+            Kunde_Strafen.FlatStyle = FlatStyle.Popup;
+            Kunde_Strafen.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Kunde_Strafen.ForeColor = SystemColors.ButtonHighlight;
+            Kunde_Strafen.Location = new Point(231, 389);
+            Kunde_Strafen.Margin = new Padding(0);
+            Kunde_Strafen.Name = "Kunde_Strafen";
+            Kunde_Strafen.Size = new Size(322, 55);
+            Kunde_Strafen.TabIndex = 11;
+            Kunde_Strafen.Text = "Strafen";
+            Kunde_Strafen.UseVisualStyleBackColor = false;
+            // 
             // KundeMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
             ClientSize = new Size(784, 561);
+            Controls.Add(Kunde_Strafen);
             Controls.Add(Kunde_Abmelden);
             Controls.Add(Kunde_Reservierungen);
             Controls.Add(Kunde_Rueckgabe);
@@ -130,5 +146,6 @@
         private Button Kunde_Rueckgabe;
         private Button Kunde_Reservierungen;
         private Button Kunde_Abmelden;
+        private Button Kunde_Strafen;
     }
 }
