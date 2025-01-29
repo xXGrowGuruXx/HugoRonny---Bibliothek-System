@@ -41,6 +41,7 @@
             kunden_Zurueck = new Button();
             kunden_Reservierungen = new Button();
             kunden_Ausgeliehen = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // kunden_Seitenname
@@ -52,7 +53,7 @@
             kunden_Seitenname.Location = new Point(288, 10);
             kunden_Seitenname.Margin = new Padding(2, 0, 2, 0);
             kunden_Seitenname.Name = "kunden_Seitenname";
-            kunden_Seitenname.Size = new Size(174, 46);
+            kunden_Seitenname.Size = new Size(143, 37);
             kunden_Seitenname.TabIndex = 6;
             kunden_Seitenname.Text = "Kunden ";
             kunden_Seitenname.TextAlign = ContentAlignment.MiddleCenter;
@@ -66,7 +67,7 @@
             kunden_Label_Username.Location = new Point(46, 204);
             kunden_Label_Username.Margin = new Padding(2, 0, 2, 0);
             kunden_Label_Username.Name = "kunden_Label_Username";
-            kunden_Label_Username.Size = new Size(110, 25);
+            kunden_Label_Username.Size = new Size(91, 20);
             kunden_Label_Username.TabIndex = 8;
             kunden_Label_Username.Text = "Username";
             // 
@@ -76,7 +77,7 @@
             kunden_Username.Location = new Point(181, 198);
             kunden_Username.Margin = new Padding(2, 3, 2, 3);
             kunden_Username.Name = "kunden_Username";
-            kunden_Username.Size = new Size(230, 30);
+            kunden_Username.Size = new Size(230, 26);
             kunden_Username.TabIndex = 9;
             kunden_Username.TextAlign = HorizontalAlignment.Center;
             kunden_Username.MouseEnter += mitarbeiter_Kunden_MouseEnter;
@@ -88,7 +89,7 @@
             kunden_Auswahl_neu.Location = new Point(46, 158);
             kunden_Auswahl_neu.Margin = new Padding(2, 3, 2, 3);
             kunden_Auswahl_neu.Name = "kunden_Auswahl_neu";
-            kunden_Auswahl_neu.Size = new Size(365, 28);
+            kunden_Auswahl_neu.Size = new Size(365, 23);
             kunden_Auswahl_neu.TabIndex = 10;
             kunden_Auswahl_neu.Text = "Kunde auswählen";
             kunden_Auswahl_neu.MouseEnter += mitarbeiter_Kunden_MouseEnter;
@@ -103,7 +104,7 @@
             kunden_Label_Name.Location = new Point(46, 258);
             kunden_Label_Name.Margin = new Padding(2, 0, 2, 0);
             kunden_Label_Name.Name = "kunden_Label_Name";
-            kunden_Label_Name.Size = new Size(68, 25);
+            kunden_Label_Name.Size = new Size(55, 20);
             kunden_Label_Name.TabIndex = 11;
             kunden_Label_Name.Text = "Name";
             // 
@@ -116,7 +117,7 @@
             kunden_Label_Vorname.Location = new Point(46, 309);
             kunden_Label_Vorname.Margin = new Padding(2, 0, 2, 0);
             kunden_Label_Vorname.Name = "kunden_Label_Vorname";
-            kunden_Label_Vorname.Size = new Size(99, 25);
+            kunden_Label_Vorname.Size = new Size(81, 20);
             kunden_Label_Vorname.TabIndex = 12;
             kunden_Label_Vorname.Text = "Vorname";
             // 
@@ -126,7 +127,7 @@
             kunden_Name.Location = new Point(181, 251);
             kunden_Name.Margin = new Padding(2, 3, 2, 3);
             kunden_Name.Name = "kunden_Name";
-            kunden_Name.Size = new Size(230, 30);
+            kunden_Name.Size = new Size(230, 26);
             kunden_Name.TabIndex = 16;
             kunden_Name.TextAlign = HorizontalAlignment.Center;
             kunden_Name.MouseEnter += mitarbeiter_Kunden_MouseEnter;
@@ -138,7 +139,7 @@
             kunden_Vorname.Location = new Point(181, 302);
             kunden_Vorname.Margin = new Padding(2, 3, 2, 3);
             kunden_Vorname.Name = "kunden_Vorname";
-            kunden_Vorname.Size = new Size(230, 30);
+            kunden_Vorname.Size = new Size(230, 26);
             kunden_Vorname.TabIndex = 17;
             kunden_Vorname.TextAlign = HorizontalAlignment.Center;
             kunden_Vorname.MouseEnter += mitarbeiter_Kunden_MouseEnter;
@@ -210,11 +211,21 @@
             kunden_Ausgeliehen.MouseEnter += mitarbeiter_Kunden_MouseEnter;
             kunden_Ausgeliehen.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(323, 381);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 28;
+            label1.Text = "label1";
+            // 
             // Mitarbeiter_Kunden
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
-            ClientSize = new Size(782, 553);
+            ClientSize = new Size(784, 561);
+            Controls.Add(label1);
             Controls.Add(kunden_Ausgeliehen);
             Controls.Add(kunden_Reservierungen);
             Controls.Add(kunden_Zurueck);
@@ -257,5 +268,6 @@
         private Button kunden_Zurueck;
         private Button kunden_Reservierungen;
         private Button kunden_Ausgeliehen;
+        private Label label1;
     }
 }
