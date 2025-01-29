@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|c:\\users\\ronny\\documents\\github\\bibliothek-system\\bibliothek\\bibliothek\\mitarbeiter\\mitarbeiter_kunden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|solutionrelative:bibliothek\\mitarbeiter\\mitarbeiter_kunden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|c:\\users\\ronny\\documents\\github\\bibliothek-system\\bibliothek\\bibliothek\\mitarbeiter\\mitarbeiter_autoren.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|solutionrelative:bibliothek\\mitarbeiter\\mitarbeiter_autoren.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|c:\\users\\ronny\\documents\\github\\bibliothek-system\\bibliothek\\bibliothek\\admin\\mitarbeiterhandling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|solutionrelative:bibliothek\\admin\\mitarbeiterhandling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|c:\\users\\ronny\\documents\\github\\bibliothek-system\\bibliothek\\bibliothek\\admin\\adminmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C72297CA-AA8B-4043-BCEA-8D882A1E2BB9}|Bibliothek\\Bibliothek.csproj|solutionrelative:bibliothek\\admin\\adminmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Mitarbeiter_Autoren.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Mitarbeiter\\Mitarbeiter_Autoren.cs",
+              "RelativeDocumentMoniker": "Bibliothek\\Mitarbeiter\\Mitarbeiter_Autoren.cs",
+              "ToolTip": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Mitarbeiter\\Mitarbeiter_Autoren.cs [Entwurf]",
+              "RelativeToolTip": "Bibliothek\\Mitarbeiter\\Mitarbeiter_Autoren.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T10:04:35.488Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminMain.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Admin\\AdminMain.cs",
+              "RelativeDocumentMoniker": "Bibliothek\\Admin\\AdminMain.cs",
+              "ToolTip": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Admin\\AdminMain.cs [Entwurf]",
+              "RelativeToolTip": "Bibliothek\\Admin\\AdminMain.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T10:04:11.857Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MitarbeiterHandling.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Admin\\MitarbeiterHandling.cs",
+              "RelativeDocumentMoniker": "Bibliothek\\Admin\\MitarbeiterHandling.cs",
+              "ToolTip": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Admin\\MitarbeiterHandling.cs [Entwurf]",
+              "RelativeToolTip": "Bibliothek\\Admin\\MitarbeiterHandling.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T10:03:54.847Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Mitarbeiter_Kunden.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Mitarbeiter\\Mitarbeiter_Kunden.cs",
+              "RelativeDocumentMoniker": "Bibliothek\\Mitarbeiter\\Mitarbeiter_Kunden.cs",
+              "ToolTip": "C:\\Users\\Ronny\\Documents\\GitHub\\Bibliothek-System\\Bibliothek\\Bibliothek\\Mitarbeiter\\Mitarbeiter_Kunden.cs [Entwurf]",
+              "RelativeToolTip": "Bibliothek\\Mitarbeiter\\Mitarbeiter_Kunden.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T10:02:55.195Z",
+              "EditorCaption": " [Entwurf]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
