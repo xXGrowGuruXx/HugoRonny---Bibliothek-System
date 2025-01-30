@@ -23,34 +23,35 @@ namespace Bibliothek.Kunde
 
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
         static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
-        static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
+        static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
         public KundeMain()
         {
             instance = this;
             InitializeComponent();
         }
 
-        private void Kunde_Load(object sender, EventArgs e)
+        private void KundeMain_Load(object sender, EventArgs e)
         {
             KundenHUB.Font = überschrift;
             Kunde_Suche.Font = button;
             Kunde_Rueckgabe.Font = button;
             Kunde_Reservierungen.Font = button;
+            Kunde_Strafen.Font = button;
             Kunde_Abmelden.Font = button;
         }
 
-        private void mitarbeiter_Kunden(object sender, FormClosingEventArgs e)
+        private void KundenMain(object sender, FormClosingEventArgs e)
         {
             MitarbeiterMain mitarbeiterMain = MitarbeiterMain.GetInstance();
             mitarbeiterMain.Show();
         }
 
-        private void mitarbeiter_Kunden_Abbrechen_Click(object sender, EventArgs e)
+        private void KundeMain_Abbrechen_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void kunde_Buttons_MouseEnter(object sender, EventArgs e)
+        private void kundeMain_Buttons_MouseEnter(object sender, EventArgs e)
         {
             // Casten des Senders zu einem Button
             Button? button = sender as Button;
@@ -62,7 +63,7 @@ namespace Bibliothek.Kunde
             }
         }
 
-        private void kunde_Buttons_MouseLeave(object sender, EventArgs e)
+        private void kundeMain_Buttons_MouseLeave(object sender, EventArgs e)
         {
             // Casten des Senders zu einem Button
             Button? button = sender as Button;
