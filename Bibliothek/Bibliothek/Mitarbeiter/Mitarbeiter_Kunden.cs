@@ -29,17 +29,10 @@ namespace Bibliothek.Mitarbeiter
             kunden_Label_Name.Font = label;
             kunden_Label_Username.Font = label;
             kunden_Label_Vorname.Font = label;
-            kunden_Label_Strasse.Font = label;
-            kunden_Label_Ort.Font = label;
-            kunden_Label_PLZ.Font = label;
             kunden_Username.Font = label;
             kunden_Name.Font = label;
             kunden_Vorname.Font = label;
-            kunden_Strasse.Font = label;
-            kunden_Ort.Font = label;
-            kunden_PLZ.Font = label;
             kunden_Speichern.Font = button;
-            kunden_deaktivieren.Font = button;
             kunden_Ausgeliehen.Font = button;
             kunden_Reservierungen.Font = button;
             kunden_Zurueck.Font = button;
@@ -89,21 +82,6 @@ namespace Bibliothek.Mitarbeiter
                     kunden_Vorname.ForeColor = Color.Black;
                     kunden_Vorname.BackColor = Color.FromArgb(128, Color.White);
                 }
-                else if (textBox == kunden_Strasse)
-                {
-                    kunden_Strasse.ForeColor = Color.Black;
-                    kunden_Strasse.BackColor = Color.FromArgb(128, Color.White);
-                }
-                else if (textBox == kunden_Ort)
-                {
-                    kunden_Ort.ForeColor = Color.Black;
-                    kunden_Ort.BackColor = Color.FromArgb(128, Color.White);
-                }
-                else if (textBox == kunden_PLZ)
-                {
-                    kunden_PLZ.ForeColor = Color.Black;
-                    kunden_PLZ.BackColor = Color.FromArgb(128, Color.White);
-                }
             }
         }
 
@@ -139,21 +117,6 @@ namespace Bibliothek.Mitarbeiter
                 {
                     kunden_Vorname.ForeColor = Color.White;
                     kunden_Vorname.BackColor = Color.FromArgb(0);
-                }
-                else if (textBox == kunden_Strasse)
-                {
-                    kunden_Strasse.ForeColor = Color.White;
-                    kunden_Strasse.BackColor = Color.FromArgb(0);
-                }
-                else if (textBox == kunden_Ort)
-                {
-                    kunden_Ort.ForeColor = Color.White;
-                    kunden_Ort.BackColor = Color.FromArgb(0);
-                }
-                else if (textBox == kunden_PLZ)
-                {
-                    kunden_PLZ.ForeColor = Color.White;
-                    kunden_PLZ.BackColor = Color.FromArgb(0);
                 }
             }
         }

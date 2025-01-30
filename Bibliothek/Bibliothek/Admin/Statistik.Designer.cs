@@ -56,11 +56,11 @@
             // 
             statistik_Name.AutoSize = true;
             statistik_Name.BackColor = Color.Transparent;
-            statistik_Name.Font = new Font("Vacaciones", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            statistik_Name.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             statistik_Name.ForeColor = SystemColors.ButtonHighlight;
             statistik_Name.Location = new Point(284, 20);
             statistik_Name.Name = "statistik_Name";
-            statistik_Name.Size = new Size(205, 55);
+            statistik_Name.Size = new Size(129, 37);
             statistik_Name.TabIndex = 1;
             statistik_Name.Text = "Statistik";
             // 
@@ -70,7 +70,7 @@
             statistik_Optionen.Items.AddRange(new object[] { "Bücher", "Strafen", "Nachrichten", "Reservierungen", "Statistik erstellen" });
             statistik_Optionen.Location = new Point(362, 92);
             statistik_Optionen.Name = "statistik_Optionen";
-            statistik_Optionen.Size = new Size(312, 36);
+            statistik_Optionen.Size = new Size(312, 29);
             statistik_Optionen.TabIndex = 2;
             statistik_Optionen.SelectedIndexChanged += statistik_Optionen_SelectedIndexChanged;
             // 
@@ -78,11 +78,11 @@
             // 
             statistik_Label_Optionen.AutoSize = true;
             statistik_Label_Optionen.BackColor = Color.Transparent;
-            statistik_Label_Optionen.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            statistik_Label_Optionen.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             statistik_Label_Optionen.ForeColor = SystemColors.ButtonFace;
             statistik_Label_Optionen.Location = new Point(199, 92);
             statistik_Label_Optionen.Name = "statistik_Label_Optionen";
-            statistik_Label_Optionen.Size = new Size(121, 41);
+            statistik_Label_Optionen.Size = new Size(85, 29);
             statistik_Label_Optionen.TabIndex = 3;
             statistik_Label_Optionen.Text = "Option";
             // 
@@ -90,7 +90,7 @@
             // 
             statistik_Erstellen.BackColor = Color.Transparent;
             statistik_Erstellen.FlatStyle = FlatStyle.Popup;
-            statistik_Erstellen.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            statistik_Erstellen.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             statistik_Erstellen.ForeColor = Color.White;
             statistik_Erstellen.Location = new Point(67, 484);
             statistik_Erstellen.Name = "statistik_Erstellen";
@@ -107,7 +107,7 @@
             // 
             statistik_Abbrechen.BackColor = Color.Transparent;
             statistik_Abbrechen.FlatStyle = FlatStyle.Popup;
-            statistik_Abbrechen.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            statistik_Abbrechen.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             statistik_Abbrechen.ForeColor = Color.White;
             statistik_Abbrechen.Location = new Point(457, 484);
             statistik_Abbrechen.Name = "statistik_Abbrechen";
@@ -121,10 +121,15 @@
             // 
             // Statistik
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(9F, 21F);
             BackgroundImage = Properties.Resources.Hintergrund800x600;
-            ClientSize = new Size(782, 553);
+            AutoScaleMode = AutoScaleMode.None;
+            ClientSize = new Size(800, 600);
+            Size = new Size(800, 600);
+            MaximizeBox = false;
+            MaximumSize = new Size(800, 600);
+            MinimizeBox = false;
+            MinimumSize = new Size(800, 600);
             Controls.Add(statistik_Abbrechen);
             Controls.Add(statistik_Erstellen);
             Controls.Add(statistik_Label_Optionen);
@@ -135,8 +140,6 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
-            MaximizeBox = false;
-            MinimizeBox = false;
             Name = "Statistik";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Statistik";

@@ -42,11 +42,11 @@
             // 
             login_Name.AutoSize = true;
             login_Name.BackColor = Color.Transparent;
-            login_Name.Font = new Font("Vacaciones", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            login_Name.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             login_Name.ForeColor = Color.White;
             login_Name.Location = new Point(101, 9);
             login_Name.Name = "login_Name";
-            login_Name.Size = new Size(232, 55);
+            login_Name.Size = new Size(155, 37);
             login_Name.TabIndex = 0;
             login_Name.Text = "Bibliothek";
             // 
@@ -54,11 +54,11 @@
             // 
             login_Label_Username.AutoSize = true;
             login_Label_Username.BackColor = Color.Transparent;
-            login_Label_Username.Font = new Font("Vacaciones", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            login_Label_Username.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             login_Label_Username.ForeColor = SystemColors.ButtonHighlight;
             login_Label_Username.Location = new Point(13, 66);
             login_Label_Username.Name = "login_Label_Username";
-            login_Label_Username.Size = new Size(123, 28);
+            login_Label_Username.Size = new Size(91, 20);
             login_Label_Username.TabIndex = 1;
             login_Label_Username.Text = "Username";
             // 
@@ -66,11 +66,11 @@
             // 
             login_Label_Password.AutoSize = true;
             login_Label_Password.BackColor = Color.Transparent;
-            login_Label_Password.Font = new Font("Vacaciones", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            login_Label_Password.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             login_Label_Password.ForeColor = SystemColors.ButtonHighlight;
             login_Label_Password.Location = new Point(13, 110);
             login_Label_Password.Name = "login_Label_Password";
-            login_Label_Password.Size = new Size(120, 28);
+            login_Label_Password.Size = new Size(86, 20);
             login_Label_Password.TabIndex = 2;
             login_Label_Password.Text = "Password";
             // 
@@ -79,7 +79,7 @@
             login_Username.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             login_Username.Location = new Point(160, 63);
             login_Username.Name = "login_Username";
-            login_Username.Size = new Size(251, 34);
+            login_Username.Size = new Size(251, 29);
             login_Username.TabIndex = 3;
             login_Username.TextAlign = HorizontalAlignment.Center;
             // 
@@ -88,7 +88,7 @@
             login_Password.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             login_Password.Location = new Point(160, 105);
             login_Password.Name = "login_Password";
-            login_Password.Size = new Size(251, 34);
+            login_Password.Size = new Size(251, 29);
             login_Password.TabIndex = 4;
             login_Password.TextAlign = HorizontalAlignment.Center;
             // 
@@ -96,11 +96,11 @@
             // 
             login_RememberMe.AutoSize = true;
             login_RememberMe.BackColor = Color.Transparent;
-            login_RememberMe.Font = new Font("Vacaciones", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            login_RememberMe.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             login_RememberMe.ForeColor = SystemColors.ButtonHighlight;
             login_RememberMe.Location = new Point(13, 162);
             login_RememberMe.Name = "login_RememberMe";
-            login_RememberMe.Size = new Size(189, 32);
+            login_RememberMe.Size = new Size(144, 24);
             login_RememberMe.TabIndex = 6;
             login_RememberMe.Text = "Remember Me";
             login_RememberMe.UseVisualStyleBackColor = false;
@@ -109,7 +109,7 @@
             // 
             login_Login.BackColor = Color.Transparent;
             login_Login.FlatStyle = FlatStyle.Flat;
-            login_Login.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            login_Login.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             login_Login.ForeColor = SystemColors.Control;
             login_Login.Location = new Point(251, 153);
             login_Login.Name = "login_Login";
@@ -123,10 +123,15 @@
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(10F, 18F);
             BackgroundImage = Properties.Resources.Hintergrund800x600;
-            ClientSize = new Size(424, 210);
+            AutoScaleMode = AutoScaleMode.None;
+            ClientSize = new Size(450, 250);
+            Size = new Size(450, 250);
+            MaximizeBox = false;
+            MaximumSize = new Size(450, 250);
+            MinimizeBox = false;
+            MinimumSize = new Size(450, 250);
             Controls.Add(login_Login);
             Controls.Add(login_RememberMe);
             Controls.Add(login_Password);
@@ -138,8 +143,6 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
-            MaximizeBox = false;
-            MinimizeBox = false;
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

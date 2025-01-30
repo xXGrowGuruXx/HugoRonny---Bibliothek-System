@@ -116,8 +116,7 @@
             // 
             // Mitarbeiter_Genre
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
             ClientSize = new Size(784, 561);
             Controls.Add(Genre_Zurueck);
@@ -127,8 +126,11 @@
             Controls.Add(Genre_Auswahl_neu);
             Controls.Add(Genre_Seitenname);
             MaximizeBox = false;
+            MaximumSize = new Size(800, 600);
             MinimizeBox = false;
+            MinimumSize = new Size(800, 600);
             Name = "Mitarbeiter_Genre";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Mitarbeiter_Genre";
             FormClosing += mitarbeiter_Genre;
             ResumeLayout(false);

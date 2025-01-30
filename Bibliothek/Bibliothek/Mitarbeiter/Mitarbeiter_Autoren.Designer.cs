@@ -117,8 +117,7 @@
             // 
             // Mitarbeiter_Autoren
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
             ClientSize = new Size(784, 561);
             Controls.Add(Autoren_Zurueck);
@@ -129,8 +128,11 @@
             Controls.Add(Autoren_Seitenname);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MaximumSize = new Size(800, 600);
             MinimizeBox = false;
+            MinimumSize = new Size(800, 600);
             Name = "Mitarbeiter_Autoren";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Mitarbeiter_Autoren";
             FormClosing += mitarbeiter_Autoren;
             ResumeLayout(false);

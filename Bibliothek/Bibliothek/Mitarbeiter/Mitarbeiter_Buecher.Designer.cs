@@ -180,7 +180,7 @@
             buecher_Titel_Autor.Name = "buecher_Titel_Autor";
             buecher_Titel_Autor.Size = new Size(202, 24);
             buecher_Titel_Autor.TabIndex = 35;
-            buecher_Titel_Autor.Text = "buecher_Titel_Autor";
+            buecher_Titel_Autor.Text = "Buch auswählen";
             buecher_Titel_Autor.MouseEnter += mitarbeiter_Buecher_MouseEnter;
             buecher_Titel_Autor.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 
@@ -206,8 +206,7 @@
             // 
             // Mitarbeiter_Buecher
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
             ClientSize = new Size(784, 561);
             Controls.Add(buecher_Genre);
@@ -225,8 +224,11 @@
             Controls.Add(buecher_Titel_Autor);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MaximumSize = new Size(800, 600);
             MinimizeBox = false;
+            MinimumSize = new Size(800, 600);
             Name = "Mitarbeiter_Buecher";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Mitarbeiter_Buecher";
             FormClosing += mitarbeiter_Buecher;
             Load += Mitarbeiter_Buecher_Load;
