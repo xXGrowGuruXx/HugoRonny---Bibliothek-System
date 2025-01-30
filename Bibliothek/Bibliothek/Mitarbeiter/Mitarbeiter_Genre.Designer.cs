@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             Genre_Seitenname = new Label();
-            Genre_Auswahl_neu = new ComboBox();
-            Genre_Label_Genre = new Label();
-            Genre_Name = new TextBox();
+            genre_Auswahl = new ComboBox();
+            genre_Label_Name = new Label();
+            genre_Name = new TextBox();
             Genre_Speichern = new Button();
             Genre_Zurueck = new Button();
             SuspendLayout();
@@ -40,61 +40,63 @@
             // 
             Genre_Seitenname.AutoSize = true;
             Genre_Seitenname.BackColor = Color.Transparent;
-            Genre_Seitenname.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Genre_Seitenname.Font = new Font("Vacaciones", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Genre_Seitenname.ForeColor = Color.Transparent;
-            Genre_Seitenname.Location = new Point(307, 9);
+            Genre_Seitenname.Location = new Point(311, 35);
             Genre_Seitenname.Name = "Genre_Seitenname";
-            Genre_Seitenname.Size = new Size(110, 37);
+            Genre_Seitenname.Size = new Size(170, 65);
             Genre_Seitenname.TabIndex = 8;
             Genre_Seitenname.Text = "Genre";
             Genre_Seitenname.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Genre_Auswahl_neu
+            // genre_Auswahl
             // 
-            Genre_Auswahl_neu.FormattingEnabled = true;
-            Genre_Auswahl_neu.Location = new Point(176, 76);
-            Genre_Auswahl_neu.Name = "Genre_Auswahl_neu";
-            Genre_Auswahl_neu.Size = new Size(399, 23);
-            Genre_Auswahl_neu.TabIndex = 12;
-            Genre_Auswahl_neu.Text = "Genre auswählen";
-            Genre_Auswahl_neu.MouseEnter += mitarbeiter_Genre_MouseEnter;
-            Genre_Auswahl_neu.MouseLeave += mitarbeiter_Genre_MouseLeave;
+            genre_Auswahl.DropDownStyle = ComboBoxStyle.DropDownList;
+            genre_Auswahl.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            genre_Auswahl.FormattingEnabled = true;
+            genre_Auswahl.Location = new Point(146, 174);
+            genre_Auswahl.Name = "genre_Auswahl";
+            genre_Auswahl.Size = new Size(462, 39);
+            genre_Auswahl.TabIndex = 12;
+            genre_Auswahl.MouseEnter += mitarbeiter_Genre_MouseEnter;
+            genre_Auswahl.MouseLeave += mitarbeiter_Genre_MouseLeave;
             // 
-            // Genre_Label_Genre
+            // genre_Label_Name
             // 
-            Genre_Label_Genre.AutoSize = true;
-            Genre_Label_Genre.BackColor = Color.Transparent;
-            Genre_Label_Genre.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Genre_Label_Genre.ForeColor = SystemColors.ButtonHighlight;
-            Genre_Label_Genre.Location = new Point(176, 133);
-            Genre_Label_Genre.Name = "Genre_Label_Genre";
-            Genre_Label_Genre.Size = new Size(59, 20);
-            Genre_Label_Genre.TabIndex = 13;
-            Genre_Label_Genre.Text = "Genre";
+            genre_Label_Name.AutoSize = true;
+            genre_Label_Name.BackColor = Color.Transparent;
+            genre_Label_Name.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            genre_Label_Name.ForeColor = SystemColors.ButtonHighlight;
+            genre_Label_Name.Location = new Point(146, 299);
+            genre_Label_Name.Name = "genre_Label_Name";
+            genre_Label_Name.Size = new Size(104, 39);
+            genre_Label_Name.TabIndex = 13;
+            genre_Label_Name.Text = "Genre";
             // 
-            // Genre_Name
+            // genre_Name
             // 
-            Genre_Name.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Genre_Name.Location = new Point(261, 130);
-            Genre_Name.Name = "Genre_Name";
-            Genre_Name.Size = new Size(314, 26);
-            Genre_Name.TabIndex = 18;
-            Genre_Name.TextAlign = HorizontalAlignment.Center;
-            Genre_Name.MouseEnter += mitarbeiter_Genre_MouseEnter;
-            Genre_Name.MouseLeave += mitarbeiter_Genre_MouseLeave;
+            genre_Name.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            genre_Name.Location = new Point(294, 299);
+            genre_Name.Name = "genre_Name";
+            genre_Name.Size = new Size(314, 38);
+            genre_Name.TabIndex = 18;
+            genre_Name.TextAlign = HorizontalAlignment.Center;
+            genre_Name.MouseEnter += mitarbeiter_Genre_MouseEnter;
+            genre_Name.MouseLeave += mitarbeiter_Genre_MouseLeave;
             // 
             // Genre_Speichern
             // 
             Genre_Speichern.BackColor = Color.Transparent;
             Genre_Speichern.FlatStyle = FlatStyle.Popup;
-            Genre_Speichern.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Genre_Speichern.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Genre_Speichern.ForeColor = SystemColors.Control;
-            Genre_Speichern.Location = new Point(561, 270);
+            Genre_Speichern.Location = new Point(73, 443);
             Genre_Speichern.Name = "Genre_Speichern";
-            Genre_Speichern.Size = new Size(211, 165);
+            Genre_Speichern.Size = new Size(211, 66);
             Genre_Speichern.TabIndex = 25;
             Genre_Speichern.Text = "Speichern";
             Genre_Speichern.UseVisualStyleBackColor = false;
+            Genre_Speichern.Click += Genre_Speichern_Click;
             Genre_Speichern.MouseEnter += mitarbeiter_Genre_MouseEnter;
             Genre_Speichern.MouseLeave += mitarbeiter_Genre_MouseLeave;
             // 
@@ -102,11 +104,11 @@
             // 
             Genre_Zurueck.BackColor = Color.Transparent;
             Genre_Zurueck.FlatStyle = FlatStyle.Popup;
-            Genre_Zurueck.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Genre_Zurueck.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Genre_Zurueck.ForeColor = SystemColors.Control;
-            Genre_Zurueck.Location = new Point(561, 466);
+            Genre_Zurueck.Location = new Point(479, 443);
             Genre_Zurueck.Name = "Genre_Zurueck";
-            Genre_Zurueck.Size = new Size(211, 83);
+            Genre_Zurueck.Size = new Size(211, 66);
             Genre_Zurueck.TabIndex = 27;
             Genre_Zurueck.Text = "Zurück";
             Genre_Zurueck.UseVisualStyleBackColor = false;
@@ -118,12 +120,12 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
-            ClientSize = new Size(784, 561);
+            ClientSize = new Size(782, 553);
             Controls.Add(Genre_Zurueck);
             Controls.Add(Genre_Speichern);
-            Controls.Add(Genre_Name);
-            Controls.Add(Genre_Label_Genre);
-            Controls.Add(Genre_Auswahl_neu);
+            Controls.Add(genre_Name);
+            Controls.Add(genre_Label_Name);
+            Controls.Add(genre_Auswahl);
             Controls.Add(Genre_Seitenname);
             MaximizeBox = false;
             MaximumSize = new Size(800, 600);
@@ -140,9 +142,9 @@
         #endregion
 
         private Label Genre_Seitenname;
-        private ComboBox Genre_Auswahl_neu;
-        private Label Genre_Label_Genre;
-        private TextBox Genre_Name;
+        private ComboBox genre_Auswahl;
+        private Label genre_Label_Name;
+        private TextBox genre_Name;
         private Button Genre_Speichern;
         private Button Genre_Zurueck;
     }

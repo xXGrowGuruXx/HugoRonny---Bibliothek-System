@@ -42,11 +42,11 @@
             // 
             adminMain_Name.AutoSize = true;
             adminMain_Name.BackColor = Color.Transparent;
-            adminMain_Name.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            adminMain_Name.Font = new Font("Vacaciones", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             adminMain_Name.ForeColor = SystemColors.ButtonHighlight;
             adminMain_Name.Location = new Point(266, 31);
             adminMain_Name.Name = "adminMain_Name";
-            adminMain_Name.Size = new Size(187, 37);
+            adminMain_Name.Size = new Size(255, 55);
             adminMain_Name.TabIndex = 0;
             adminMain_Name.Text = "Admin Main";
             // 
@@ -78,7 +78,7 @@
             // 
             adminMain_Logout.BackColor = Color.Transparent;
             adminMain_Logout.FlatStyle = FlatStyle.Popup;
-            adminMain_Logout.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            adminMain_Logout.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             adminMain_Logout.ForeColor = SystemColors.Control;
             adminMain_Logout.Location = new Point(110, 449);
             adminMain_Logout.Name = "adminMain_Logout";
@@ -94,7 +94,7 @@
             // 
             adminMain_Mitarbeiter.BackColor = Color.Transparent;
             adminMain_Mitarbeiter.FlatStyle = FlatStyle.Popup;
-            adminMain_Mitarbeiter.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            adminMain_Mitarbeiter.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             adminMain_Mitarbeiter.ForeColor = SystemColors.Control;
             adminMain_Mitarbeiter.Location = new Point(207, 159);
             adminMain_Mitarbeiter.Name = "adminMain_Mitarbeiter";
@@ -110,7 +110,7 @@
             // 
             adminMain_Statistik.BackColor = Color.Transparent;
             adminMain_Statistik.FlatStyle = FlatStyle.Popup;
-            adminMain_Statistik.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            adminMain_Statistik.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             adminMain_Statistik.ForeColor = SystemColors.Control;
             adminMain_Statistik.Location = new Point(207, 308);
             adminMain_Statistik.Name = "adminMain_Statistik";
@@ -126,7 +126,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
-            ClientSize = new Size(784, 561);
+            ClientSize = new Size(782, 553);
             Controls.Add(adminMain_Statistik);
             Controls.Add(adminMain_Mitarbeiter);
             Controls.Add(adminMain_Logout);
@@ -154,8 +154,6 @@
         #endregion
 
         private Label adminMain_Name;
-        private Button adminMain_Strafen;
-        private Button adminMain_Verliehene_Bücher;
         private Panel panel3;
         private Panel panel1;
         private Panel panel2;

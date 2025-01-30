@@ -13,8 +13,8 @@ namespace Bibliothek.Mitarbeiter
 {
     public partial class Mitarbeiter_Genre : Form
     {
-        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
+        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 28, FontStyle.Regular);
+        static Font label = CustomFonts.GetCustomFont("Vacaciones", 16, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
 
         public Mitarbeiter_Genre()
@@ -25,10 +25,15 @@ namespace Bibliothek.Mitarbeiter
         private void mitarbeiter_Genre_Load(object sender, EventArgs e)
         {
             Genre_Seitenname.Font = überschrift;
-            Genre_Label_Genre.Font = label;
-            Genre_Name.Font = label;
+
+            genre_Label_Name.Font = label;
+            genre_Name.Font = label;
+
             Genre_Speichern.Font = button;
             Genre_Zurueck.Font = button;
+
+            ManageÜbersicht manageÜbersicht = new ManageÜbersicht();
+            manageÜbersicht.LoadGenres(comboBox: genre_Auswahl);
         }
         private void mitarbeiter_Genre(object sender, FormClosingEventArgs e)
         {
@@ -43,7 +48,6 @@ namespace Bibliothek.Mitarbeiter
 
         private void mitarbeiter_Genre_MouseEnter(object sender, EventArgs e)
         {
-            ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
             Button? button = sender as Button;
 
@@ -52,17 +56,12 @@ namespace Bibliothek.Mitarbeiter
                 button.ForeColor = Color.Black;
                 button.BackColor = Color.FromArgb(128, Color.White);
             }
-            else if (comboBox != null)
-            {
-                Genre_Auswahl_neu.ForeColor = Color.Black;
-                Genre_Auswahl_neu.BackColor = Color.FromArgb(128, Color.White);
-            }
             else if (textBox != null)
             {
-                if (textBox == Genre_Name)
+                if (textBox == genre_Name)
                 {
-                    Genre_Name.ForeColor = Color.Black;
-                    Genre_Name.BackColor = Color.FromArgb(128, Color.White);
+                    genre_Label_Name.ForeColor = Color.Black;
+                    genre_Label_Name.BackColor = Color.FromArgb(128, Color.White);
                 }
 
             }
@@ -70,7 +69,6 @@ namespace Bibliothek.Mitarbeiter
 
         private void mitarbeiter_Genre_MouseLeave(object sender, EventArgs e)
         {
-            ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
             Button? button = sender as Button;
 
@@ -79,20 +77,31 @@ namespace Bibliothek.Mitarbeiter
                 button.ForeColor = Color.White;
                 button.BackColor = Color.FromArgb(0);
             }
-            else if (comboBox != null)
-            {
-                Genre_Auswahl_neu.ForeColor = Color.White;
-                Genre_Auswahl_neu.BackColor = Color.FromArgb(0);
-            }
             else if (textBox != null)
             {
-                if (textBox == Genre_Name)
+                if (textBox == genre_Name)
                 {
-                    Genre_Name.ForeColor = Color.White;
-                    Genre_Name.BackColor = Color.FromArgb(0);
+                    genre_Name.ForeColor = Color.White;
+                    genre_Name.BackColor = Color.FromArgb(0);
                 }
 
 
+            }
+        }
+
+        private void Genre_Speichern_Click(object sender, EventArgs e)
+        {
+            if (genre_Name.Text != null)
+            {
+                ManageÜbersicht manageÜbersicht = new ManageÜbersicht();
+                if (genre_Name.Text == "* NEU *")
+                {
+                    manageÜbersicht.CreateNewGenre(genre_Auswahl, genre_Name);
+                }
+                else
+                {
+                    manageÜbersicht.UpdateGenre(genre_Name, comboBox: genre_Auswahl);
+                }
             }
         }
     }

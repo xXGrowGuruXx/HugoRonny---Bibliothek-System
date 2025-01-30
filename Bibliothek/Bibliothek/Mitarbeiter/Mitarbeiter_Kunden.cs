@@ -13,29 +13,39 @@ namespace Bibliothek.Mitarbeiter
 {
     public partial class Mitarbeiter_Kunden : Form
     {
-        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
+        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 28, FontStyle.Regular);
+        static Font label = CustomFonts.GetCustomFont("Vacaciones", 16, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
+
+        private ManageKundenHandling manageKundenHandling;
+
+        private static Mitarbeiter_Kunden instance;
+
+        public static Mitarbeiter_Kunden GetInstance()
+        {
+            return instance;
+        }
 
         public Mitarbeiter_Kunden()
         {
+            instance = this;
             InitializeComponent();
-            this.ClientSize = new System.Drawing.Size(800,600);
+            manageKundenHandling = new ManageKundenHandling();
         }
 
         private void Mitarbeiter_Kunden_Load(object sender, EventArgs e)
         {
             kunden_Seitenname.Font = überschrift;
-            kunden_Label_Name.Font = label;
-            kunden_Label_Username.Font = label;
-            kunden_Label_Vorname.Font = label;
-            kunden_Username.Font = label;
-            kunden_Name.Font = label;
-            kunden_Vorname.Font = label;
-            kunden_Speichern.Font = button;
-            kunden_Ausgeliehen.Font = button;
-            kunden_Reservierungen.Font = button;
-            kunden_Zurueck.Font = button;
+
+            mitarbeiterKunden_Label_Name.Font = label;
+            mitarbeiterKunden_Label_Username.Font = label;
+            mitarbeiterKunden_Label_Vorname.Font = label;
+
+            mitarbeiterKunden_Speichern.Font = button;
+            mitarbeiterKunden_Info.Font = button;
+            mitarbeiterKunden_Zurueck.Font = button;
+
+            manageKundenHandling.LoadKunden(mitarbeiterKunden_List);
         }
 
         private void mitarbeiter_Kunden(object sender, FormClosingEventArgs e)
@@ -44,14 +54,13 @@ namespace Bibliothek.Mitarbeiter
             mitarbeiterMain.Show();
         }
 
-        private void mitarbeiter_Kunden_Abbrechen_Click(object sender, EventArgs e)
+        private void mitarbeiter_Kunden_Zurück_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void mitarbeiter_Kunden_MouseEnter(object sender, EventArgs e)
         {
-            ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
             Button? button = sender as Button;
 
@@ -60,34 +69,33 @@ namespace Bibliothek.Mitarbeiter
                 button.ForeColor = Color.Black;
                 button.BackColor = Color.FromArgb(128, Color.White);
             }
-            else if (comboBox != null)
-            {
-                kunden_Auswahl_neu.ForeColor = Color.Black;
-                kunden_Auswahl_neu.BackColor = Color.FromArgb(128, Color.White);
-            }
             else if (textBox != null)
             {
-                if (textBox == kunden_Name)
+                if (textBox == mitarbeiterKunden_Name)
                 {
-                    kunden_Name.ForeColor = Color.Black;
-                    kunden_Name.BackColor = Color.FromArgb(128, Color.White);
+                    mitarbeiterKunden_Label_Name.ForeColor = Color.Black;
+                    mitarbeiterKunden_Label_Name.BackColor = Color.FromArgb(128, Color.White);
                 }
-                else if (textBox == kunden_Username)
+                else if (textBox == mitarbeiterKunden_Username)
                 {
-                    kunden_Username.ForeColor = Color.Black;
-                    kunden_Username.BackColor = Color.FromArgb(128, Color.White);
+                    mitarbeiterKunden_Label_Username.ForeColor = Color.Black;
+                    mitarbeiterKunden_Label_Username.BackColor = Color.FromArgb(128, Color.White);
                 }
-                else if (textBox == kunden_Vorname)
+                else if (textBox == mitarbeiterKunden_Vorname)
                 {
-                    kunden_Vorname.ForeColor = Color.Black;
-                    kunden_Vorname.BackColor = Color.FromArgb(128, Color.White);
+                    mitarbeiterKunden_Label_Vorname.ForeColor = Color.Black;
+                    mitarbeiterKunden_Label_Vorname.BackColor = Color.FromArgb(128, Color.White);
+                }
+                else if (textBox == mitarbeiterKunden_Passwort)
+                {
+                    mitarbeiterKunden_Label_Passwort.ForeColor = Color.Black;
+                    mitarbeiterKunden_Label_Passwort.BackColor = Color.FromArgb(128, Color.White);
                 }
             }
         }
 
         private void mitarbeiter_Kunden_MouseLeave(object sender, EventArgs e)
         {
-            ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
             Button? button = sender as Button;
 
@@ -96,34 +104,52 @@ namespace Bibliothek.Mitarbeiter
                 button.ForeColor = Color.White;
                 button.BackColor = Color.FromArgb(0);
             }
-            else if (comboBox != null)
-            {
-                kunden_Auswahl_neu.ForeColor = Color.White;
-                kunden_Auswahl_neu.BackColor = Color.FromArgb(0);
-            }
             else if (textBox != null)
             {
-                if (textBox == kunden_Name)
+                if (textBox == mitarbeiterKunden_Name)
                 {
-                    kunden_Name.ForeColor = Color.White;
-                    kunden_Name.BackColor = Color.FromArgb(0);
+                    mitarbeiterKunden_Label_Name.ForeColor = Color.White;
+                    mitarbeiterKunden_Label_Name.BackColor = Color.FromArgb(0);
                 }
-                else if (textBox == kunden_Username)
+                else if (textBox == mitarbeiterKunden_Username)
                 {
-                    kunden_Username.ForeColor = Color.White;
-                    kunden_Username.BackColor = Color.FromArgb(0);
+                    mitarbeiterKunden_Label_Username.ForeColor = Color.White;
+                    mitarbeiterKunden_Label_Username.BackColor = Color.FromArgb(0);
                 }
-                else if (textBox == kunden_Vorname)
+                else if (textBox == mitarbeiterKunden_Vorname)
                 {
-                    kunden_Vorname.ForeColor = Color.White;
-                    kunden_Vorname.BackColor = Color.FromArgb(0);
+                    mitarbeiterKunden_Label_Vorname.ForeColor = Color.White;
+                    mitarbeiterKunden_Label_Vorname.BackColor = Color.FromArgb(0);
+                }
+                else if (textBox == mitarbeiterKunden_Passwort)
+                {
+                    mitarbeiterKunden_Label_Passwort.ForeColor = Color.Black;
+                    mitarbeiterKunden_Label_Passwort.BackColor = Color.FromArgb(128, Color.White);
                 }
             }
         }
 
-        private void kunden_Reservierungen_Click(object sender, EventArgs e)
+        private void mitarbeiterKunden_List_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            manageKundenHandling.LoadSelectedInformation(mitarbeiterKunden_List, mitarbeiterKunden_Vorname, mitarbeiterKunden_Name, mitarbeiterKunden_Username, mitarbeiterKunden_Passwort);
         }
+
+        private void mitarbeiterKunden_Speichern_Click(object sender, EventArgs e)
+        {
+            if (mitarbeiterKunden_List.SelectedItem.ToString() == null)
+            {
+                MessageBox.Show("Bitte wähle erst den Kunden oder * NEU *");
+                return;
+            }
+            else if (mitarbeiterKunden_List.SelectedItem.ToString() == "* NEU *")
+            {
+                manageKundenHandling.CreateNewKunde(mitarbeiterKunden_List, mitarbeiterKunden_Vorname, mitarbeiterKunden_Name, mitarbeiterKunden_Username, mitarbeiterKunden_Passwort);
+            }
+            else
+            {
+                manageKundenHandling.UpdateKunde(mitarbeiterKunden_List, mitarbeiterKunden_Vorname, mitarbeiterKunden_Name, mitarbeiterKunden_Username, mitarbeiterKunden_Passwort);
+            }
+        }
+
     }
 }

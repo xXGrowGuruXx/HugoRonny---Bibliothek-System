@@ -24,11 +24,15 @@ namespace Bibliothek.Mitarbeiter
 
         private void mitarbeiter_Autoren_Load(object sender, EventArgs e)
         {
-            Autoren_Seitenname.Font = überschrift;
-            Autoren_Label_Name.Font = label;
-            Autoren_Name.Font = label;
-            Autoren_Speichern.Font = button;
-            Autoren_Zurueck.Font = button;
+            autoren_Seitenname.Font = überschrift;
+
+            autoren_Label_Name.Font = label;
+
+            autoren_Speichern.Font = button;
+            autoren_Zurueck.Font = button;
+
+            ManageÜbersicht manageÜbersicht = new ManageÜbersicht();
+            manageÜbersicht.LoadAutoren(comboBox: autoren_List);
         }
         private void mitarbeiter_Autoren(object sender, FormClosingEventArgs e)
         {
@@ -43,7 +47,6 @@ namespace Bibliothek.Mitarbeiter
 
         private void mitarbeiter_Autoren_MouseEnter(object sender, EventArgs e)
         {
-            ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
             Button? button = sender as Button;
 
@@ -52,25 +55,19 @@ namespace Bibliothek.Mitarbeiter
                 button.ForeColor = Color.Black;
                 button.BackColor = Color.FromArgb(128, Color.White);
             }
-            else if (comboBox != null)
-            {
-                Autoren_Auswahl_neu.ForeColor = Color.Black;
-                Autoren_Auswahl_neu.BackColor = Color.FromArgb(128, Color.White);
-            }
             else if (textBox != null)
             {
-                if (textBox == Autoren_Name)
+                if (textBox == autoren_Name)
                 {
-                    Autoren_Name.ForeColor = Color.Black;
-                    Autoren_Name.BackColor = Color.FromArgb(128, Color.White);
+                    autoren_Name.ForeColor = Color.Black;
+                    autoren_Name.BackColor = Color.FromArgb(128, Color.White);
                 }
-                
+
             }
         }
 
         private void mitarbeiter_Autoren_MouseLeave(object sender, EventArgs e)
         {
-            ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
             Button? button = sender as Button;
 
@@ -79,23 +76,30 @@ namespace Bibliothek.Mitarbeiter
                 button.ForeColor = Color.White;
                 button.BackColor = Color.FromArgb(0);
             }
-            else if (comboBox != null)
-            {
-                Autoren_Auswahl_neu.ForeColor = Color.White;
-                Autoren_Auswahl_neu.BackColor = Color.FromArgb(0);
-            }
             else if (textBox != null)
             {
-                if (textBox == Autoren_Name)
+                if (textBox == autoren_Name)
                 {
-                    Autoren_Name.ForeColor = Color.White;
-                    Autoren_Name.BackColor = Color.FromArgb(0);
+                    autoren_Name.ForeColor = Color.White;
+                    autoren_Name.BackColor = Color.FromArgb(0);
                 }
-
-
             }
         }
 
-
+        private void autoren_Speichern_Click(object sender, EventArgs e)
+        {
+            if (autoren_Name != null)
+            {
+                ManageÜbersicht manageÜbersicht = new ManageÜbersicht();
+                if (autoren_Name.Text == "* NEU *")
+                {
+                    manageÜbersicht.CreateNewAutor(autoren_List, autoren_Name);
+                }
+                else
+                {
+                    manageÜbersicht.UpdateAutor(autoren_List, autoren_Name);
+                }
+            }
+        }
     }
 }

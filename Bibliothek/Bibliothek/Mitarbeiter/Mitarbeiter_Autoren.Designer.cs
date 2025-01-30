@@ -29,103 +29,106 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mitarbeiter_Autoren));
-            Autoren_Seitenname = new Label();
-            Autoren_Auswahl_neu = new ComboBox();
-            Autoren_Label_Name = new Label();
-            Autoren_Name = new TextBox();
-            Autoren_Speichern = new Button();
-            Autoren_Zurueck = new Button();
+            autoren_Seitenname = new Label();
+            autoren_List = new ComboBox();
+            autoren_Label_Name = new Label();
+            autoren_Name = new TextBox();
+            autoren_Speichern = new Button();
+            autoren_Zurueck = new Button();
             SuspendLayout();
             // 
-            // Autoren_Seitenname
+            // autoren_Seitenname
             // 
-            Autoren_Seitenname.AutoSize = true;
-            Autoren_Seitenname.BackColor = Color.Transparent;
-            Autoren_Seitenname.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Autoren_Seitenname.ForeColor = Color.Transparent;
-            Autoren_Seitenname.Location = new Point(312, 9);
-            Autoren_Seitenname.Name = "Autoren_Seitenname";
-            Autoren_Seitenname.Size = new Size(137, 37);
-            Autoren_Seitenname.TabIndex = 7;
-            Autoren_Seitenname.Text = "Autoren";
-            Autoren_Seitenname.TextAlign = ContentAlignment.MiddleCenter;
+            autoren_Seitenname.AutoSize = true;
+            autoren_Seitenname.BackColor = Color.Transparent;
+            autoren_Seitenname.Font = new Font("Vacaciones", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_Seitenname.ForeColor = Color.Transparent;
+            autoren_Seitenname.Location = new Point(287, 32);
+            autoren_Seitenname.Name = "autoren_Seitenname";
+            autoren_Seitenname.Size = new Size(225, 65);
+            autoren_Seitenname.TabIndex = 7;
+            autoren_Seitenname.Text = "Autoren";
+            autoren_Seitenname.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Autoren_Auswahl_neu
+            // autoren_List
             // 
-            Autoren_Auswahl_neu.FormattingEnabled = true;
-            Autoren_Auswahl_neu.Location = new Point(174, 73);
-            Autoren_Auswahl_neu.Name = "Autoren_Auswahl_neu";
-            Autoren_Auswahl_neu.Size = new Size(399, 23);
-            Autoren_Auswahl_neu.TabIndex = 11;
-            Autoren_Auswahl_neu.Text = "Autor auswählen";
-            Autoren_Auswahl_neu.MouseEnter += mitarbeiter_Autoren_MouseEnter;
-            Autoren_Auswahl_neu.MouseLeave += mitarbeiter_Autoren_MouseLeave;
+            autoren_List.DropDownStyle = ComboBoxStyle.DropDownList;
+            autoren_List.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_List.FormattingEnabled = true;
+            autoren_List.Location = new Point(191, 195);
+            autoren_List.Name = "autoren_List";
+            autoren_List.Size = new Size(399, 36);
+            autoren_List.TabIndex = 11;
+            autoren_List.MouseEnter += mitarbeiter_Autoren_MouseEnter;
+            autoren_List.MouseLeave += mitarbeiter_Autoren_MouseLeave;
             // 
-            // Autoren_Label_Name
+            // autoren_Label_Name
             // 
-            Autoren_Label_Name.AutoSize = true;
-            Autoren_Label_Name.BackColor = Color.Transparent;
-            Autoren_Label_Name.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Autoren_Label_Name.ForeColor = SystemColors.ButtonHighlight;
-            Autoren_Label_Name.Location = new Point(174, 137);
-            Autoren_Label_Name.Name = "Autoren_Label_Name";
-            Autoren_Label_Name.Size = new Size(55, 20);
-            Autoren_Label_Name.TabIndex = 12;
-            Autoren_Label_Name.Text = "Name";
+            autoren_Label_Name.AutoSize = true;
+            autoren_Label_Name.BackColor = Color.Transparent;
+            autoren_Label_Name.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_Label_Name.ForeColor = SystemColors.ButtonHighlight;
+            autoren_Label_Name.Location = new Point(122, 298);
+            autoren_Label_Name.Name = "autoren_Label_Name";
+            autoren_Label_Name.Size = new Size(96, 39);
+            autoren_Label_Name.TabIndex = 12;
+            autoren_Label_Name.Text = "Name";
             // 
-            // Autoren_Name
+            // autoren_Name
             // 
-            Autoren_Name.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Autoren_Name.Location = new Point(259, 131);
-            Autoren_Name.Name = "Autoren_Name";
-            Autoren_Name.Size = new Size(314, 26);
-            Autoren_Name.TabIndex = 17;
-            Autoren_Name.TextAlign = HorizontalAlignment.Center;
-            Autoren_Name.MouseEnter += mitarbeiter_Autoren_MouseEnter;
-            Autoren_Name.MouseLeave += mitarbeiter_Autoren_MouseLeave;
+            autoren_Name.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_Name.Location = new Point(347, 305);
+            autoren_Name.Name = "autoren_Name";
+            autoren_Name.Size = new Size(314, 30);
+            autoren_Name.TabIndex = 17;
+            autoren_Name.TextAlign = HorizontalAlignment.Center;
+            autoren_Name.MouseEnter += mitarbeiter_Autoren_MouseEnter;
+            autoren_Name.MouseLeave += mitarbeiter_Autoren_MouseLeave;
             // 
-            // Autoren_Speichern
+            // autoren_Speichern
             // 
-            Autoren_Speichern.BackColor = Color.Transparent;
-            Autoren_Speichern.FlatStyle = FlatStyle.Popup;
-            Autoren_Speichern.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Autoren_Speichern.ForeColor = SystemColors.Control;
-            Autoren_Speichern.Location = new Point(561, 216);
-            Autoren_Speichern.Name = "Autoren_Speichern";
-            Autoren_Speichern.Size = new Size(211, 165);
-            Autoren_Speichern.TabIndex = 24;
-            Autoren_Speichern.Text = "Speichern";
-            Autoren_Speichern.UseVisualStyleBackColor = false;
-            Autoren_Speichern.MouseEnter += mitarbeiter_Autoren_MouseEnter;
-            Autoren_Speichern.MouseLeave += mitarbeiter_Autoren_MouseLeave;
+            autoren_Speichern.BackColor = Color.Transparent;
+            autoren_Speichern.FlatStyle = FlatStyle.Popup;
+            autoren_Speichern.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_Speichern.ForeColor = SystemColors.Control;
+            autoren_Speichern.Location = new Point(24, 481);
+            autoren_Speichern.Name = "autoren_Speichern";
+            autoren_Speichern.Size = new Size(192, 53);
+            autoren_Speichern.TabIndex = 24;
+            autoren_Speichern.Text = "Speichern";
+            autoren_Speichern.UseVisualStyleBackColor = false;
+            autoren_Speichern.Click += autoren_Speichern_Click;
+            autoren_Speichern.MouseEnter += mitarbeiter_Autoren_MouseEnter;
+            autoren_Speichern.MouseLeave += mitarbeiter_Autoren_MouseLeave;
             // 
-            // Autoren_Zurueck
+            // autoren_Zurueck
             // 
-            Autoren_Zurueck.BackColor = Color.Transparent;
-            Autoren_Zurueck.FlatStyle = FlatStyle.Popup;
-            Autoren_Zurueck.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Autoren_Zurueck.ForeColor = SystemColors.Control;
-            Autoren_Zurueck.Location = new Point(561, 466);
-            Autoren_Zurueck.Name = "Autoren_Zurueck";
-            Autoren_Zurueck.Size = new Size(211, 83);
-            Autoren_Zurueck.TabIndex = 26;
-            Autoren_Zurueck.Text = "Zurück";
-            Autoren_Zurueck.UseVisualStyleBackColor = false;
-            Autoren_Zurueck.Click += mitarbeiter_Autoren_Abbrechen_Click;
-            Autoren_Zurueck.MouseEnter += mitarbeiter_Autoren_MouseEnter;
-            Autoren_Zurueck.MouseLeave += mitarbeiter_Autoren_MouseLeave;
+            autoren_Zurueck.BackColor = Color.Transparent;
+            autoren_Zurueck.FlatStyle = FlatStyle.Popup;
+            autoren_Zurueck.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_Zurueck.ForeColor = SystemColors.Control;
+            autoren_Zurueck.Location = new Point(547, 481);
+            autoren_Zurueck.Name = "autoren_Zurueck";
+            autoren_Zurueck.Size = new Size(211, 53);
+            autoren_Zurueck.TabIndex = 26;
+            autoren_Zurueck.Text = "Zurück";
+            autoren_Zurueck.UseVisualStyleBackColor = false;
+            autoren_Zurueck.Click += mitarbeiter_Autoren_Abbrechen_Click;
+            autoren_Zurueck.MouseEnter += mitarbeiter_Autoren_MouseEnter;
+            autoren_Zurueck.MouseLeave += mitarbeiter_Autoren_MouseLeave;
             // 
             // Mitarbeiter_Autoren
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
-            ClientSize = new Size(784, 561);
-            Controls.Add(Autoren_Zurueck);
-            Controls.Add(Autoren_Speichern);
-            Controls.Add(Autoren_Name);
-            Controls.Add(Autoren_Label_Name);
-            Controls.Add(Autoren_Auswahl_neu);
-            Controls.Add(Autoren_Seitenname);
+            ClientSize = new Size(782, 553);
+            Controls.Add(autoren_Zurueck);
+            Controls.Add(autoren_Speichern);
+            Controls.Add(autoren_Name);
+            Controls.Add(autoren_Label_Name);
+            Controls.Add(autoren_List);
+            Controls.Add(autoren_Seitenname);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(800, 600);
@@ -141,11 +144,11 @@
 
         #endregion
 
-        private Label Autoren_Seitenname;
-        private ComboBox Autoren_Auswahl_neu;
-        private Label Autoren_Label_Name;
-        private TextBox Autoren_Name;
-        private Button Autoren_Speichern;
-        private Button Autoren_Zurueck;
+        private Label autoren_Seitenname;
+        private ComboBox autoren_List;
+        private Label autoren_Label_Name;
+        private TextBox autoren_Name;
+        private Button autoren_Speichern;
+        private Button autoren_Zurueck;
     }
 }

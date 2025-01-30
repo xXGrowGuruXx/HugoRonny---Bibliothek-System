@@ -1,20 +1,11 @@
 ﻿using Bibliothek.utils;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Bibliothek.Mitarbeiter
 {
     public partial class Mitarbeiter_Buecher : Form
     {
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
+        static Font label = CustomFonts.GetCustomFont("Vacaciones", 16, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
 
         public Mitarbeiter_Buecher()
@@ -22,7 +13,7 @@ namespace Bibliothek.Mitarbeiter
             InitializeComponent();
         }
 
-        private void mitarbeiter_Buecher(object sender, FormClosingEventArgs e)
+        private void mitarbeiter_Buecher_Closing(object sender, FormClosingEventArgs e)
         {
             MitarbeiterMain mitarbeiterMain = MitarbeiterMain.GetInstance();
             mitarbeiterMain.Show();
@@ -36,21 +27,23 @@ namespace Bibliothek.Mitarbeiter
         private void Mitarbeiter_Buecher_Load(object sender, EventArgs e)
         {
             buch_Seitenname.Font = überschrift;
-            buecher_Label_Titel.Font = label;
-            buecher_Label_Autor.Font = label;
-            buecher_Label_Genre.Font = label;
-            buecher_Label_ISBN.Font = label;
-            buecher_Titel.Font = label;
-            buecher_Autor.Font = label;
-            buecher_Genre.Font = label;
-            buecher_ISBN.Font = label;
+
+            bücher_Label_Titel.Font = label;
+            bücher_Label_Autor.Font = label;
+            bücher_Label_Genre.Font = label;
+            bücher_Label_ISBN.Font = label;
+
             buecher_Speichern.Font = button;
             buecher_Loeschen.Font = button;
             buecher_Zurueck.Font = button;
 
-
+            ManageMenu manageMenu = new ManageMenu();
+            manageMenu.LoadBücher(dropDown_Bücher);
+            manageMenu.LoadAutoren(menu_Autoren);
+            manageMenu.LoadGenres(menu_Genre);
         }
-        private void mitarbeiter_Buecher_MouseEnter(object sender, EventArgs e)
+
+        private void mitarbeiter_Bücher_MouseEnter(object sender, EventArgs e)
         {
             ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
@@ -63,37 +56,34 @@ namespace Bibliothek.Mitarbeiter
             }
             else if (comboBox != null)
             {
-                buecher_Titel_Autor.ForeColor = Color.Black;
-                buecher_Titel_Autor.BackColor = Color.FromArgb(128, Color.White);
+                if (comboBox == bücher_Autor)
+                {
+                    bücher_Label_Autor.ForeColor = Color.Black;
+                    bücher_Label_Autor.BackColor = Color.FromArgb(128, Color.White);
+                }
+                else if (comboBox == bücher_Genre)
+                {
+                    bücher_Label_Genre.ForeColor = Color.Black;
+                    bücher_Label_Genre.BackColor = Color.FromArgb(128, Color.White);
+                }
             }
             else if (textBox != null)
             {
-                if (textBox == buecher_Titel)
+                if (textBox == bücher_Titel)
                 {
-                    buecher_Titel.ForeColor = Color.Black;
-                    buecher_Titel.BackColor = Color.FromArgb(128, Color.White);
+                    bücher_Label_Titel.ForeColor = Color.Black;
+                    bücher_Label_Titel.BackColor = Color.FromArgb(128, Color.White);
                 }
-                else if (textBox == buecher_Autor)
+                else if (textBox == bücher_ISBN)
                 {
-                    buecher_Autor.ForeColor = Color.Black;
-                    buecher_Autor.BackColor = Color.FromArgb(128, Color.White);
+                    bücher_Label_ISBN.ForeColor = Color.Black;
+                    bücher_Label_ISBN.BackColor = Color.FromArgb(128, Color.White);
                 }
-                else if (textBox == buecher_Genre)
-                {
-                    buecher_Genre.ForeColor = Color.Black;
-                    buecher_Genre.BackColor = Color.FromArgb(128, Color.White);
-                }
-                else if (textBox == buecher_ISBN)
-                {
-                    buecher_ISBN.ForeColor = Color.Black;
-                    buecher_ISBN.BackColor = Color.FromArgb(128, Color.White);
-                }
-                
             }
         }
 
 
-        private void mitarbeiter_Kunden_MouseLeave(object sender, EventArgs e)
+        private void mitarbeiter_Bücher_MouseLeave(object sender, EventArgs e)
         {
             ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
@@ -106,33 +96,83 @@ namespace Bibliothek.Mitarbeiter
             }
             else if (comboBox != null)
             {
-                buecher_Titel_Autor.ForeColor = Color.White;
-                buecher_Titel_Autor.BackColor = Color.FromArgb(0);
+                if (comboBox == bücher_Autor)
+                {
+                    bücher_Label_Autor.ForeColor = Color.White;
+                    bücher_Label_Autor.BackColor = Color.FromArgb(0);
+                }
+                else if (comboBox == bücher_Genre)
+                {
+                    bücher_Label_Genre.ForeColor = Color.White;
+                    bücher_Label_Genre.BackColor = Color.FromArgb(0);
+                }
             }
             else if (textBox != null)
             {
-                if (textBox == buecher_Titel)
+                if (textBox == bücher_Titel)
                 {
-                    buecher_Titel.ForeColor = Color.White;
-                    buecher_Titel.BackColor = Color.FromArgb(0);
+                    bücher_Label_Titel.ForeColor = Color.White;
+                    bücher_Label_Titel.BackColor = Color.FromArgb(0);
                 }
-                else if (textBox == buecher_Autor)
+                else if (textBox == bücher_ISBN)
                 {
-                    buecher_Autor.ForeColor = Color.White;
-                    buecher_Autor.BackColor = Color.FromArgb(0);
+                    bücher_Label_ISBN.ForeColor = Color.White;
+                    bücher_Label_ISBN.BackColor = Color.FromArgb(0);
                 }
-                else if (textBox == buecher_Genre)
-                {
-                    buecher_Genre.ForeColor = Color.White;
-                    buecher_Genre.BackColor = Color.FromArgb(0);
-                }
-                else if (textBox == buecher_ISBN)
-                {
-                    buecher_ISBN.ForeColor = Color.White;
-                    buecher_ISBN.BackColor = Color.FromArgb(0);
-                }
-
             }
+        }
+
+        private void bücher_Menu_MouseEnter(object sender, EventArgs e)
+        {
+            ToolStripMenuItem? menu = sender as ToolStripMenuItem;
+
+            if (menu != null)
+            {
+                if (menu == menu_Bücher)
+                {
+                    menu_Bücher.ForeColor = Color.Black;
+                    menu_Bücher.BackColor = Color.FromArgb(128, Color.White);
+                }
+                else if (menu == menu_Autoren)
+                {
+                    menu_Autoren.ForeColor = Color.Black;
+                    menu_Autoren.BackColor = Color.FromArgb(128, Color.White);
+                }
+                else if (menu == menu_Genre)
+                {
+                    menu_Genre.ForeColor = Color.Black;
+                    menu_Genre.BackColor = Color.FromArgb(128, Color.White);
+                }
+            }
+        }
+
+        private void bücher_Menu_MouseLeave(object sender, EventArgs e)
+        {
+            ToolStripMenuItem? menu = sender as ToolStripMenuItem;
+
+            if (menu != null)
+            {
+                if (menu == menu_Bücher)
+                {
+                    menu_Bücher.ForeColor = Color.White;
+                    menu_Bücher.BackColor = Color.FromArgb(0);
+                }
+                else if (menu == menu_Autoren)
+                {
+                    menu_Autoren.ForeColor = Color.White;
+                    menu_Autoren.BackColor = Color.FromArgb(0);
+                }
+                else if (menu == menu_Genre)
+                {
+                    menu_Genre.ForeColor = Color.White;
+                    menu_Genre.BackColor = Color.FromArgb(0);
+                }
+            }
+        }
+
+        private void dropDown_Bücher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

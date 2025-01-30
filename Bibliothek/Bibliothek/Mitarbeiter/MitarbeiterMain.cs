@@ -73,6 +73,37 @@ namespace Bibliothek.Mitarbeiter
             }
         }
 
-        
+        private void mitarbeiter_Buttons_Click(object sender, EventArgs e)
+        {
+            Button? button = sender as Button;
+
+            if (button != null)
+            {
+                if (button == mitarbeiter_Kunden)
+                {
+                    Mitarbeiter_Kunden mitarbeiter_Kunden = new Mitarbeiter_Kunden();
+                    mitarbeiter_Kunden.Show();
+                    this.Hide();
+                }
+                if (button == mitarbeiter_Autoren)
+                {
+                    Mitarbeiter_Autoren mitarbeiter_Autoren = new Mitarbeiter_Autoren();
+                    mitarbeiter_Autoren.Show();
+                    this.Hide();
+                }
+                if (button == mitarbeiter_Bücher)
+                {
+                    Mitarbeiter_Buecher mitarbeiter_Buecher = new Mitarbeiter_Buecher();
+                    mitarbeiter_Buecher.Show();
+                    this.Hide();
+                }
+                if (button == mitarbeiter_Genres)
+                {
+                    Mitarbeiter_Genre mitarbeiter_Genre = new Mitarbeiter_Genre();
+                    mitarbeiter_Genre.Show();
+                    this.Hide();
+                }
+            }
+        }
     }
 }
