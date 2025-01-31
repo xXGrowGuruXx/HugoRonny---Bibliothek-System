@@ -187,7 +187,7 @@
             bücher_Menu.Items.AddRange(new ToolStripItem[] { menu_Bücher, menu_Autoren, menu_Genre });
             bücher_Menu.Location = new Point(210, 107);
             bücher_Menu.Name = "bücher_Menu";
-            bücher_Menu.Size = new Size(397, 46);
+            bücher_Menu.Size = new Size(547, 46);
             bücher_Menu.TabIndex = 38;
             // 
             // menu_Bücher
@@ -205,8 +205,13 @@
             // 
             // dropDown_Bücher
             // 
+            dropDown_Bücher.AutoSize = false;
+            dropDown_Bücher.DropDownHeight = 300;
             dropDown_Bücher.DropDownStyle = ComboBoxStyle.DropDownList;
+            dropDown_Bücher.DropDownWidth = 300;
             dropDown_Bücher.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dropDown_Bücher.IntegralHeight = false;
+            dropDown_Bücher.MaxDropDownItems = 100;
             dropDown_Bücher.Name = "dropDown_Bücher";
             dropDown_Bücher.Size = new Size(121, 36);
             // 
