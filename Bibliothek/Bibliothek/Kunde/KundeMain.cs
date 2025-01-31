@@ -45,8 +45,13 @@ namespace Bibliothek.Kunde
 
         private void KundenMain(object sender, FormClosingEventArgs e)
         {
-            MitarbeiterMain mitarbeiterMain = MitarbeiterMain.GetInstance();
-            mitarbeiterMain.Show();
+            Login login = Login.GetInstance();
+            login.Show();
+        }
+
+        private void kundeMain_Abmelden_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void KundeMain_Abbrechen_Click(object sender, EventArgs e)
@@ -75,6 +80,40 @@ namespace Bibliothek.Kunde
                 // Ändere die Hintergrundfarbe des Buttons auf halbtransparent
                 button.BackColor = Color.FromArgb(0);
                 button.ForeColor = Color.White;
+            }
+        }
+
+        private void kundeMain_Buttons_Click(object sender, EventArgs e)
+        {
+            Button? button = sender as Button;
+
+            if (button != null)
+            {
+                if (button == Kunde_Suche)
+                {
+                    KundeSuche kunde_suche = new KundeSuche();
+                    kunde_suche.Show();
+                    this.Hide();
+                }
+                if (button == Kunde_Rueckgabe)
+                {
+                    KundeRückgabe kunde_Rückgabe = new KundeRückgabe();
+                    kunde_Rückgabe.Show();
+                    this.Hide();
+                }
+                if (button == Kunde_Reservierungen)
+                {
+                    KundeReservierungen kunde_Reservierungen = new KundeReservierungen();
+                    kunde_Reservierungen.Show();
+                    this.Hide();
+                }
+                if (button == Kunde_Strafen)
+                {
+                    KundeStrafen kunde_Strafen = new KundeStrafen();
+                    kunde_Strafen.Show();
+                    this.Hide();
+                }
+                
             }
         }
     }
