@@ -25,9 +25,11 @@ namespace Bibliothek.Kunde
         private void KundeSuche_Load(object sender, EventArgs e)
         {
             KundeSuche_Seitenname.Font = überschrift;
+
             KundeSuche_Ausleihen.Font = button;
             KundeSuche_Reservieren.Font = button;
             KundeSuche_Zurück.Font = button;
+
         }
         private void Kunde_Suche(object sender, FormClosingEventArgs e)
         {

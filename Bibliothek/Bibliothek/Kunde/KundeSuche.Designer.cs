@@ -109,7 +109,7 @@
             kundeSuche_Menue.Items.AddRange(new ToolStripItem[] { menu_Bücher, menu_Autor, menu_Genre, menu_ISBN });
             kundeSuche_Menue.Location = new Point(35, 84);
             kundeSuche_Menue.Name = "kundeSuche_Menue";
-            kundeSuche_Menue.Size = new Size(708, 52);
+            kundeSuche_Menue.Size = new Size(828, 52);
             kundeSuche_Menue.TabIndex = 34;
             // 
             // menu_Bücher
@@ -120,6 +120,8 @@
             menu_Bücher.Name = "menu_Bücher";
             menu_Bücher.Size = new Size(175, 48);
             menu_Bücher.Text = "Titel";
+            menu_Bücher.MouseEnter += Kunde_Suche_MouseEnter;
+            menu_Bücher.MouseLeave += Kunde_Suche_MouseLeave;
             // 
             // menu_Autor
             // 
@@ -129,6 +131,8 @@
             menu_Autor.Name = "menu_Autor";
             menu_Autor.Size = new Size(175, 48);
             menu_Autor.Text = "Autor";
+            menu_Autor.MouseEnter += Kunde_Suche_MouseEnter;
+            menu_Autor.MouseLeave += Kunde_Suche_MouseLeave;
             // 
             // menu_Genre
             // 
@@ -138,6 +142,8 @@
             menu_Genre.Name = "menu_Genre";
             menu_Genre.Size = new Size(175, 48);
             menu_Genre.Text = "Genre";
+            menu_Genre.MouseEnter += Kunde_Suche_MouseEnter;
+            menu_Genre.MouseLeave += Kunde_Suche_MouseLeave;
             // 
             // menu_ISBN
             // 
@@ -147,6 +153,8 @@
             menu_ISBN.Name = "menu_ISBN";
             menu_ISBN.Size = new Size(175, 48);
             menu_ISBN.Text = "ISBN";
+            menu_ISBN.MouseEnter += Kunde_Suche_MouseEnter;
+            menu_ISBN.MouseLeave += Kunde_Suche_MouseLeave;
             // 
             // dataGridView1
             // 
