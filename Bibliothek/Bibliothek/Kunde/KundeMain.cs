@@ -33,11 +33,14 @@ namespace Bibliothek.Kunde
         private void KundeMain_Load(object sender, EventArgs e)
         {
             KundenHUB.Font = überschrift;
+
             Kunde_Suche.Font = button;
             Kunde_Rueckgabe.Font = button;
             Kunde_Reservierungen.Font = button;
             Kunde_Strafen.Font = button;
             Kunde_Abmelden.Font = button;
+
+
         }
 
         private void KundenMain(object sender, FormClosingEventArgs e)
