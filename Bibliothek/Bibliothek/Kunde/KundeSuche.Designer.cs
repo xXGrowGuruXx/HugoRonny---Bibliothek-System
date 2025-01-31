@@ -28,78 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            KundenSuche_Seitenname = new Label();
-            KundenSuche_Suche = new TextBox();
-            KundenSuche_Suchen = new Button();
-            buecher_Zurueck = new Button();
-            dataGridView1 = new DataGridView();
+            KundeSuche_Seitenname = new Label();
+            KundeSuche_Zurück = new Button();
             KundeSuche_Ausleihen = new Button();
             KundeSuche_Reservieren = new Button();
-            Titel = new DataGridViewTextBoxColumn();
-            Autor = new DataGridViewTextBoxColumn();
-            Genre = new DataGridViewTextBoxColumn();
-            ISBN = new DataGridViewTextBoxColumn();
-            KundeSuche_Sortieren = new ComboBox();
+            kundeSuche_Menue = new MenuStrip();
+            menu_Bücher = new ToolStripMenuItem();
+            menu_Autor = new ToolStripMenuItem();
+            menu_Genre = new ToolStripMenuItem();
+            menu_ISBN = new ToolStripMenuItem();
+            dataGridView1 = new DataGridView();
+            kundeSuche_Menue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // KundenSuche_Seitenname
+            // KundeSuche_Seitenname
             // 
-            KundenSuche_Seitenname.AutoSize = true;
-            KundenSuche_Seitenname.BackColor = Color.Transparent;
-            KundenSuche_Seitenname.Font = new Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            KundenSuche_Seitenname.ForeColor = Color.Transparent;
-            KundenSuche_Seitenname.Location = new Point(263, 9);
-            KundenSuche_Seitenname.Name = "KundenSuche_Seitenname";
-            KundenSuche_Seitenname.Size = new Size(240, 44);
-            KundenSuche_Seitenname.TabIndex = 8;
-            KundenSuche_Seitenname.Text = "Büchersuche";
-            KundenSuche_Seitenname.TextAlign = ContentAlignment.MiddleCenter;
+            KundeSuche_Seitenname.AutoSize = true;
+            KundeSuche_Seitenname.BackColor = Color.Transparent;
+            KundeSuche_Seitenname.Font = new Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            KundeSuche_Seitenname.ForeColor = Color.Transparent;
+            KundeSuche_Seitenname.Location = new Point(263, 9);
+            KundeSuche_Seitenname.Name = "KundeSuche_Seitenname";
+            KundeSuche_Seitenname.Size = new Size(240, 44);
+            KundeSuche_Seitenname.TabIndex = 8;
+            KundeSuche_Seitenname.Text = "Büchersuche";
+            KundeSuche_Seitenname.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // KundenSuche_Suche
+            // KundeSuche_Zurück
             // 
-            KundenSuche_Suche.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            KundenSuche_Suche.Location = new Point(35, 79);
-            KundenSuche_Suche.Name = "KundenSuche_Suche";
-            KundenSuche_Suche.Size = new Size(453, 26);
-            KundenSuche_Suche.TabIndex = 14;
-            KundenSuche_Suche.Text = "Suche - Titel - Autor oder Genre eingeben";
-            KundenSuche_Suche.TextAlign = HorizontalAlignment.Center;
-            // 
-            // KundenSuche_Suchen
-            // 
-            KundenSuche_Suchen.BackColor = Color.Transparent;
-            KundenSuche_Suchen.FlatStyle = FlatStyle.Popup;
-            KundenSuche_Suchen.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            KundenSuche_Suchen.ForeColor = SystemColors.Control;
-            KundenSuche_Suchen.Location = new Point(533, 69);
-            KundenSuche_Suchen.Name = "KundenSuche_Suchen";
-            KundenSuche_Suchen.Size = new Size(211, 41);
-            KundenSuche_Suchen.TabIndex = 29;
-            KundenSuche_Suchen.Text = "Suchen";
-            KundenSuche_Suchen.UseVisualStyleBackColor = false;
-            // 
-            // buecher_Zurueck
-            // 
-            buecher_Zurueck.BackColor = Color.Transparent;
-            buecher_Zurueck.FlatStyle = FlatStyle.Popup;
-            buecher_Zurueck.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buecher_Zurueck.ForeColor = SystemColors.Control;
-            buecher_Zurueck.Location = new Point(561, 485);
-            buecher_Zurueck.Name = "buecher_Zurueck";
-            buecher_Zurueck.Size = new Size(211, 64);
-            buecher_Zurueck.TabIndex = 30;
-            buecher_Zurueck.Text = "Zurück";
-            buecher_Zurueck.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Titel, Autor, Genre, ISBN });
-            dataGridView1.Location = new Point(12, 145);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(760, 334);
-            dataGridView1.TabIndex = 31;
+            KundeSuche_Zurück.BackColor = Color.Transparent;
+            KundeSuche_Zurück.FlatStyle = FlatStyle.Popup;
+            KundeSuche_Zurück.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            KundeSuche_Zurück.ForeColor = SystemColors.Control;
+            KundeSuche_Zurück.Location = new Point(561, 485);
+            KundeSuche_Zurück.Name = "KundeSuche_Zurück";
+            KundeSuche_Zurück.Size = new Size(211, 64);
+            KundeSuche_Zurück.TabIndex = 30;
+            KundeSuche_Zurück.Text = "Zurück";
+            KundeSuche_Zurück.UseVisualStyleBackColor = false;
+            KundeSuche_Zurück.Click += Kunde_Suche_Abbrechen_Click;
+            KundeSuche_Zurück.MouseEnter += Kunde_Suche_MouseEnter;
+            KundeSuche_Zurück.MouseLeave += Kunde_Suche_MouseLeave;
             // 
             // KundeSuche_Ausleihen
             // 
@@ -113,6 +83,8 @@
             KundeSuche_Ausleihen.TabIndex = 32;
             KundeSuche_Ausleihen.Text = "Ausleihen";
             KundeSuche_Ausleihen.UseVisualStyleBackColor = false;
+            KundeSuche_Ausleihen.MouseEnter += Kunde_Suche_MouseEnter;
+            KundeSuche_Ausleihen.MouseLeave += Kunde_Suche_MouseLeave;
             // 
             // KundeSuche_Reservieren
             // 
@@ -126,55 +98,80 @@
             KundeSuche_Reservieren.TabIndex = 33;
             KundeSuche_Reservieren.Text = "Reservieren";
             KundeSuche_Reservieren.UseVisualStyleBackColor = false;
+            KundeSuche_Reservieren.MouseEnter += Kunde_Suche_MouseEnter;
+            KundeSuche_Reservieren.MouseLeave += Kunde_Suche_MouseLeave;
             // 
-            // Titel
+            // kundeSuche_Menue
             // 
-            Titel.HeaderText = "Titel";
-            Titel.Name = "Titel";
-            Titel.Width = 250;
+            kundeSuche_Menue.BackColor = Color.Transparent;
+            kundeSuche_Menue.Dock = DockStyle.None;
+            kundeSuche_Menue.Font = new Font("Microsoft Sans Serif", 12F);
+            kundeSuche_Menue.Items.AddRange(new ToolStripItem[] { menu_Bücher, menu_Autor, menu_Genre, menu_ISBN });
+            kundeSuche_Menue.Location = new Point(35, 84);
+            kundeSuche_Menue.Name = "kundeSuche_Menue";
+            kundeSuche_Menue.Size = new Size(708, 52);
+            kundeSuche_Menue.TabIndex = 34;
             // 
-            // Autor
+            // menu_Bücher
             // 
-            Autor.HeaderText = "Autor";
-            Autor.Name = "Autor";
-            Autor.Width = 150;
+            menu_Bücher.AutoSize = false;
+            menu_Bücher.Font = new Font("Microsoft Sans Serif", 18F);
+            menu_Bücher.ForeColor = Color.White;
+            menu_Bücher.Name = "menu_Bücher";
+            menu_Bücher.Size = new Size(175, 48);
+            menu_Bücher.Text = "Titel";
             // 
-            // Genre
+            // menu_Autor
             // 
-            Genre.HeaderText = "Genre";
-            Genre.Name = "Genre";
-            Genre.Width = 120;
+            menu_Autor.AutoSize = false;
+            menu_Autor.Font = new Font("Microsoft Sans Serif", 18F);
+            menu_Autor.ForeColor = Color.White;
+            menu_Autor.Name = "menu_Autor";
+            menu_Autor.Size = new Size(175, 48);
+            menu_Autor.Text = "Autor";
             // 
-            // ISBN
+            // menu_Genre
             // 
-            ISBN.HeaderText = "ISBN";
-            ISBN.Name = "ISBN";
-            ISBN.Width = 150;
+            menu_Genre.AutoSize = false;
+            menu_Genre.Font = new Font("Microsoft Sans Serif", 18F);
+            menu_Genre.ForeColor = Color.White;
+            menu_Genre.Name = "menu_Genre";
+            menu_Genre.Size = new Size(175, 48);
+            menu_Genre.Text = "Genre";
             // 
-            // KundeSuche_Sortieren
+            // menu_ISBN
             // 
-            KundeSuche_Sortieren.FormattingEnabled = true;
-            KundeSuche_Sortieren.Location = new Point(35, 111);
-            KundeSuche_Sortieren.Name = "KundeSuche_Sortieren";
-            KundeSuche_Sortieren.Size = new Size(142, 28);
-            KundeSuche_Sortieren.TabIndex = 34;
-            KundeSuche_Sortieren.Text = "Sortieren nach";
+            menu_ISBN.AutoSize = false;
+            menu_ISBN.Font = new Font("Microsoft Sans Serif", 18F);
+            menu_ISBN.ForeColor = Color.White;
+            menu_ISBN.Name = "menu_ISBN";
+            menu_ISBN.Size = new Size(175, 48);
+            menu_ISBN.Text = "ISBN";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(35, 158);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(709, 272);
+            dataGridView1.TabIndex = 35;
             // 
             // KundeSuche
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
             ClientSize = new Size(784, 561);
-            Controls.Add(KundeSuche_Sortieren);
+            Controls.Add(dataGridView1);
             Controls.Add(KundeSuche_Reservieren);
             Controls.Add(KundeSuche_Ausleihen);
-            Controls.Add(dataGridView1);
-            Controls.Add(buecher_Zurueck);
-            Controls.Add(KundenSuche_Suchen);
-            Controls.Add(KundenSuche_Suche);
-            Controls.Add(KundenSuche_Seitenname);
+            Controls.Add(KundeSuche_Zurück);
+            Controls.Add(KundeSuche_Seitenname);
+            Controls.Add(kundeSuche_Menue);
             Font = new Font("Microsoft Sans Serif", 12F);
+            ForeColor = SystemColors.Control;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MainMenuStrip = kundeSuche_Menue;
             MaximizeBox = false;
             MaximumSize = new Size(800, 600);
             MinimizeBox = false;
@@ -182,6 +179,10 @@
             Name = "KundeSuche";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "KundeSuche";
+            FormClosing += Kunde_Suche;
+            Load += KundeSuche_Load;
+            kundeSuche_Menue.ResumeLayout(false);
+            kundeSuche_Menue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -189,17 +190,15 @@
 
         #endregion
 
-        private Label KundenSuche_Seitenname;
-        private TextBox KundenSuche_Suche;
-        private Button KundenSuche_Suchen;
-        private Button buecher_Zurueck;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Titel;
-        private DataGridViewTextBoxColumn Autor;
-        private DataGridViewTextBoxColumn Genre;
-        private DataGridViewTextBoxColumn ISBN;
+        private Label KundeSuche_Seitenname;
+        private Button KundeSuche_Zurück;
         private Button KundeSuche_Ausleihen;
         private Button KundeSuche_Reservieren;
-        private ComboBox KundeSuche_Sortieren;
+        private MenuStrip kundeSuche_Menue;
+        private ToolStripMenuItem menu_Bücher;
+        private ToolStripMenuItem menu_Autor;
+        private ToolStripMenuItem menu_Genre;
+        private ToolStripMenuItem menu_ISBN;
+        private DataGridView dataGridView1;
     }
 }

@@ -44,7 +44,7 @@
             login_Name.BackColor = Color.Transparent;
             login_Name.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             login_Name.ForeColor = Color.White;
-            login_Name.Location = new Point(101, 9);
+            login_Name.Location = new Point(137, 9);
             login_Name.Name = "login_Name";
             login_Name.Size = new Size(155, 37);
             login_Name.TabIndex = 0;
@@ -123,15 +123,9 @@
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(10F, 18F);
-            BackgroundImage = Properties.Resources.Hintergrund800x600;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(450, 250);
-            Size = new Size(450, 250);
-            MaximizeBox = false;
-            MaximumSize = new Size(450, 250);
-            MinimizeBox = false;
-            MinimumSize = new Size(450, 250);
+            BackgroundImage = Properties.Resources.Hintergrund800x600;
+            ClientSize = new Size(434, 211);
             Controls.Add(login_Login);
             Controls.Add(login_RememberMe);
             Controls.Add(login_Password);
@@ -143,6 +137,10 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MaximumSize = new Size(450, 250);
+            MinimizeBox = false;
+            MinimumSize = new Size(450, 250);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
