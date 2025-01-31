@@ -27,7 +27,6 @@ namespace Bibliothek.Mitarbeiter
             Genre_Seitenname.Font = überschrift;
 
             genre_Label_Name.Font = label;
-            genre_Name.Font = label;
 
             Genre_Speichern.Font = button;
             Genre_Zurueck.Font = button;
@@ -81,8 +80,8 @@ namespace Bibliothek.Mitarbeiter
             {
                 if (textBox == genre_Name)
                 {
-                    genre_Name.ForeColor = Color.White;
-                    genre_Name.BackColor = Color.FromArgb(0);
+                    genre_Label_Name.ForeColor = Color.White;
+                    genre_Label_Name.BackColor = Color.FromArgb(0);
                 }
 
 
@@ -94,7 +93,7 @@ namespace Bibliothek.Mitarbeiter
             if (genre_Name.Text != null)
             {
                 ManageÜbersicht manageÜbersicht = new ManageÜbersicht();
-                if (genre_Name.Text == "* NEU *")
+                if (genre_Auswahl.Text == "* NEU *")
                 {
                     manageÜbersicht.CreateNewGenre(genre_Auswahl, genre_Name);
                 }
@@ -103,6 +102,11 @@ namespace Bibliothek.Mitarbeiter
                     manageÜbersicht.UpdateGenre(genre_Name, comboBox: genre_Auswahl);
                 }
             }
+        }
+
+        private void genre_Auswahl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            genre_Name.Text = genre_Auswahl.Text;
         }
     }
 }

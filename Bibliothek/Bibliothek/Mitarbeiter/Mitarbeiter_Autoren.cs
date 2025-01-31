@@ -23,7 +23,7 @@ namespace Bibliothek.Mitarbeiter
             autoren_Zurueck.Font = button;
 
             ManageÜbersicht manageÜbersicht = new ManageÜbersicht();
-            manageÜbersicht.LoadAutoren(comboBox: autoren_List);
+            manageÜbersicht.LoadAutoren(autoren_List);
         }
         private void mitarbeiter_Autoren(object sender, FormClosingEventArgs e)
         {
@@ -50,10 +50,9 @@ namespace Bibliothek.Mitarbeiter
             {
                 if (textBox == autoren_Name)
                 {
-                    autoren_Name.ForeColor = Color.Black;
-                    autoren_Name.BackColor = Color.FromArgb(128, Color.White);
+                    autoren_Label_Name.ForeColor = Color.Black;
+                    autoren_Label_Name.BackColor = Color.FromArgb(128, Color.White);
                 }
-
             }
         }
 
@@ -71,18 +70,18 @@ namespace Bibliothek.Mitarbeiter
             {
                 if (textBox == autoren_Name)
                 {
-                    autoren_Name.ForeColor = Color.White;
-                    autoren_Name.BackColor = Color.FromArgb(0);
+                    autoren_Label_Name.ForeColor = Color.White;
+                    autoren_Label_Name.BackColor = Color.FromArgb(0);
                 }
             }
         }
 
         private void autoren_Speichern_Click(object sender, EventArgs e)
         {
-            if (autoren_Name != null)
+            if (autoren_Name.Text != null)
             {
                 ManageÜbersicht manageÜbersicht = new ManageÜbersicht();
-                if (autoren_Name.Text == "* NEU *")
+                if (autoren_List.Text == "* NEU *")
                 {
                     manageÜbersicht.CreateNewAutor(autoren_List, autoren_Name);
                 }
@@ -91,6 +90,11 @@ namespace Bibliothek.Mitarbeiter
                     manageÜbersicht.UpdateAutor(autoren_List, autoren_Name);
                 }
             }
+        }
+
+        private void autoren_List_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            autoren_Name.Text = autoren_List.Text;
         }
     }
 }

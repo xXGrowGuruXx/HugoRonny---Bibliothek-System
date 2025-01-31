@@ -58,6 +58,7 @@
             genre_Auswahl.Name = "genre_Auswahl";
             genre_Auswahl.Size = new Size(462, 39);
             genre_Auswahl.TabIndex = 12;
+            genre_Auswahl.SelectedIndexChanged += genre_Auswahl_SelectedIndexChanged;
             genre_Auswahl.MouseEnter += mitarbeiter_Genre_MouseEnter;
             genre_Auswahl.MouseLeave += mitarbeiter_Genre_MouseLeave;
             // 
@@ -135,6 +136,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Mitarbeiter_Genre";
             FormClosing += mitarbeiter_Genre;
+            Load += mitarbeiter_Genre_Load;
             ResumeLayout(false);
             PerformLayout();
         }

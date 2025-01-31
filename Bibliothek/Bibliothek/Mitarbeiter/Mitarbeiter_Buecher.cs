@@ -34,13 +34,12 @@ namespace Bibliothek.Mitarbeiter
             bücher_Label_ISBN.Font = label;
 
             buecher_Speichern.Font = button;
-            buecher_Loeschen.Font = button;
             buecher_Zurueck.Font = button;
 
             ManageMenu manageMenu = new ManageMenu();
-            manageMenu.LoadBücher(dropDown_Bücher);
-            manageMenu.LoadAutoren(menu_Autoren);
-            manageMenu.LoadGenres(menu_Genre);
+            manageMenu.LoadBücher(dropDown_Bücher, bücher_Titel, bücher_Autor, bücher_Genre, bücher_ISBN);
+            manageMenu.LoadAutoren(menu_Autoren, bücher_Titel, bücher_Autor, bücher_Genre, bücher_ISBN);
+            manageMenu.LoadGenres(menu_Genre, bücher_Titel, bücher_Autor, bücher_Genre, bücher_ISBN);
         }
 
         private void mitarbeiter_Bücher_MouseEnter(object sender, EventArgs e)
@@ -170,9 +169,16 @@ namespace Bibliothek.Mitarbeiter
             }
         }
 
-        private void dropDown_Bücher_SelectedIndexChanged(object sender, EventArgs e)
+        private void buecher_Speichern_Click(object sender, EventArgs e)
         {
+            ManageMenu manageMenu = new ManageMenu();
+            manageMenu.SaveChanges(bücher_Titel, bücher_Autor, bücher_Genre, bücher_ISBN);
+        }
 
+        private void TextBox_Changed(object sender, EventArgs e)
+        {
+            ManageMenu manualMenu = new ManageMenu();
+            manualMenu.FillComboBoxes(bücher_Autor, bücher_Genre);
         }
     }
 }

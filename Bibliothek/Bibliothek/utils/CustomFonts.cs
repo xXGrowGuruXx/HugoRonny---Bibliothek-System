@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Text;
-using System.Linq;
+﻿using System.Drawing.Text;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bibliothek.utils
 {
@@ -25,9 +20,12 @@ namespace Bibliothek.utils
             }
         }
 
+        [DllImport("gdi32.dll")]
+        private static extern int AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, ref uint pcFonts);
+
         private static void LoadFontFromResource(string fontFileName)
         {
-            string resourceName = $"Bibliothek.Resources.{fontFileName}"; // Passe den Namespace an
+            string resourceName = $"Bibliothek.Resources.{fontFileName}";
 
             using (Stream fontStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
             {
@@ -43,6 +41,11 @@ namespace Bibliothek.utils
                 Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
 
                 _fontCollection.AddMemoryFont(fontPtr, fontData.Length);
+
+                // Windows mitteilen, dass eine neue Schrift geladen wurde
+                uint dummy = 0;
+                AddFontMemResourceEx(fontPtr, (uint)fontData.Length, IntPtr.Zero, ref dummy);
+
                 Marshal.FreeCoTaskMem(fontPtr);
             }
         }

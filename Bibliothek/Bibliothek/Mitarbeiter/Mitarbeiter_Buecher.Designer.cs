@@ -33,7 +33,6 @@
             bücher_Label_Titel = new Label();
             bücher_Titel = new TextBox();
             buecher_Zurueck = new Button();
-            buecher_Loeschen = new Button();
             buecher_Speichern = new Button();
             bücher_Label_ISBN = new Label();
             bücher_Label_Autor = new Label();
@@ -82,6 +81,7 @@
             bücher_Titel.Size = new Size(377, 30);
             bücher_Titel.TabIndex = 13;
             bücher_Titel.TextAlign = HorizontalAlignment.Center;
+            bücher_Titel.TextChanged += TextBox_Changed;
             bücher_Titel.MouseEnter += mitarbeiter_Bücher_MouseEnter;
             bücher_Titel.MouseLeave += mitarbeiter_Bücher_MouseLeave;
             // 
@@ -91,7 +91,7 @@
             buecher_Zurueck.FlatStyle = FlatStyle.Popup;
             buecher_Zurueck.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buecher_Zurueck.ForeColor = SystemColors.Control;
-            buecher_Zurueck.Location = new Point(529, 438);
+            buecher_Zurueck.Location = new Point(509, 438);
             buecher_Zurueck.Name = "buecher_Zurueck";
             buecher_Zurueck.Size = new Size(211, 64);
             buecher_Zurueck.TabIndex = 26;
@@ -101,33 +101,19 @@
             buecher_Zurueck.MouseEnter += mitarbeiter_Bücher_MouseEnter;
             buecher_Zurueck.MouseLeave += mitarbeiter_Bücher_MouseLeave;
             // 
-            // buecher_Loeschen
-            // 
-            buecher_Loeschen.BackColor = Color.Transparent;
-            buecher_Loeschen.FlatStyle = FlatStyle.Popup;
-            buecher_Loeschen.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buecher_Loeschen.ForeColor = SystemColors.Control;
-            buecher_Loeschen.Location = new Point(35, 438);
-            buecher_Loeschen.Name = "buecher_Loeschen";
-            buecher_Loeschen.Size = new Size(211, 64);
-            buecher_Loeschen.TabIndex = 27;
-            buecher_Loeschen.Text = "Löschen";
-            buecher_Loeschen.UseVisualStyleBackColor = false;
-            buecher_Loeschen.MouseEnter += mitarbeiter_Bücher_MouseEnter;
-            buecher_Loeschen.MouseLeave += mitarbeiter_Bücher_MouseLeave;
-            // 
             // buecher_Speichern
             // 
             buecher_Speichern.BackColor = Color.Transparent;
             buecher_Speichern.FlatStyle = FlatStyle.Popup;
             buecher_Speichern.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buecher_Speichern.ForeColor = SystemColors.Control;
-            buecher_Speichern.Location = new Point(285, 438);
+            buecher_Speichern.Location = new Point(62, 438);
             buecher_Speichern.Name = "buecher_Speichern";
             buecher_Speichern.Size = new Size(211, 64);
             buecher_Speichern.TabIndex = 28;
             buecher_Speichern.Text = "Speichern";
             buecher_Speichern.UseVisualStyleBackColor = false;
+            buecher_Speichern.Click += buecher_Speichern_Click;
             buecher_Speichern.MouseEnter += mitarbeiter_Bücher_MouseEnter;
             buecher_Speichern.MouseLeave += mitarbeiter_Bücher_MouseLeave;
             // 
@@ -187,7 +173,7 @@
             bücher_Menu.Items.AddRange(new ToolStripItem[] { menu_Bücher, menu_Autoren, menu_Genre });
             bücher_Menu.Location = new Point(210, 107);
             bücher_Menu.Name = "bücher_Menu";
-            bücher_Menu.Size = new Size(547, 46);
+            bücher_Menu.Size = new Size(397, 46);
             bücher_Menu.TabIndex = 38;
             // 
             // menu_Bücher
@@ -205,15 +191,8 @@
             // 
             // dropDown_Bücher
             // 
-            dropDown_Bücher.AutoSize = false;
-            dropDown_Bücher.DropDownHeight = 300;
-            dropDown_Bücher.DropDownStyle = ComboBoxStyle.DropDownList;
-            dropDown_Bücher.DropDownWidth = 300;
-            dropDown_Bücher.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dropDown_Bücher.IntegralHeight = false;
-            dropDown_Bücher.MaxDropDownItems = 100;
             dropDown_Bücher.Name = "dropDown_Bücher";
-            dropDown_Bücher.Size = new Size(121, 36);
+            dropDown_Bücher.Size = new Size(121, 28);
             // 
             // menu_Autoren
             // 
@@ -241,8 +220,10 @@
             // 
             // bücher_Autor
             // 
+            bücher_Autor.DropDownStyle = ComboBoxStyle.DropDownList;
             bücher_Autor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bücher_Autor.FormattingEnabled = true;
+            bücher_Autor.ItemHeight = 28;
             bücher_Autor.Location = new Point(276, 231);
             bücher_Autor.Name = "bücher_Autor";
             bücher_Autor.Size = new Size(377, 36);
@@ -252,6 +233,7 @@
             // 
             // bücher_Genre
             // 
+            bücher_Genre.DropDownStyle = ComboBoxStyle.DropDownList;
             bücher_Genre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bücher_Genre.FormattingEnabled = true;
             bücher_Genre.Location = new Point(276, 283);
@@ -273,7 +255,6 @@
             Controls.Add(bücher_Label_Autor);
             Controls.Add(bücher_Label_ISBN);
             Controls.Add(buecher_Speichern);
-            Controls.Add(buecher_Loeschen);
             Controls.Add(buecher_Zurueck);
             Controls.Add(bücher_Titel);
             Controls.Add(bücher_Label_Titel);
@@ -302,7 +283,6 @@
         private Label bücher_Label_Titel;
         private TextBox bücher_Titel;
         private Button buecher_Zurueck;
-        private Button buecher_Loeschen;
         private Button buecher_Speichern;
         private Label bücher_Label_ISBN;
         private Label bücher_Label_Autor;
@@ -311,9 +291,9 @@
         private MenuStrip bücher_Menu;
         private ComboBox bücher_Autor;
         private ComboBox bücher_Genre;
-        private ToolStripMenuItem menu_Bücher;
         private ToolStripMenuItem menu_Autoren;
         private ToolStripMenuItem menu_Genre;
+        private ToolStripMenuItem menu_Bücher;
         private ToolStripComboBox dropDown_Bücher;
     }
 }

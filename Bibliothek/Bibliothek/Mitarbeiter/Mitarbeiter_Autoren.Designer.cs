@@ -59,6 +59,7 @@
             autoren_List.Name = "autoren_List";
             autoren_List.Size = new Size(399, 36);
             autoren_List.TabIndex = 11;
+            autoren_List.SelectedIndexChanged += autoren_List_SelectedIndexChanged;
             autoren_List.MouseEnter += mitarbeiter_Autoren_MouseEnter;
             autoren_List.MouseLeave += mitarbeiter_Autoren_MouseLeave;
             // 
@@ -138,6 +139,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Mitarbeiter_Autoren";
             FormClosing += mitarbeiter_Autoren;
+            Load += mitarbeiter_Autoren_Load;
             ResumeLayout(false);
             PerformLayout();
         }

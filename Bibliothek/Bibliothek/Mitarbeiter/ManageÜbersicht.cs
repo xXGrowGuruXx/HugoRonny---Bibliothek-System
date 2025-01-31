@@ -27,14 +27,22 @@ namespace Bibliothek.Mitarbeiter
             {
                 if (comboBox != null)
                 {
-                    comboBox.Items.Clear(); // Nur einmal leeren, vor der Schleife
-                    comboBox.Items.Add("* NEU *"); // Sonder-Eintrag hinzufügen
+                    comboBox.Items.Clear();
+                    comboBox.Items.Add("* NEU *");
 
                     foreach (DataRow row in result.Rows) // Durch die Zeilen iterieren
                     {
                         comboBox.Items.Add(row["GenreName"].ToString());
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Keine ComboBox gefunden");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Kein Genre gefunden");
             }
         }
 
@@ -109,23 +117,38 @@ namespace Bibliothek.Mitarbeiter
 
         public void LoadAutoren(ComboBox comboBox)
         {
-            string query = "SELECT AutorName FROM Autor";
+            string query = "SELECT AutorName FROM Autoren";
 
             // Datenbankabfrage ausführen
             DataTable result = Database.ExecuteQuery(query);
 
-            if (result != null && result.Rows.Count > 0)
+            if (result.Rows.Count > 0)
             {
-                if (comboBox != null)
+                try
                 {
-                    comboBox.Items.Clear(); // Nur einmal leeren, vor der Schleife
-                    comboBox.Items.Add("* NEU *"); // Sonder-Eintrag hinzufügen
-                }
+                    if (comboBox != null)
+                    {
+                        comboBox.Items.Clear();
+                        comboBox.Items.Add("* NEU *");
 
-                foreach (DataRow row in result.Rows) // Durch die Zeilen iterieren
-                {
-                    comboBox.Items.Add(row["AutorName"].ToString());
+                        foreach (DataRow row in result.Rows)
+                        {
+                            comboBox.Items.Add(row["AutorName"].ToString());
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Keine ComboBox gefunden", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Fehler beim befüllen der ComboBox:\n" + e.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Keine Autoren gefunden", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -193,6 +216,5 @@ namespace Bibliothek.Mitarbeiter
                 MessageBox.Show("Fehler beim Aktualisieren des Autors:\n" + ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }
