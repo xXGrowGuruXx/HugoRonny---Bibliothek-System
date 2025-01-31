@@ -21,7 +21,7 @@ namespace Bibliothek.Mitarbeiter
 
                     foreach (DataRow row in result.Rows) // Durch die Zeilen iterieren
                     {
-                        menuBox.Items.Add(row["GenreName"].ToString());
+                        menuBox.Items.Add(row["Titel"].ToString());
                     }
                 }
             }
