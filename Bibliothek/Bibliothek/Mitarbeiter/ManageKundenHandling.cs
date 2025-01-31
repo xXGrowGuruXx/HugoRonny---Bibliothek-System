@@ -54,7 +54,7 @@ namespace Bibliothek.Mitarbeiter
                 forname.Text = row["Vorname"].ToString();
                 surename.Text = row["Name"].ToString();
                 username.Text = row["Username"].ToString();
-                passwort.Text = row["Password"].ToString();
+                passwort.Text = row["Passwort"].ToString();
                 
             }
             else

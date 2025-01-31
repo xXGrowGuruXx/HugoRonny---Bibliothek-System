@@ -131,7 +131,17 @@ namespace Bibliothek.Mitarbeiter
 
         private void mitarbeiterKunden_List_SelectedIndexChanged(object sender, EventArgs e)
         {
-            manageKundenHandling.LoadSelectedInformation(mitarbeiterKunden_List, mitarbeiterKunden_Vorname, mitarbeiterKunden_Name, mitarbeiterKunden_Username, mitarbeiterKunden_Passwort);
+            if (mitarbeiterKunden_List.Text != "* NEU *")
+            {
+                manageKundenHandling.LoadSelectedInformation(mitarbeiterKunden_List, mitarbeiterKunden_Vorname, mitarbeiterKunden_Name, mitarbeiterKunden_Username, mitarbeiterKunden_Passwort);
+            }
+            else
+            {
+                mitarbeiterKunden_Vorname.Text = string.Empty;
+                mitarbeiterKunden_Name.Text = string.Empty;
+                mitarbeiterKunden_Username.Text = string.Empty;
+                mitarbeiterKunden_Passwort.Text = string.Empty;
+            }
         }
 
         private void mitarbeiterKunden_Speichern_Click(object sender, EventArgs e)
