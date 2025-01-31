@@ -12,37 +12,34 @@ using System.Windows.Forms;
 
 namespace Bibliothek.Kunde
 {
-    public partial class KundeSuche : Form
+    public partial class KundeRückgabe : Form
     {
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
         static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
 
-        public KundeSuche()
+        public KundeRückgabe()
         {
             InitializeComponent();
         }
-        private void KundeSuche_Load(object sender, EventArgs e)
+        private void KundeRückgabe_Load(object sender, EventArgs e)
         {
-            KundeSuche_Seitenname.Font = überschrift;
+            kundeRückgabe_Seitenname.Font = überschrift;
 
-            KundeSuche_Ausleihen.Font = button;
-            KundeSuche_Reservieren.Font = button;
-            KundeSuche_Zurück.Font = button;
-
+            kundeRückgabe_Abgeben.Font = button;
+            kundeRückgabe_Zurück.Font = button;
         }
-        private void Kunde_Suche(object sender, FormClosingEventArgs e)
+        private void kundeRückgabe(object sender, FormClosingEventArgs e)
         {
             KundeMain kundeMain = KundeMain.GetInstance();
             kundeMain.Show();
         }
 
-        private void Kunde_Suche_Abbrechen_Click(object sender, EventArgs e)
+        private void kundeRückgabe_Abbrechen_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void Kunde_Suche_MouseEnter(object sender, EventArgs e)
+        private void kundeRückgabe_MouseEnter(object sender, EventArgs e)
         {
             ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
@@ -53,10 +50,14 @@ namespace Bibliothek.Kunde
                 button.ForeColor = Color.Black;
                 button.BackColor = Color.FromArgb(128, Color.White);
             }
-            
+            else if (comboBox != null)
+            {
+                kundeRückgabe_Buchauswahl.ForeColor = Color.Black;
+                kundeRückgabe_Buchauswahl.BackColor = Color.FromArgb(128, Color.White);
+            }
         }
 
-        private void Kunde_Suche_MouseLeave(object sender, EventArgs e)
+        private void kundeRückgabe_MouseLeave(object sender, EventArgs e)
         {
             ComboBox? comboBox = sender as ComboBox;
             TextBox? textBox = sender as TextBox;
@@ -67,7 +68,25 @@ namespace Bibliothek.Kunde
                 button.ForeColor = Color.White;
                 button.BackColor = Color.FromArgb(0);
             }
-            
+            else if (comboBox != null)
+            {
+                kundeRückgabe_Buchauswahl.ForeColor = Color.White;
+                kundeRückgabe_Buchauswahl.BackColor = Color.FromArgb(0);
+            }
+        }
+        private void kundeRückgabe_Buttons_Click(object sender, EventArgs e)
+        {
+            Button? button = sender as Button;
+
+            if (button != null)
+            {
+                if (button == kundeRückgabe_Abgeben)
+                {
+                    
+                }
+              
+
+            }
         }
     }
 }

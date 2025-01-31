@@ -62,6 +62,7 @@
             Kunde_Suche.TabIndex = 7;
             Kunde_Suche.Text = "Büchersuche";
             Kunde_Suche.UseVisualStyleBackColor = false;
+            Kunde_Suche.Click += kundeMain_Buttons_Click;
             Kunde_Suche.MouseEnter += kundeMain_Buttons_MouseEnter;
             Kunde_Suche.MouseLeave += kundeMain_Buttons_MouseLeave;
             // 
@@ -78,6 +79,7 @@
             Kunde_Rueckgabe.TabIndex = 8;
             Kunde_Rueckgabe.Text = "Rückgabe";
             Kunde_Rueckgabe.UseVisualStyleBackColor = false;
+            Kunde_Rueckgabe.Click += kundeMain_Buttons_Click;
             Kunde_Rueckgabe.MouseEnter += kundeMain_Buttons_MouseEnter;
             Kunde_Rueckgabe.MouseLeave += kundeMain_Buttons_MouseLeave;
             // 
@@ -94,6 +96,7 @@
             Kunde_Reservierungen.TabIndex = 9;
             Kunde_Reservierungen.Text = "Reservierungen";
             Kunde_Reservierungen.UseVisualStyleBackColor = false;
+            Kunde_Reservierungen.Click += kundeMain_Buttons_Click;
             Kunde_Reservierungen.MouseEnter += kundeMain_Buttons_MouseEnter;
             Kunde_Reservierungen.MouseLeave += kundeMain_Buttons_MouseLeave;
             // 
@@ -110,6 +113,7 @@
             Kunde_Abmelden.TabIndex = 10;
             Kunde_Abmelden.Text = "Abmelden";
             Kunde_Abmelden.UseVisualStyleBackColor = false;
+            Kunde_Abmelden.Click += kundeMain_Abmelden_Click;
             Kunde_Abmelden.MouseEnter += kundeMain_Buttons_MouseEnter;
             Kunde_Abmelden.MouseLeave += kundeMain_Buttons_MouseLeave;
             // 
@@ -126,6 +130,7 @@
             Kunde_Strafen.TabIndex = 11;
             Kunde_Strafen.Text = "Strafen";
             Kunde_Strafen.UseVisualStyleBackColor = false;
+            Kunde_Strafen.Click += kundeMain_Buttons_Click;
             Kunde_Strafen.MouseEnter += kundeMain_Buttons_MouseEnter;
             Kunde_Strafen.MouseLeave += kundeMain_Buttons_MouseLeave;
             // 
@@ -147,6 +152,8 @@
             Name = "KundeMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "KundeMain";
+            FormClosing += KundenMain;
+            Load += KundeMain_Load;
             ResumeLayout(false);
             PerformLayout();
         }

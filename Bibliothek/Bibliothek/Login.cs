@@ -4,6 +4,7 @@ using System.Data;
 using System.Media;
 using Bibliothek.Admin;
 using Bibliothek.Mitarbeiter;
+using Bibliothek.Kunde;
 
 namespace Bibliothek
 {
@@ -95,6 +96,9 @@ namespace Bibliothek
 
                     case 3:
                         // Rolle 3 - Kunde
+                        KundeMain kunden = new KundeMain();
+                        kunden.Show();
+                        this.Hide();
                         break;
                 }
             }

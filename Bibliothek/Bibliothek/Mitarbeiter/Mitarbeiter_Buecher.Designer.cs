@@ -53,11 +53,11 @@
             // 
             buch_Seitenname.AutoSize = true;
             buch_Seitenname.BackColor = Color.Transparent;
-            buch_Seitenname.Font = new Font("Vacaciones", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buch_Seitenname.Font = new Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buch_Seitenname.ForeColor = Color.Transparent;
             buch_Seitenname.Location = new Point(300, 31);
             buch_Seitenname.Name = "buch_Seitenname";
-            buch_Seitenname.Size = new Size(196, 65);
+            buch_Seitenname.Size = new Size(139, 44);
             buch_Seitenname.TabIndex = 7;
             buch_Seitenname.Text = "Bücher";
             buch_Seitenname.TextAlign = ContentAlignment.MiddleCenter;
@@ -66,11 +66,11 @@
             // 
             bücher_Label_Titel.AutoSize = true;
             bücher_Label_Titel.BackColor = Color.Transparent;
-            bücher_Label_Titel.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bücher_Label_Titel.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bücher_Label_Titel.ForeColor = SystemColors.ButtonHighlight;
             bücher_Label_Titel.Location = new Point(116, 168);
             bücher_Label_Titel.Name = "bücher_Label_Titel";
-            bücher_Label_Titel.Size = new Size(85, 39);
+            bücher_Label_Titel.Size = new Size(52, 26);
             bücher_Label_Titel.TabIndex = 12;
             bücher_Label_Titel.Text = "Titel";
             // 
@@ -79,7 +79,7 @@
             bücher_Titel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bücher_Titel.Location = new Point(276, 175);
             bücher_Titel.Name = "bücher_Titel";
-            bücher_Titel.Size = new Size(377, 30);
+            bücher_Titel.Size = new Size(377, 26);
             bücher_Titel.TabIndex = 13;
             bücher_Titel.TextAlign = HorizontalAlignment.Center;
             bücher_Titel.MouseEnter += mitarbeiter_Bücher_MouseEnter;
@@ -89,7 +89,7 @@
             // 
             buecher_Zurueck.BackColor = Color.Transparent;
             buecher_Zurueck.FlatStyle = FlatStyle.Popup;
-            buecher_Zurueck.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buecher_Zurueck.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buecher_Zurueck.ForeColor = SystemColors.Control;
             buecher_Zurueck.Location = new Point(529, 438);
             buecher_Zurueck.Name = "buecher_Zurueck";
@@ -105,7 +105,7 @@
             // 
             buecher_Loeschen.BackColor = Color.Transparent;
             buecher_Loeschen.FlatStyle = FlatStyle.Popup;
-            buecher_Loeschen.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buecher_Loeschen.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buecher_Loeschen.ForeColor = SystemColors.Control;
             buecher_Loeschen.Location = new Point(35, 438);
             buecher_Loeschen.Name = "buecher_Loeschen";
@@ -120,7 +120,7 @@
             // 
             buecher_Speichern.BackColor = Color.Transparent;
             buecher_Speichern.FlatStyle = FlatStyle.Popup;
-            buecher_Speichern.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buecher_Speichern.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buecher_Speichern.ForeColor = SystemColors.Control;
             buecher_Speichern.Location = new Point(285, 438);
             buecher_Speichern.Name = "buecher_Speichern";
@@ -135,11 +135,11 @@
             // 
             bücher_Label_ISBN.AutoSize = true;
             bücher_Label_ISBN.BackColor = Color.Transparent;
-            bücher_Label_ISBN.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bücher_Label_ISBN.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bücher_Label_ISBN.ForeColor = SystemColors.ButtonHighlight;
             bücher_Label_ISBN.Location = new Point(117, 340);
             bücher_Label_ISBN.Name = "bücher_Label_ISBN";
-            bücher_Label_ISBN.Size = new Size(84, 39);
+            bücher_Label_ISBN.Size = new Size(64, 26);
             bücher_Label_ISBN.TabIndex = 31;
             bücher_Label_ISBN.Text = "ISBN";
             // 
@@ -147,11 +147,11 @@
             // 
             bücher_Label_Autor.AutoSize = true;
             bücher_Label_Autor.BackColor = Color.Transparent;
-            bücher_Label_Autor.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bücher_Label_Autor.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bücher_Label_Autor.ForeColor = SystemColors.ButtonHighlight;
             bücher_Label_Autor.Location = new Point(116, 227);
             bücher_Label_Autor.Name = "bücher_Label_Autor";
-            bücher_Label_Autor.Size = new Size(101, 39);
+            bücher_Label_Autor.Size = new Size(64, 26);
             bücher_Label_Autor.TabIndex = 32;
             bücher_Label_Autor.Text = "Autor";
             // 
@@ -159,11 +159,11 @@
             // 
             bücher_Label_Genre.AutoSize = true;
             bücher_Label_Genre.BackColor = Color.Transparent;
-            bücher_Label_Genre.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bücher_Label_Genre.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bücher_Label_Genre.ForeColor = SystemColors.ButtonHighlight;
             bücher_Label_Genre.Location = new Point(116, 279);
             bücher_Label_Genre.Name = "bücher_Label_Genre";
-            bücher_Label_Genre.Size = new Size(104, 39);
+            bücher_Label_Genre.Size = new Size(72, 26);
             bücher_Label_Genre.TabIndex = 33;
             bücher_Label_Genre.Text = "Genre";
             // 
@@ -172,7 +172,7 @@
             bücher_ISBN.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bücher_ISBN.Location = new Point(276, 347);
             bücher_ISBN.Name = "bücher_ISBN";
-            bücher_ISBN.Size = new Size(377, 30);
+            bücher_ISBN.Size = new Size(377, 26);
             bücher_ISBN.TabIndex = 34;
             bücher_ISBN.TextAlign = HorizontalAlignment.Center;
             bücher_ISBN.MouseEnter += mitarbeiter_Bücher_MouseEnter;
@@ -187,7 +187,7 @@
             bücher_Menu.Items.AddRange(new ToolStripItem[] { menu_Bücher, menu_Autoren, menu_Genre });
             bücher_Menu.Location = new Point(210, 107);
             bücher_Menu.Name = "bücher_Menu";
-            bücher_Menu.Size = new Size(547, 46);
+            bücher_Menu.Size = new Size(397, 46);
             bücher_Menu.TabIndex = 38;
             // 
             // menu_Bücher
@@ -195,7 +195,7 @@
             menu_Bücher.AutoSize = false;
             menu_Bücher.BackColor = Color.Transparent;
             menu_Bücher.DropDownItems.AddRange(new ToolStripItem[] { dropDown_Bücher });
-            menu_Bücher.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            menu_Bücher.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menu_Bücher.ForeColor = Color.White;
             menu_Bücher.Name = "menu_Bücher";
             menu_Bücher.Size = new Size(152, 42);
@@ -213,13 +213,13 @@
             dropDown_Bücher.IntegralHeight = false;
             dropDown_Bücher.MaxDropDownItems = 100;
             dropDown_Bücher.Name = "dropDown_Bücher";
-            dropDown_Bücher.Size = new Size(121, 36);
+            dropDown_Bücher.Size = new Size(121, 29);
             // 
             // menu_Autoren
             // 
             menu_Autoren.AutoSize = false;
             menu_Autoren.BackColor = Color.Transparent;
-            menu_Autoren.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            menu_Autoren.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menu_Autoren.ForeColor = Color.White;
             menu_Autoren.Name = "menu_Autoren";
             menu_Autoren.Size = new Size(131, 42);
@@ -231,7 +231,7 @@
             // 
             menu_Genre.AutoSize = false;
             menu_Genre.BackColor = Color.Transparent;
-            menu_Genre.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            menu_Genre.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menu_Genre.ForeColor = Color.White;
             menu_Genre.Name = "menu_Genre";
             menu_Genre.Size = new Size(106, 42);
@@ -245,7 +245,7 @@
             bücher_Autor.FormattingEnabled = true;
             bücher_Autor.Location = new Point(276, 231);
             bücher_Autor.Name = "bücher_Autor";
-            bücher_Autor.Size = new Size(377, 36);
+            bücher_Autor.Size = new Size(377, 29);
             bücher_Autor.TabIndex = 39;
             bücher_Autor.MouseEnter += mitarbeiter_Bücher_MouseEnter;
             bücher_Autor.MouseLeave += mitarbeiter_Bücher_MouseLeave;
@@ -256,7 +256,7 @@
             bücher_Genre.FormattingEnabled = true;
             bücher_Genre.Location = new Point(276, 283);
             bücher_Genre.Name = "bücher_Genre";
-            bücher_Genre.Size = new Size(377, 36);
+            bücher_Genre.Size = new Size(377, 29);
             bücher_Genre.TabIndex = 40;
             bücher_Genre.MouseEnter += mitarbeiter_Bücher_MouseEnter;
             bücher_Genre.MouseLeave += mitarbeiter_Bücher_MouseLeave;
@@ -265,7 +265,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
-            ClientSize = new Size(782, 553);
+            ClientSize = new Size(784, 561);
             Controls.Add(bücher_Genre);
             Controls.Add(bücher_Autor);
             Controls.Add(bücher_ISBN);
