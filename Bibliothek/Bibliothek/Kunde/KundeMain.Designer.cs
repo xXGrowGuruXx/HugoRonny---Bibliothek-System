@@ -40,11 +40,11 @@
             // 
             KundenHUB.AutoSize = true;
             KundenHUB.BackColor = Color.Transparent;
-            KundenHUB.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            KundenHUB.Font = new Font("Vacaciones", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             KundenHUB.ForeColor = Color.Transparent;
-            KundenHUB.Location = new Point(274, 9);
+            KundenHUB.Location = new Point(232, 17);
             KundenHUB.Name = "KundenHUB";
-            KundenHUB.Size = new Size(223, 37);
+            KundenHUB.Size = new Size(321, 65);
             KundenHUB.TabIndex = 6;
             KundenHUB.Text = "Kunden HUB ";
             KundenHUB.TextAlign = ContentAlignment.MiddleCenter;
@@ -53,9 +53,9 @@
             // 
             Kunde_Suche.BackColor = Color.Transparent;
             Kunde_Suche.FlatStyle = FlatStyle.Popup;
-            Kunde_Suche.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Kunde_Suche.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Kunde_Suche.ForeColor = SystemColors.ButtonHighlight;
-            Kunde_Suche.Location = new Point(231, 82);
+            Kunde_Suche.Location = new Point(231, 109);
             Kunde_Suche.Margin = new Padding(0);
             Kunde_Suche.Name = "Kunde_Suche";
             Kunde_Suche.Size = new Size(322, 55);
@@ -70,9 +70,9 @@
             // 
             Kunde_Rueckgabe.BackColor = Color.Transparent;
             Kunde_Rueckgabe.FlatStyle = FlatStyle.Popup;
-            Kunde_Rueckgabe.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Kunde_Rueckgabe.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Kunde_Rueckgabe.ForeColor = SystemColors.ButtonHighlight;
-            Kunde_Rueckgabe.Location = new Point(231, 190);
+            Kunde_Rueckgabe.Location = new Point(231, 207);
             Kunde_Rueckgabe.Margin = new Padding(0);
             Kunde_Rueckgabe.Name = "Kunde_Rueckgabe";
             Kunde_Rueckgabe.Size = new Size(322, 55);
@@ -87,9 +87,9 @@
             // 
             Kunde_Reservierungen.BackColor = Color.Transparent;
             Kunde_Reservierungen.FlatStyle = FlatStyle.Popup;
-            Kunde_Reservierungen.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Kunde_Reservierungen.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Kunde_Reservierungen.ForeColor = SystemColors.ButtonHighlight;
-            Kunde_Reservierungen.Location = new Point(231, 294);
+            Kunde_Reservierungen.Location = new Point(231, 314);
             Kunde_Reservierungen.Margin = new Padding(0);
             Kunde_Reservierungen.Name = "Kunde_Reservierungen";
             Kunde_Reservierungen.Size = new Size(322, 55);
@@ -104,9 +104,9 @@
             // 
             Kunde_Abmelden.BackColor = Color.Transparent;
             Kunde_Abmelden.FlatStyle = FlatStyle.Popup;
-            Kunde_Abmelden.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Kunde_Abmelden.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Kunde_Abmelden.ForeColor = SystemColors.ButtonHighlight;
-            Kunde_Abmelden.Location = new Point(104, 497);
+            Kunde_Abmelden.Location = new Point(100, 489);
             Kunde_Abmelden.Margin = new Padding(0);
             Kunde_Abmelden.Name = "Kunde_Abmelden";
             Kunde_Abmelden.Size = new Size(590, 55);
@@ -121,9 +121,9 @@
             // 
             Kunde_Strafen.BackColor = Color.Transparent;
             Kunde_Strafen.FlatStyle = FlatStyle.Popup;
-            Kunde_Strafen.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Kunde_Strafen.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Kunde_Strafen.ForeColor = SystemColors.ButtonHighlight;
-            Kunde_Strafen.Location = new Point(231, 398);
+            Kunde_Strafen.Location = new Point(231, 400);
             Kunde_Strafen.Margin = new Padding(0);
             Kunde_Strafen.Name = "Kunde_Strafen";
             Kunde_Strafen.Size = new Size(322, 55);
@@ -138,7 +138,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
-            ClientSize = new Size(784, 561);
+            ClientSize = new Size(782, 553);
             Controls.Add(Kunde_Strafen);
             Controls.Add(Kunde_Abmelden);
             Controls.Add(Kunde_Reservierungen);

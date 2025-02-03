@@ -40,7 +40,6 @@
             bücher_ISBN = new TextBox();
             bücher_Menu = new MenuStrip();
             menu_Bücher = new ToolStripMenuItem();
-            dropDown_Bücher = new ToolStripComboBox();
             menu_Autoren = new ToolStripMenuItem();
             menu_Genre = new ToolStripMenuItem();
             bücher_Autor = new ComboBox();
@@ -173,14 +172,13 @@
             bücher_Menu.Items.AddRange(new ToolStripItem[] { menu_Bücher, menu_Autoren, menu_Genre });
             bücher_Menu.Location = new Point(210, 107);
             bücher_Menu.Name = "bücher_Menu";
-            bücher_Menu.Size = new Size(397, 46);
+            bücher_Menu.Size = new Size(547, 46);
             bücher_Menu.TabIndex = 38;
             // 
             // menu_Bücher
             // 
             menu_Bücher.AutoSize = false;
             menu_Bücher.BackColor = Color.Transparent;
-            menu_Bücher.DropDownItems.AddRange(new ToolStripItem[] { dropDown_Bücher });
             menu_Bücher.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menu_Bücher.ForeColor = Color.White;
             menu_Bücher.Name = "menu_Bücher";
@@ -188,11 +186,6 @@
             menu_Bücher.Text = "Bücher";
             menu_Bücher.MouseEnter += bücher_Menu_MouseEnter;
             menu_Bücher.MouseLeave += bücher_Menu_MouseLeave;
-            // 
-            // dropDown_Bücher
-            // 
-            dropDown_Bücher.Name = "dropDown_Bücher";
-            dropDown_Bücher.Size = new Size(121, 28);
             // 
             // menu_Autoren
             // 
@@ -294,6 +287,5 @@
         private ToolStripMenuItem menu_Autoren;
         private ToolStripMenuItem menu_Genre;
         private ToolStripMenuItem menu_Bücher;
-        private ToolStripComboBox dropDown_Bücher;
     }
 }

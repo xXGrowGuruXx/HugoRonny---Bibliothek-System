@@ -41,17 +41,22 @@ namespace Bibliothek.Mitarbeiter
         private DataTable Bücher(string username)
         {
             string query =
-                    "SELECT Bücher.Titel, Autoren.AutorName, Genres.GenreName, Ausgeliehen.Ausleihdatum, Ausgeliehen.Rückgabedatum, Ausgeliehen.Rückgabe " +
+                    "SELECT Bücher.Titel, Autoren.AutorName, Genres.GenreName, Ausgeliehen.Ausleihdatum, Ausgeliehen.Rückgabedatum, " +
+                    "CASE " +
+                    "    WHEN Ausgeliehen.Rückgabe = 1 THEN 'true' " +
+                    "    WHEN Ausgeliehen.Rückgabe = 0 THEN 'false' " +
+                    "    WHEN Ausgeliehen.Rückgabe IS NULL THEN ' ' " +
+                    "END AS Rückgabe " +
                     "FROM Ausgeliehen " +
                     "JOIN Bücher ON Ausgeliehen.BuchID = Bücher.BuchID " +
                     "JOIN Autoren ON Bücher.AutorID = Autoren.AutorID " +
                     "JOIN Genres ON Bücher.GenreID = Genres.GenreID " +
                     "JOIN Benutzer ON Ausgeliehen.BenutzerID = Benutzer.BenutzerID " +
-                    "WHERE Benutzer.UserName = @Username";
+                    "WHERE Benutzer.Name || ', ' || Benutzer.Vorname = @Fullname";
 
             SQLiteParameter[] parameters =
             {
-                new SQLiteParameter("@Username", username)
+                new SQLiteParameter("@Fullname", username)
             };
 
             DataTable bücher = Database.ExecuteQuery(query, parameters);
@@ -80,14 +85,14 @@ namespace Bibliothek.Mitarbeiter
                     "JOIN Ausgeliehen ON Strafen.AusleihID = Ausgeliehen.AusleihID " +
                     "JOIN Bücher ON Ausgeliehen.BuchID = Bücher.BuchID " +
                     "JOIN Benutzer ON Ausgeliehen.BenutzerID = Benutzer.BenutzerID " +
-                    "WHERE Benutzer.UserName = @Username";
+                    "WHERE Benutzer.Name || ', ' || Benutzer.Vorname = @Fullname";
 
             SQLiteParameter[] param =
             {
-                new SQLiteParameter("@Username", username)
+                new SQLiteParameter("@Fullname", username)
             };
 
-            DataTable strafen = Database.ExecuteQuery(query);
+            DataTable strafen = Database.ExecuteQuery(query, param);
 
             return strafen;
         }
@@ -95,19 +100,18 @@ namespace Bibliothek.Mitarbeiter
         private DataTable Reservierung(string username)
         {
             string query =
-                "SELECT Bücher.Titel, " +
-                "Reservierungen.Reservierungsdatum " +
-                "FROM Reservierungen " +
+                "SELECT Bücher.Titel, Reservierungen.Reservierungsdatum " +
+                "FROM Benutzer " +
+                "JOIN Reservierungen ON Benutzer.BenutzerID = Reservierungen.BenutzerID " +
                 "JOIN Bücher ON Reservierungen.BuchID = Bücher.BuchID " +
-                "JOIN Benutzer ON Reservierungen.BenutzerID = Benutzer.BenutzerID " +
-                "WHERE Benutzer.UserName = @Username";
+                "WHERE Benutzer.Name || ', ' || Benutzer.Vorname = @Fullname";
 
             SQLiteParameter[] param =
             {
-                new SQLiteParameter("@Username", username)
+                new SQLiteParameter("@Fullname", username)
             };
 
-            DataTable reservierungen = Database.ExecuteQuery(query);
+            DataTable reservierungen = Database.ExecuteQuery(query, param);
 
             return reservierungen;
         }

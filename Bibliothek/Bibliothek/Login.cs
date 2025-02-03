@@ -96,7 +96,7 @@ namespace Bibliothek
 
                     case 3:
                         // Rolle 3 - Kunde
-                        KundeMain kunden = new KundeMain();
+                        KundeMain kunden = new KundeMain(username);
                         kunden.Show();
                         this.Hide();
                         break;

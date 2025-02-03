@@ -62,6 +62,11 @@
             // 
             // kundenInfo_Grid
             // 
+            kundenInfo_Grid.AllowUserToAddRows = false;
+            kundenInfo_Grid.AllowUserToDeleteRows = false;
+            kundenInfo_Grid.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            kundenInfo_Grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            kundenInfo_Grid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             kundenInfo_Grid.BackgroundColor = SystemColors.Control;
             kundenInfo_Grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             kundenInfo_Grid.Location = new Point(12, 178);

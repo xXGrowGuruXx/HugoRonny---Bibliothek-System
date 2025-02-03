@@ -24,8 +24,11 @@ namespace Bibliothek.Kunde
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
         static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
-        public KundeMain()
+
+        string _username = string.Empty;
+        public KundeMain(string userName)
         {
+            _username = userName;
             instance = this;
             InitializeComponent();
         }
@@ -91,7 +94,7 @@ namespace Bibliothek.Kunde
             {
                 if (button == Kunde_Suche)
                 {
-                    KundeSuche kunde_suche = new KundeSuche();
+                    KundeSuche kunde_suche = new KundeSuche(_username);
                     kunde_suche.Show();
                     this.Hide();
                 }

@@ -32,20 +32,20 @@
             kundeRückgabe_Seitenname = new Label();
             kundeRückgabe_Zurück = new Button();
             kundeRückgabe_Abgeben = new Button();
-            kundeRückgabe_AusgelieheneBücher = new DataGridView();
+            kundeRückgabe_Grid = new DataGridView();
             kundeRückgabe_Buchauswahl = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)kundeRückgabe_AusgelieheneBücher).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)kundeRückgabe_Grid).BeginInit();
             SuspendLayout();
             // 
             // kundeRückgabe_Seitenname
             // 
             kundeRückgabe_Seitenname.AutoSize = true;
             kundeRückgabe_Seitenname.BackColor = Color.Transparent;
-            kundeRückgabe_Seitenname.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kundeRückgabe_Seitenname.Font = new Font("Vacaciones", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kundeRückgabe_Seitenname.ForeColor = Color.Transparent;
-            kundeRückgabe_Seitenname.Location = new Point(268, 28);
+            kundeRückgabe_Seitenname.Location = new Point(216, 32);
             kundeRückgabe_Seitenname.Name = "kundeRückgabe_Seitenname";
-            kundeRückgabe_Seitenname.Size = new Size(264, 37);
+            kundeRückgabe_Seitenname.Size = new Size(360, 55);
             kundeRückgabe_Seitenname.TabIndex = 7;
             kundeRückgabe_Seitenname.Text = "Bücherrückgabe";
             kundeRückgabe_Seitenname.TextAlign = ContentAlignment.MiddleCenter;
@@ -54,12 +54,12 @@
             // 
             kundeRückgabe_Zurück.BackColor = Color.Transparent;
             kundeRückgabe_Zurück.FlatStyle = FlatStyle.Popup;
-            kundeRückgabe_Zurück.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kundeRückgabe_Zurück.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kundeRückgabe_Zurück.ForeColor = SystemColors.ButtonHighlight;
-            kundeRückgabe_Zurück.Location = new Point(114, 497);
+            kundeRückgabe_Zurück.Location = new Point(475, 463);
             kundeRückgabe_Zurück.Margin = new Padding(0);
             kundeRückgabe_Zurück.Name = "kundeRückgabe_Zurück";
-            kundeRückgabe_Zurück.Size = new Size(590, 55);
+            kundeRückgabe_Zurück.Size = new Size(201, 55);
             kundeRückgabe_Zurück.TabIndex = 11;
             kundeRückgabe_Zurück.Text = "Zurück";
             kundeRückgabe_Zurück.UseVisualStyleBackColor = false;
@@ -71,12 +71,12 @@
             // 
             kundeRückgabe_Abgeben.BackColor = Color.Transparent;
             kundeRückgabe_Abgeben.FlatStyle = FlatStyle.Popup;
-            kundeRückgabe_Abgeben.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kundeRückgabe_Abgeben.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kundeRückgabe_Abgeben.ForeColor = SystemColors.ButtonHighlight;
-            kundeRückgabe_Abgeben.Location = new Point(114, 431);
+            kundeRückgabe_Abgeben.Location = new Point(102, 463);
             kundeRückgabe_Abgeben.Margin = new Padding(0);
             kundeRückgabe_Abgeben.Name = "kundeRückgabe_Abgeben";
-            kundeRückgabe_Abgeben.Size = new Size(590, 55);
+            kundeRückgabe_Abgeben.Size = new Size(212, 55);
             kundeRückgabe_Abgeben.TabIndex = 12;
             kundeRückgabe_Abgeben.Text = "Abgeben";
             kundeRückgabe_Abgeben.UseVisualStyleBackColor = false;
@@ -84,14 +84,15 @@
             kundeRückgabe_Abgeben.MouseEnter += kundeRückgabe_MouseEnter;
             kundeRückgabe_Abgeben.MouseLeave += kundeRückgabe_MouseLeave;
             // 
-            // kundeRückgabe_AusgelieheneBücher
+            // kundeRückgabe_Grid
             // 
-            kundeRückgabe_AusgelieheneBücher.BackgroundColor = Color.White;
-            kundeRückgabe_AusgelieheneBücher.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            kundeRückgabe_AusgelieheneBücher.Location = new Point(38, 108);
-            kundeRückgabe_AusgelieheneBücher.Name = "kundeRückgabe_AusgelieheneBücher";
-            kundeRückgabe_AusgelieheneBücher.Size = new Size(711, 221);
-            kundeRückgabe_AusgelieheneBücher.TabIndex = 13;
+            kundeRückgabe_Grid.BackgroundColor = Color.White;
+            kundeRückgabe_Grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            kundeRückgabe_Grid.Location = new Point(38, 108);
+            kundeRückgabe_Grid.Name = "kundeRückgabe_Grid";
+            kundeRückgabe_Grid.RowHeadersWidth = 51;
+            kundeRückgabe_Grid.Size = new Size(711, 221);
+            kundeRückgabe_Grid.TabIndex = 13;
             // 
             // kundeRückgabe_Buchauswahl
             // 
@@ -99,7 +100,7 @@
             kundeRückgabe_Buchauswahl.FormattingEnabled = true;
             kundeRückgabe_Buchauswahl.Location = new Point(38, 353);
             kundeRückgabe_Buchauswahl.Name = "kundeRückgabe_Buchauswahl";
-            kundeRückgabe_Buchauswahl.Size = new Size(711, 29);
+            kundeRückgabe_Buchauswahl.Size = new Size(711, 36);
             kundeRückgabe_Buchauswahl.TabIndex = 14;
             kundeRückgabe_Buchauswahl.Text = "Buch für Rückgabe auswählen";
             // 
@@ -107,9 +108,9 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
-            ClientSize = new Size(784, 561);
+            ClientSize = new Size(782, 553);
             Controls.Add(kundeRückgabe_Buchauswahl);
-            Controls.Add(kundeRückgabe_AusgelieheneBücher);
+            Controls.Add(kundeRückgabe_Grid);
             Controls.Add(kundeRückgabe_Abgeben);
             Controls.Add(kundeRückgabe_Zurück);
             Controls.Add(kundeRückgabe_Seitenname);
@@ -125,7 +126,7 @@
             Text = "KundeRückgabe";
             FormClosing += kundeRückgabe;
             Load += KundeRückgabe_Load;
-            ((System.ComponentModel.ISupportInitialize)kundeRückgabe_AusgelieheneBücher).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kundeRückgabe_Grid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -135,7 +136,7 @@
         private Label kundeRückgabe_Seitenname;
         private Button kundeRückgabe_Zurück;
         private Button kundeRückgabe_Abgeben;
-        private DataGridView kundeRückgabe_AusgelieheneBücher;
+        private DataGridView kundeRückgabe_Grid;
         private ComboBox kundeRückgabe_Buchauswahl;
     }
 }

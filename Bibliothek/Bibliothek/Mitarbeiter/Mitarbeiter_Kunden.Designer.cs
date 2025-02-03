@@ -194,6 +194,7 @@
             mitarbeiterKunden_Info.TabIndex = 27;
             mitarbeiterKunden_Info.Text = "Info";
             mitarbeiterKunden_Info.UseVisualStyleBackColor = false;
+            mitarbeiterKunden_Info.Click += mitarbeiterKunden_Info_Click;
             mitarbeiterKunden_Info.MouseEnter += mitarbeiter_Kunden_MouseEnter;
             mitarbeiterKunden_Info.MouseLeave += mitarbeiter_Kunden_MouseLeave;
             // 

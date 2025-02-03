@@ -8,29 +8,31 @@ namespace Bibliothek.Mitarbeiter
     internal class ManageMenu
     {
         private static string buch;
-        public void LoadBücher(ToolStripComboBox menuBox, TextBox titel, ComboBox autor, ComboBox genre, TextBox isbn)
+        public void LoadBücher(ToolStripMenuItem bücher, TextBox titel, ComboBox autor, ComboBox genre, TextBox isbn)
         {
             string query = "SELECT Titel FROM Bücher";
 
             // Datenbankabfrage ausführen
-            DataTable result = Database.ExecuteQuery(query);
+            DataTable bücherResult = Database.ExecuteQuery(query);
 
-            if (result != null)
+            if (bücherResult != null)
             {
-                if (menuBox != null)
+                bücher.DropDownItems.Clear();
+
+                foreach (DataRow bücherRow in bücherResult.Rows)
                 {
-                    menuBox.Items.Clear();
+                    ToolStripLabel label = new ToolStripLabel();
+                    label.Text = bücherRow["Titel"].ToString();
+                    label.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+                    label.AutoSize = false;
+                    label.Width = 350;
 
-                    foreach (DataRow row in result.Rows) // Durch die Zeilen iterieren
+                    label.Click += (sender, e) =>
                     {
-                        menuBox.Items.Add(row["Titel"].ToString());
+                        FillUI(titel, autor, genre, isbn, buchLabel: label);
+                    };
 
-                        menuBox.SelectedIndexChanged += (sender, e) =>
-                        {
-                            FillUI(titel, autor, genre, isbn, menuBox:  menuBox);
-                            buch = menuBox.Text;
-                        };
-                    }
+                    bücher.DropDownItems.Add(label);
                 }
             }
         }
@@ -145,7 +147,7 @@ namespace Bibliothek.Mitarbeiter
             }
         }
 
-        private void FillUI(TextBox titel, ComboBox autor, ComboBox genre, TextBox isbn, ToolStripComboBox? menuBox = null, ToolStripLabel? autorLabel = null, ToolStripLabel? genreLabel = null)
+        private void FillUI(TextBox titel, ComboBox autor, ComboBox genre, TextBox isbn, ToolStripLabel? buchLabel = null, ToolStripLabel? autorLabel = null, ToolStripLabel? genreLabel = null)
         {
             string selectedBuch = string.Empty;
             string findBuchQuery =
@@ -157,9 +159,9 @@ namespace Bibliothek.Mitarbeiter
 
             List<SQLiteParameter> paramList = new List<SQLiteParameter>();
 
-            if (menuBox != null)
+            if (buchLabel != null)
             {
-                selectedBuch = menuBox.Text;
+                selectedBuch = buchLabel.Text;
 
                 paramList.Add(new SQLiteParameter("@Buch", selectedBuch));
             }

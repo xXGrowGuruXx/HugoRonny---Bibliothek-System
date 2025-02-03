@@ -161,5 +161,11 @@ namespace Bibliothek.Mitarbeiter
             }
         }
 
+        private void mitarbeiterKunden_Info_Click(object sender, EventArgs e)
+        {
+            Mitarbeiter_KundenInfo mitarbeiter_KundenInfo = new Mitarbeiter_KundenInfo(mitarbeiterKunden_List.Text);
+            mitarbeiter_KundenInfo.Show();
+            this.Hide();
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace Bibliothek.Mitarbeiter
             buecher_Zurueck.Font = button;
 
             ManageMenu manageMenu = new ManageMenu();
-            manageMenu.LoadBücher(dropDown_Bücher, bücher_Titel, bücher_Autor, bücher_Genre, bücher_ISBN);
+            manageMenu.LoadBücher(menu_Bücher, bücher_Titel, bücher_Autor, bücher_Genre, bücher_ISBN);
             manageMenu.LoadAutoren(menu_Autoren, bücher_Titel, bücher_Autor, bücher_Genre, bücher_ISBN);
             manageMenu.LoadGenres(menu_Genre, bücher_Titel, bücher_Autor, bücher_Genre, bücher_ISBN);
         }
