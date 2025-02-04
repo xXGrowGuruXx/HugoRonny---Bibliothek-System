@@ -100,19 +100,19 @@ namespace Bibliothek.Kunde
                 }
                 if (button == Kunde_Rueckgabe)
                 {
-                    KundeRückgabe kunde_Rückgabe = new KundeRückgabe();
+                    KundeRückgabe kunde_Rückgabe = new KundeRückgabe(_username);
                     kunde_Rückgabe.Show();
                     this.Hide();
                 }
                 if (button == Kunde_Reservierungen)
                 {
-                    KundeReservierungen kunde_Reservierungen = new KundeReservierungen();
+                    KundeReservierungen kunde_Reservierungen = new KundeReservierungen(_username);
                     kunde_Reservierungen.Show();
                     this.Hide();
                 }
                 if (button == Kunde_Strafen)
                 {
-                    KundeStrafen kunde_Strafen = new KundeStrafen();
+                    KundeStrafen kunde_Strafen = new KundeStrafen(_username);
                     kunde_Strafen.Show();
                     this.Hide();
                 }

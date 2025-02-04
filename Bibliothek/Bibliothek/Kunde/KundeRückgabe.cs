@@ -18,8 +18,11 @@ namespace Bibliothek.Kunde
         static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
 
-        public KundeRückgabe()
+        string _username = string.Empty;
+
+        public KundeRückgabe(string username)
         {
+            _username = username;
             InitializeComponent();
         }
         private void KundeRückgabe_Load(object sender, EventArgs e)
@@ -28,6 +31,10 @@ namespace Bibliothek.Kunde
 
             kundeRückgabe_Abgeben.Font = button;
             kundeRückgabe_Zurück.Font = button;
+
+            KundenÜbersicht kundenÜbersicht = new KundenÜbersicht(_username);
+            kundenÜbersicht.ShowBücher(kundeRückgabe_Grid);
+            kundenÜbersicht.LoadBücher(kundeRückgabe_Buchauswahl, kundeRückgabe_Grid);
         }
         private void kundeRückgabe(object sender, FormClosingEventArgs e)
         {
@@ -76,16 +83,19 @@ namespace Bibliothek.Kunde
         }
         private void kundeRückgabe_Buttons_Click(object sender, EventArgs e)
         {
-            Button? button = sender as Button;
+            KundenÜbersicht kundenÜbersicht = new KundenÜbersicht(_username);
+            kundenÜbersicht.BuchAbgeben(kundeRückgabe_Buchauswahl, kundeRückgabe_Grid);
+        }
 
-            if (button != null)
+        private void kundeRückgabe_Buchauswahl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(kundeRückgabe_Buchauswahl.Text))
             {
-                if (button == kundeRückgabe_Abgeben)
-                {
-                    
-                }
-              
-
+                kundeRückgabe_Abgeben.Visible = true;
+            }
+            else
+            {
+                kundeRückgabe_Abgeben.Visible = false;
             }
         }
     }

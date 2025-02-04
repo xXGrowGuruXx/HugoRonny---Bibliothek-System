@@ -80,12 +80,17 @@
             kundeRückgabe_Abgeben.TabIndex = 12;
             kundeRückgabe_Abgeben.Text = "Abgeben";
             kundeRückgabe_Abgeben.UseVisualStyleBackColor = false;
+            kundeRückgabe_Abgeben.Visible = false;
             kundeRückgabe_Abgeben.Click += kundeRückgabe_Buttons_Click;
             kundeRückgabe_Abgeben.MouseEnter += kundeRückgabe_MouseEnter;
             kundeRückgabe_Abgeben.MouseLeave += kundeRückgabe_MouseLeave;
             // 
             // kundeRückgabe_Grid
             // 
+            kundeRückgabe_Grid.AllowUserToAddRows = false;
+            kundeRückgabe_Grid.AllowUserToDeleteRows = false;
+            kundeRückgabe_Grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            kundeRückgabe_Grid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             kundeRückgabe_Grid.BackgroundColor = Color.White;
             kundeRückgabe_Grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             kundeRückgabe_Grid.Location = new Point(38, 108);
@@ -96,13 +101,14 @@
             // 
             // kundeRückgabe_Buchauswahl
             // 
+            kundeRückgabe_Buchauswahl.DropDownStyle = ComboBoxStyle.DropDownList;
             kundeRückgabe_Buchauswahl.Font = new Font("Segoe UI", 12F);
             kundeRückgabe_Buchauswahl.FormattingEnabled = true;
             kundeRückgabe_Buchauswahl.Location = new Point(38, 353);
             kundeRückgabe_Buchauswahl.Name = "kundeRückgabe_Buchauswahl";
             kundeRückgabe_Buchauswahl.Size = new Size(711, 36);
             kundeRückgabe_Buchauswahl.TabIndex = 14;
-            kundeRückgabe_Buchauswahl.Text = "Buch für Rückgabe auswählen";
+            kundeRückgabe_Buchauswahl.SelectedIndexChanged += kundeRückgabe_Buchauswahl_SelectedIndexChanged;
             // 
             // KundeRückgabe
             // 

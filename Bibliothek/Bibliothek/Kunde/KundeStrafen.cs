@@ -14,20 +14,26 @@ namespace Bibliothek.Kunde
 {
     public partial class KundeStrafen : Form
     {
-        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
-        static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
+        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 28, FontStyle.Regular);
+        static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
 
-        public KundeStrafen()
+        string _username = string.Empty;
+
+        public KundeStrafen(string username)
         {
             InitializeComponent();
+            _username = username;
         }
         private void KundeStrafen_Load(object sender, EventArgs e)
         {
             KundeStrafen_Seitenname.Font = überschrift;
 
-            KundeStrafen_Abgeben.Font = button;
+            KundeStrafen_Bezahlen.Font = button;
             KundeStrafen_Zurück.Font = button;
+
+            KundenÜbersicht kundenÜbersicht = new KundenÜbersicht(_username);
+            kundenÜbersicht.ShowStrafen(KundeStrafen_Grid);
+            kundenÜbersicht.LoadStrafen(KundeStrafen_Strafauswahl, KundeStrafen_Grid);
         }
         private void kundeStrafen(object sender, FormClosingEventArgs e)
         {
@@ -52,8 +58,8 @@ namespace Bibliothek.Kunde
             }
             else if (comboBox != null)
             {
-                KundeStrafen_Buchauswahl.ForeColor = Color.Black;
-                KundeStrafen_Buchauswahl.BackColor = Color.FromArgb(128, Color.White);
+                KundeStrafen_Strafauswahl.ForeColor = Color.Black;
+                KundeStrafen_Strafauswahl.BackColor = Color.FromArgb(128, Color.White);
             }
         }
 
@@ -70,22 +76,25 @@ namespace Bibliothek.Kunde
             }
             else if (comboBox != null)
             {
-                KundeStrafen_Buchauswahl.ForeColor = Color.White;
-                KundeStrafen_Buchauswahl.BackColor = Color.FromArgb(0);
+                KundeStrafen_Strafauswahl.ForeColor = Color.White;
+                KundeStrafen_Strafauswahl.BackColor = Color.FromArgb(0);
             }
         }
         private void KundeStrafen_Buttons_Click(object sender, EventArgs e)
         {
-            Button? button = sender as Button;
+            KundenÜbersicht kundenÜbersicht = new KundenÜbersicht(_username);
+            kundenÜbersicht.StrafeZahlen(KundeStrafen_Strafauswahl, KundeStrafen_Grid);
+        }
 
-            if (button != null)
+        private void KundeStrafen_Strafauswahl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(KundeStrafen_Strafauswahl.Text))
             {
-                if (button == KundeStrafen_Abgeben)
-                {
-                    
-                }
-              
-
+                KundeStrafen_Bezahlen.Visible = true;
+            }
+            else
+            {
+                KundeStrafen_Bezahlen.Visible = false;
             }
         }
     }

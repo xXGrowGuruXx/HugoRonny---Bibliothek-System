@@ -15,19 +15,25 @@ namespace Bibliothek.Kunde
     public partial class KundeReservierungen : Form
     {
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
-        static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
+        static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
 
-        public KundeReservierungen()
+        string _username = string.Empty;
+
+        public KundeReservierungen(string username)
         {
             InitializeComponent();
+            _username = username;
         }
         private void KundeReservierungen_Load(object sender, EventArgs e)
         {
             KundeReservierungen_Seitenname.Font = überschrift;
 
-            KundeReservierungen_Abgeben.Font = button;
+            KundeReservierungen_Delete.Font = button;
             KundeReservierungen_Zurück.Font = button;
+
+            KundenÜbersicht kundenÜbersicht = new KundenÜbersicht(_username);
+            kundenÜbersicht.ShowReservierung(KundeReservierungen_Grid);
+            kundenÜbersicht.LoadReservierung(KundeReservierungen_Auswahl, KundeReservierungen_Grid);
         }
         private void kundeReservierungen(object sender, FormClosingEventArgs e)
         {
@@ -52,8 +58,8 @@ namespace Bibliothek.Kunde
             }
             else if (comboBox != null)
             {
-                KundeReservierungen_Buchauswahl.ForeColor = Color.Black;
-                KundeReservierungen_Buchauswahl.BackColor = Color.FromArgb(128, Color.White);
+                KundeReservierungen_Auswahl.ForeColor = Color.Black;
+                KundeReservierungen_Auswahl.BackColor = Color.FromArgb(128, Color.White);
             }
         }
 
@@ -70,22 +76,25 @@ namespace Bibliothek.Kunde
             }
             else if (comboBox != null)
             {
-                KundeReservierungen_Buchauswahl.ForeColor = Color.White;
-                KundeReservierungen_Buchauswahl.BackColor = Color.FromArgb(0);
+                KundeReservierungen_Auswahl.ForeColor = Color.White;
+                KundeReservierungen_Auswahl.BackColor = Color.FromArgb(0);
             }
         }
         private void KundeReservierungen_Buttons_Click(object sender, EventArgs e)
         {
-            Button? button = sender as Button;
+            KundenÜbersicht kundenÜbersicht = new KundenÜbersicht(_username);
+            kundenÜbersicht.RemoveReservierung(KundeReservierungen_Auswahl, KundeReservierungen_Grid);
+        }
 
-            if (button != null)
+        private void KundeReservierungen_Auswahl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(KundeReservierungen_Auswahl.Text))
             {
-                if (button == KundeReservierungen_Abgeben)
-                {
-                    
-                }
-              
-
+                KundeReservierungen_Delete.Visible = true;
+            }
+            else
+            {
+                KundeReservierungen_Delete.Visible = false;
             }
         }
     }
