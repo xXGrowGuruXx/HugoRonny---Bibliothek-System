@@ -14,8 +14,10 @@ namespace Bibliothek
             // Berechne die X-Position, um das Label horizontal zu zentrieren
             int x = (this.ClientSize.Width - status.Width) / 2;
 
+            int y = (this.ClientSize.Height - status.Height) / 4;
+
             // Setze die Position des Labels
-            status.Location = new Point(x, status.Location.Y);
+            status.Location = new Point(x, y);
         }
 
         private async void SplashScreen_Shown(object sender, EventArgs e)
