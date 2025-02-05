@@ -20,7 +20,7 @@ namespace Bibliothek.Mitarbeiter
             return instance; 
         }
 
-        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
+        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 28, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
         public MitarbeiterMain()
         {

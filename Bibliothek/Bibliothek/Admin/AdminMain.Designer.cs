@@ -94,7 +94,7 @@
             // 
             adminMain_Mitarbeiter.BackColor = Color.Transparent;
             adminMain_Mitarbeiter.FlatStyle = FlatStyle.Popup;
-            adminMain_Mitarbeiter.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            adminMain_Mitarbeiter.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             adminMain_Mitarbeiter.ForeColor = SystemColors.Control;
             adminMain_Mitarbeiter.Location = new Point(207, 159);
             adminMain_Mitarbeiter.Name = "adminMain_Mitarbeiter";
@@ -110,7 +110,7 @@
             // 
             adminMain_Statistik.BackColor = Color.Transparent;
             adminMain_Statistik.FlatStyle = FlatStyle.Popup;
-            adminMain_Statistik.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            adminMain_Statistik.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             adminMain_Statistik.ForeColor = SystemColors.Control;
             adminMain_Statistik.Location = new Point(207, 308);
             adminMain_Statistik.Name = "adminMain_Statistik";

@@ -39,12 +39,12 @@
             // kundenInfo_Options
             // 
             kundenInfo_Options.DropDownStyle = ComboBoxStyle.DropDownList;
-            kundenInfo_Options.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kundenInfo_Options.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kundenInfo_Options.FormattingEnabled = true;
             kundenInfo_Options.Items.AddRange(new object[] { "Ausgeliehen", "Reservierungen", "Strafen" });
             kundenInfo_Options.Location = new Point(12, 117);
             kundenInfo_Options.Name = "kundenInfo_Options";
-            kundenInfo_Options.Size = new Size(310, 36);
+            kundenInfo_Options.Size = new Size(310, 45);
             kundenInfo_Options.TabIndex = 0;
             kundenInfo_Options.SelectedIndexChanged += kundenInfo_Options_SelectedIndexChanged;
             // 
@@ -79,9 +79,9 @@
             // 
             kundenInfo_Zurück.BackColor = Color.Transparent;
             kundenInfo_Zurück.FlatStyle = FlatStyle.Popup;
-            kundenInfo_Zurück.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kundenInfo_Zurück.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kundenInfo_Zurück.ForeColor = Color.White;
-            kundenInfo_Zurück.Location = new Point(586, 110);
+            kundenInfo_Zurück.Location = new Point(586, 109);
             kundenInfo_Zurück.Name = "kundenInfo_Zurück";
             kundenInfo_Zurück.Size = new Size(184, 55);
             kundenInfo_Zurück.TabIndex = 3;

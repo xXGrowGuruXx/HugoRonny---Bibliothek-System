@@ -88,7 +88,7 @@
             // 
             buecher_Zurueck.BackColor = Color.Transparent;
             buecher_Zurueck.FlatStyle = FlatStyle.Popup;
-            buecher_Zurueck.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buecher_Zurueck.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buecher_Zurueck.ForeColor = SystemColors.Control;
             buecher_Zurueck.Location = new Point(509, 438);
             buecher_Zurueck.Name = "buecher_Zurueck";
@@ -104,7 +104,7 @@
             // 
             buecher_Speichern.BackColor = Color.Transparent;
             buecher_Speichern.FlatStyle = FlatStyle.Popup;
-            buecher_Speichern.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buecher_Speichern.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buecher_Speichern.ForeColor = SystemColors.Control;
             buecher_Speichern.Location = new Point(62, 438);
             buecher_Speichern.Name = "buecher_Speichern";
@@ -165,24 +165,25 @@
             // 
             // bücher_Menu
             // 
+            bücher_Menu.AutoSize = false;
             bücher_Menu.BackColor = Color.Transparent;
             bücher_Menu.Dock = DockStyle.None;
-            bücher_Menu.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bücher_Menu.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bücher_Menu.ImageScalingSize = new Size(20, 20);
             bücher_Menu.Items.AddRange(new ToolStripItem[] { menu_Bücher, menu_Autoren, menu_Genre });
-            bücher_Menu.Location = new Point(210, 107);
+            bücher_Menu.Location = new Point(116, 107);
             bücher_Menu.Name = "bücher_Menu";
-            bücher_Menu.Size = new Size(547, 46);
+            bücher_Menu.Size = new Size(537, 46);
             bücher_Menu.TabIndex = 38;
             // 
             // menu_Bücher
             // 
             menu_Bücher.AutoSize = false;
             menu_Bücher.BackColor = Color.Transparent;
-            menu_Bücher.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            menu_Bücher.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menu_Bücher.ForeColor = Color.White;
             menu_Bücher.Name = "menu_Bücher";
-            menu_Bücher.Size = new Size(152, 42);
+            menu_Bücher.Size = new Size(175, 50);
             menu_Bücher.Text = "Bücher";
             menu_Bücher.MouseEnter += bücher_Menu_MouseEnter;
             menu_Bücher.MouseLeave += bücher_Menu_MouseLeave;
@@ -191,10 +192,10 @@
             // 
             menu_Autoren.AutoSize = false;
             menu_Autoren.BackColor = Color.Transparent;
-            menu_Autoren.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            menu_Autoren.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menu_Autoren.ForeColor = Color.White;
             menu_Autoren.Name = "menu_Autoren";
-            menu_Autoren.Size = new Size(131, 42);
+            menu_Autoren.Size = new Size(175, 50);
             menu_Autoren.Text = "Autoren";
             menu_Autoren.MouseEnter += bücher_Menu_MouseEnter;
             menu_Autoren.MouseLeave += bücher_Menu_MouseLeave;
@@ -203,10 +204,10 @@
             // 
             menu_Genre.AutoSize = false;
             menu_Genre.BackColor = Color.Transparent;
-            menu_Genre.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            menu_Genre.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menu_Genre.ForeColor = Color.White;
             menu_Genre.Name = "menu_Genre";
-            menu_Genre.Size = new Size(106, 42);
+            menu_Genre.Size = new Size(175, 50);
             menu_Genre.Text = "Genre";
             menu_Genre.MouseEnter += bücher_Menu_MouseEnter;
             menu_Genre.MouseLeave += bücher_Menu_MouseLeave;

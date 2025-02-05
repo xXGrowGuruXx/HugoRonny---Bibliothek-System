@@ -7,18 +7,21 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
 	<ApplicationManifest>app.manifest</ApplicationManifest>
+	<PublishSingleFile>true</PublishSingleFile>
+	<SelfContained>true</SelfContained>
+	<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+	<PublishReadyToRun>true</PublishReadyToRun>
+	<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\BiblioDB.db" />
+	<None Remove="Resources\database.db" />
     <None Remove="Resources\Hintergrund800x600.jpg" />
-    <None Remove="utils\Monserga-regular-FFP.ttf" />
-    <None Remove="utils\Mont Royal.ttf" />
-    <None Remove="utils\Vacaciones-font-ffp-defharo.ttf" />
+    <None Remove="Resources\Vacaciones-font-ffp-defharo.ttf" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\BiblioDB.db">
+    <EmbeddedResource Include="Resources\database.db">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Hintergrund800x600.jpg">
@@ -32,20 +35,6 @@
   <ItemGroup>
     <PackageReference Include="EPPlus" Version="7.5.3" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Kunde\KundeReservierungen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Kunde\KundeStrafen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>

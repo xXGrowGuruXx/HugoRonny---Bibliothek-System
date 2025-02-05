@@ -13,7 +13,7 @@ namespace Bibliothek.Admin
 {
     public partial class MitarbeiterHandling : Form
     {
-        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
+        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 28, FontStyle.Regular);
         static Font label = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
 
@@ -153,6 +153,17 @@ namespace Bibliothek.Admin
             }
             else if (mitarbeiterHandling_Choose.SelectedItem.ToString() == "* NEU *")
             {
+                string vorname = mitarbeiterHandling_Vorname.Text;
+                string nachname = mitarbeiterHandling_Nachname.Text;
+                string username = mitarbeiterHandling_Username.Text;
+                string passwort = mitarbeiterHandling_Passwort.Text;
+
+                if (string.IsNullOrEmpty(vorname) || string.IsNullOrEmpty(nachname) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(passwort))
+                {
+                    MessageBox.Show("Fülle bitte erst die Felder aus!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                    return;
+                }
+
                 manageMitarbeiterHandling.CreateNewMitarbeiter(mitarbeiterHandling_Choose, mitarbeiterHandling_Vorname, mitarbeiterHandling_Nachname, mitarbeiterHandling_Username, mitarbeiterHandling_Passwort);
             }
             else
@@ -163,14 +174,21 @@ namespace Bibliothek.Admin
 
         private void mitarbeiterHandling_Löschen_Click(object sender, EventArgs e)
         {
-            if (mitarbeiterHandling_Choose.SelectedItem.ToString() != "* NEU *")
-            {
-                ManageMitarbeiterHandling manageMitarbeiterHandling = new ManageMitarbeiterHandling();
-                manageMitarbeiterHandling.DeleteMitarbeiter(mitarbeiterHandling_Choose, mitarbeiterHandling_Vorname, mitarbeiterHandling_Nachname, mitarbeiterHandling_Username, mitarbeiterHandling_Passwort);
-            }
-            else if (string.IsNullOrEmpty(mitarbeiterHandling_Choose.SelectedItem.ToString()))
+            if (mitarbeiterHandling_Choose.SelectedItem == null)
             {
                 MessageBox.Show("Bitte wähle erst den Mitarbeiter den du Löschen möchtest!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (mitarbeiterHandling_Choose.SelectedItem.ToString() != "* NEU *")
+                {
+                    ManageMitarbeiterHandling manageMitarbeiterHandling = new ManageMitarbeiterHandling();
+                    manageMitarbeiterHandling.DeleteMitarbeiter(mitarbeiterHandling_Choose, mitarbeiterHandling_Vorname, mitarbeiterHandling_Nachname, mitarbeiterHandling_Username, mitarbeiterHandling_Passwort);
+                }
+                else if (mitarbeiterHandling_Choose.SelectedItem.ToString() == "* NEU *")
+                {
+                    MessageBox.Show("Bitte wähle erst den Mitarbeiter den du Löschen möchtest!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

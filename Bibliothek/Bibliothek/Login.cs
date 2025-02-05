@@ -25,7 +25,7 @@ namespace Bibliothek
         /// Custom Fonts
         /// </summary>
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font label = CustomFonts.GetCustomFont("Vacaciones", 12, FontStyle.Regular);
+        static Font label = CustomFonts.GetCustomFont("Vacaciones", 14, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
         public Login()
         {

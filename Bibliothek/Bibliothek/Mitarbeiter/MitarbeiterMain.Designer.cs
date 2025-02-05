@@ -41,7 +41,7 @@
             // 
             mitarbeiter_Kunden.BackColor = Color.Transparent;
             mitarbeiter_Kunden.FlatStyle = FlatStyle.Popup;
-            mitarbeiter_Kunden.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mitarbeiter_Kunden.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiter_Kunden.ForeColor = SystemColors.ButtonHighlight;
             mitarbeiter_Kunden.Location = new Point(236, 98);
             mitarbeiter_Kunden.Margin = new Padding(0);
@@ -58,7 +58,7 @@
             // 
             mitarbeiter_Bücher.BackColor = Color.Transparent;
             mitarbeiter_Bücher.FlatStyle = FlatStyle.Popup;
-            mitarbeiter_Bücher.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mitarbeiter_Bücher.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiter_Bücher.ForeColor = SystemColors.ButtonHighlight;
             mitarbeiter_Bücher.Location = new Point(236, 200);
             mitarbeiter_Bücher.Margin = new Padding(0);
@@ -75,7 +75,7 @@
             // 
             mitarbeiter_Autoren.BackColor = Color.Transparent;
             mitarbeiter_Autoren.FlatStyle = FlatStyle.Popup;
-            mitarbeiter_Autoren.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mitarbeiter_Autoren.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiter_Autoren.ForeColor = SystemColors.ButtonHighlight;
             mitarbeiter_Autoren.Location = new Point(236, 299);
             mitarbeiter_Autoren.Margin = new Padding(0);
@@ -92,7 +92,7 @@
             // 
             mitarbeiter_Genres.BackColor = Color.Transparent;
             mitarbeiter_Genres.FlatStyle = FlatStyle.Popup;
-            mitarbeiter_Genres.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mitarbeiter_Genres.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiter_Genres.ForeColor = SystemColors.ButtonHighlight;
             mitarbeiter_Genres.Location = new Point(236, 395);
             mitarbeiter_Genres.Margin = new Padding(0);
@@ -109,7 +109,7 @@
             // 
             mitarbeiter_Abmelden.BackColor = Color.Transparent;
             mitarbeiter_Abmelden.FlatStyle = FlatStyle.Popup;
-            mitarbeiter_Abmelden.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mitarbeiter_Abmelden.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiter_Abmelden.ForeColor = SystemColors.ButtonHighlight;
             mitarbeiter_Abmelden.Location = new Point(106, 480);
             mitarbeiter_Abmelden.Margin = new Padding(0);
@@ -126,11 +126,11 @@
             // 
             mitarbeiter_Name.AutoSize = true;
             mitarbeiter_Name.BackColor = Color.Transparent;
-            mitarbeiter_Name.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mitarbeiter_Name.Font = new Font("Vacaciones", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiter_Name.ForeColor = Color.Transparent;
-            mitarbeiter_Name.Location = new Point(260, 9);
+            mitarbeiter_Name.Location = new Point(193, 21);
             mitarbeiter_Name.Name = "mitarbeiter_Name";
-            mitarbeiter_Name.Size = new Size(330, 46);
+            mitarbeiter_Name.Size = new Size(422, 65);
             mitarbeiter_Name.TabIndex = 5;
             mitarbeiter_Name.Text = "Mitarbeiter HUB ";
             mitarbeiter_Name.TextAlign = ContentAlignment.MiddleCenter;

@@ -4,9 +4,9 @@ namespace Bibliothek.Mitarbeiter
 {
     public partial class Mitarbeiter_Buecher : Form
     {
-        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font label = CustomFonts.GetCustomFont("Vacaciones", 16, FontStyle.Regular);
-        static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
+        static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 28, FontStyle.Regular);
+        static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
+        static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
 
         public Mitarbeiter_Buecher()
         {
@@ -35,6 +35,10 @@ namespace Bibliothek.Mitarbeiter
 
             buecher_Speichern.Font = button;
             buecher_Zurueck.Font = button;
+
+            menu_Autoren.Font = button;
+            menu_Bücher.Font = button;
+            menu_Genre.Font = button;
 
             ManageMenu manageMenu = new ManageMenu();
             manageMenu.LoadBücher(menu_Bücher, bücher_Titel, bücher_Autor, bücher_Genre, bücher_ISBN);

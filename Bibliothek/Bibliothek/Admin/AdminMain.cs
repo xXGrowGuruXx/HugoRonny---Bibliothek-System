@@ -6,8 +6,7 @@ namespace Bibliothek.Admin
     public partial class AdminMain : Form
     {
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font logoutButton = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
-        static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
+        static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
 
         private static AdminMain instance;
 
@@ -38,7 +37,7 @@ namespace Bibliothek.Admin
             adminMain_Name.Font = überschrift;
             adminMain_Mitarbeiter.Font = button;
             adminMain_Statistik.Font = button;
-            adminMain_Logout.Font = logoutButton;
+            adminMain_Logout.Font = button;
         }
 
         private void adminMain_Buttons_MouseEnter(object sender, EventArgs e)

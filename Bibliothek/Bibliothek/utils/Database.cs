@@ -13,6 +13,9 @@ namespace Bibliothek.utils
     {
         private static SQLiteConnection _connection;
 
+        static string exeDirectory = exeDirectory = AppContext.BaseDirectory;
+        static string databaseFilePath = Path.Combine(exeDirectory, "database.db");
+
         /// <summary>
         /// Initialisiert die Verbindung zur SQLite-Datenbank.
         /// </summary>
@@ -22,19 +25,15 @@ namespace Bibliothek.utils
         /// <param name="fileStream">Speichert die Datenbank</param>
         public static void LoadDatabase()
         {
+            string resourceName = $"Bibliothek.Resources.database.db";
+
             // Hole den Stream der eingebetteten Ressource
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Bibliothek.Resources.BiblioDB.db"))
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
             {
                 if (stream == null)
                 {
                     throw new ArgumentException("Die Datenbank-Ressource konnte nicht gefunden werden.");
                 }
-
-                // Bestimme den Ordner, in dem die EXE ausgeführt wird
-                string exeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
-                // Erstelle den Pfad für die Datenbankdatei im gleichen Verzeichnis wie die EXE
-                string databaseFilePath = Path.Combine(exeDirectory, "BiblioDB.db");
 
                 // Überprüfen, ob die Datei bereits existiert
                 if (!File.Exists(databaseFilePath))

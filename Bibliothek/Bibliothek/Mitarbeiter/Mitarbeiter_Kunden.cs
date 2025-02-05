@@ -14,8 +14,8 @@ namespace Bibliothek.Mitarbeiter
     public partial class Mitarbeiter_Kunden : Form
     {
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 28, FontStyle.Regular);
-        static Font label = CustomFonts.GetCustomFont("Vacaciones", 16, FontStyle.Regular);
-        static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
+        static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
+        static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
 
         private ManageKundenHandling manageKundenHandling;
 

@@ -41,11 +41,11 @@
             // 
             kundeRückgabe_Seitenname.AutoSize = true;
             kundeRückgabe_Seitenname.BackColor = Color.Transparent;
-            kundeRückgabe_Seitenname.Font = new Font("Vacaciones", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kundeRückgabe_Seitenname.Font = new Font("Vacaciones", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kundeRückgabe_Seitenname.ForeColor = Color.Transparent;
-            kundeRückgabe_Seitenname.Location = new Point(216, 32);
+            kundeRückgabe_Seitenname.Location = new Point(177, 28);
             kundeRückgabe_Seitenname.Name = "kundeRückgabe_Seitenname";
-            kundeRückgabe_Seitenname.Size = new Size(360, 55);
+            kundeRückgabe_Seitenname.Size = new Size(420, 65);
             kundeRückgabe_Seitenname.TabIndex = 7;
             kundeRückgabe_Seitenname.Text = "Bücherrückgabe";
             kundeRückgabe_Seitenname.TextAlign = ContentAlignment.MiddleCenter;

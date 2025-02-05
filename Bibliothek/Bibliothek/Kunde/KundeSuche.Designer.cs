@@ -49,7 +49,7 @@
             KundeSuche_Seitenname.BackColor = Color.Transparent;
             KundeSuche_Seitenname.Font = new Font("Vacaciones", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             KundeSuche_Seitenname.ForeColor = Color.Transparent;
-            KundeSuche_Seitenname.Location = new Point(239, 30);
+            KundeSuche_Seitenname.Location = new Point(221, 19);
             KundeSuche_Seitenname.Name = "KundeSuche_Seitenname";
             KundeSuche_Seitenname.Size = new Size(333, 65);
             KundeSuche_Seitenname.TabIndex = 8;

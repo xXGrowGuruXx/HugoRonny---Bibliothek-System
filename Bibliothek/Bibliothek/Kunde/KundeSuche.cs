@@ -15,7 +15,6 @@ namespace Bibliothek.Kunde
     public partial class KundeSuche : Form
     {
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
         static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
 
         static KundeSuche instance;

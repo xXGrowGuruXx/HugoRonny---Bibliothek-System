@@ -43,7 +43,7 @@
             autoren_Seitenname.BackColor = Color.Transparent;
             autoren_Seitenname.Font = new Font("Vacaciones", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             autoren_Seitenname.ForeColor = Color.Transparent;
-            autoren_Seitenname.Location = new Point(287, 32);
+            autoren_Seitenname.Location = new Point(287, 54);
             autoren_Seitenname.Name = "autoren_Seitenname";
             autoren_Seitenname.Size = new Size(225, 65);
             autoren_Seitenname.TabIndex = 7;
@@ -53,11 +53,11 @@
             // autoren_List
             // 
             autoren_List.DropDownStyle = ComboBoxStyle.DropDownList;
-            autoren_List.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_List.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             autoren_List.FormattingEnabled = true;
-            autoren_List.Location = new Point(191, 195);
+            autoren_List.Location = new Point(135, 195);
             autoren_List.Name = "autoren_List";
-            autoren_List.Size = new Size(399, 36);
+            autoren_List.Size = new Size(512, 45);
             autoren_List.TabIndex = 11;
             autoren_List.SelectedIndexChanged += autoren_List_SelectedIndexChanged;
             autoren_List.MouseEnter += mitarbeiter_Autoren_MouseEnter;
@@ -67,20 +67,20 @@
             // 
             autoren_Label_Name.AutoSize = true;
             autoren_Label_Name.BackColor = Color.Transparent;
-            autoren_Label_Name.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_Label_Name.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             autoren_Label_Name.ForeColor = SystemColors.ButtonHighlight;
             autoren_Label_Name.Location = new Point(122, 298);
             autoren_Label_Name.Name = "autoren_Label_Name";
-            autoren_Label_Name.Size = new Size(96, 39);
+            autoren_Label_Name.Size = new Size(115, 47);
             autoren_Label_Name.TabIndex = 12;
             autoren_Label_Name.Text = "Name";
             // 
             // autoren_Name
             // 
-            autoren_Name.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            autoren_Name.Location = new Point(347, 305);
+            autoren_Name.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_Name.Location = new Point(287, 306);
             autoren_Name.Name = "autoren_Name";
-            autoren_Name.Size = new Size(314, 30);
+            autoren_Name.Size = new Size(360, 38);
             autoren_Name.TabIndex = 17;
             autoren_Name.TextAlign = HorizontalAlignment.Center;
             autoren_Name.MouseEnter += mitarbeiter_Autoren_MouseEnter;
@@ -90,11 +90,11 @@
             // 
             autoren_Speichern.BackColor = Color.Transparent;
             autoren_Speichern.FlatStyle = FlatStyle.Popup;
-            autoren_Speichern.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_Speichern.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             autoren_Speichern.ForeColor = SystemColors.Control;
-            autoren_Speichern.Location = new Point(24, 481);
+            autoren_Speichern.Location = new Point(122, 481);
             autoren_Speichern.Name = "autoren_Speichern";
-            autoren_Speichern.Size = new Size(192, 53);
+            autoren_Speichern.Size = new Size(213, 53);
             autoren_Speichern.TabIndex = 24;
             autoren_Speichern.Text = "Speichern";
             autoren_Speichern.UseVisualStyleBackColor = false;
@@ -106,9 +106,9 @@
             // 
             autoren_Zurueck.BackColor = Color.Transparent;
             autoren_Zurueck.FlatStyle = FlatStyle.Popup;
-            autoren_Zurueck.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoren_Zurueck.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             autoren_Zurueck.ForeColor = SystemColors.Control;
-            autoren_Zurueck.Location = new Point(547, 481);
+            autoren_Zurueck.Location = new Point(436, 481);
             autoren_Zurueck.Name = "autoren_Zurueck";
             autoren_Zurueck.Size = new Size(211, 53);
             autoren_Zurueck.TabIndex = 26;

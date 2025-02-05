@@ -50,7 +50,7 @@
             kunden_Seitenname.BackColor = Color.Transparent;
             kunden_Seitenname.Font = new Font("Vacaciones", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kunden_Seitenname.ForeColor = Color.Transparent;
-            kunden_Seitenname.Location = new Point(307, 31);
+            kunden_Seitenname.Location = new Point(287, 38);
             kunden_Seitenname.Margin = new Padding(2, 0, 2, 0);
             kunden_Seitenname.Name = "kunden_Seitenname";
             kunden_Seitenname.Size = new Size(213, 65);
@@ -62,22 +62,22 @@
             // 
             mitarbeiterKunden_Label_Username.AutoSize = true;
             mitarbeiterKunden_Label_Username.BackColor = Color.Transparent;
-            mitarbeiterKunden_Label_Username.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Label_Username.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiterKunden_Label_Username.ForeColor = SystemColors.ButtonHighlight;
-            mitarbeiterKunden_Label_Username.Location = new Point(115, 316);
+            mitarbeiterKunden_Label_Username.Location = new Point(111, 327);
             mitarbeiterKunden_Label_Username.Margin = new Padding(2, 0, 2, 0);
             mitarbeiterKunden_Label_Username.Name = "mitarbeiterKunden_Label_Username";
-            mitarbeiterKunden_Label_Username.Size = new Size(161, 39);
+            mitarbeiterKunden_Label_Username.Size = new Size(193, 47);
             mitarbeiterKunden_Label_Username.TabIndex = 8;
             mitarbeiterKunden_Label_Username.Text = "Username";
             // 
             // mitarbeiterKunden_Username
             // 
-            mitarbeiterKunden_Username.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mitarbeiterKunden_Username.Location = new Point(307, 316);
+            mitarbeiterKunden_Username.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Username.Location = new Point(356, 335);
             mitarbeiterKunden_Username.Margin = new Padding(2, 3, 2, 3);
             mitarbeiterKunden_Username.Name = "mitarbeiterKunden_Username";
-            mitarbeiterKunden_Username.Size = new Size(300, 30);
+            mitarbeiterKunden_Username.Size = new Size(300, 38);
             mitarbeiterKunden_Username.TabIndex = 9;
             mitarbeiterKunden_Username.TextAlign = HorizontalAlignment.Center;
             mitarbeiterKunden_Username.MouseEnter += mitarbeiter_Kunden_MouseEnter;
@@ -88,10 +88,10 @@
             mitarbeiterKunden_List.DropDownStyle = ComboBoxStyle.DropDownList;
             mitarbeiterKunden_List.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiterKunden_List.FormattingEnabled = true;
-            mitarbeiterKunden_List.Location = new Point(172, 147);
+            mitarbeiterKunden_List.Location = new Point(121, 143);
             mitarbeiterKunden_List.Margin = new Padding(2, 3, 2, 3);
             mitarbeiterKunden_List.Name = "mitarbeiterKunden_List";
-            mitarbeiterKunden_List.Size = new Size(435, 36);
+            mitarbeiterKunden_List.Size = new Size(535, 36);
             mitarbeiterKunden_List.TabIndex = 10;
             mitarbeiterKunden_List.SelectedIndexChanged += mitarbeiterKunden_List_SelectedIndexChanged;
             mitarbeiterKunden_List.MouseEnter += mitarbeiter_Kunden_MouseEnter;
@@ -101,12 +101,12 @@
             // 
             mitarbeiterKunden_Label_Name.AutoSize = true;
             mitarbeiterKunden_Label_Name.BackColor = Color.Transparent;
-            mitarbeiterKunden_Label_Name.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Label_Name.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiterKunden_Label_Name.ForeColor = SystemColors.ButtonHighlight;
-            mitarbeiterKunden_Label_Name.Location = new Point(152, 211);
+            mitarbeiterKunden_Label_Name.Location = new Point(121, 207);
             mitarbeiterKunden_Label_Name.Margin = new Padding(2, 0, 2, 0);
             mitarbeiterKunden_Label_Name.Name = "mitarbeiterKunden_Label_Name";
-            mitarbeiterKunden_Label_Name.Size = new Size(96, 39);
+            mitarbeiterKunden_Label_Name.Size = new Size(115, 47);
             mitarbeiterKunden_Label_Name.TabIndex = 11;
             mitarbeiterKunden_Label_Name.Text = "Name";
             // 
@@ -114,22 +114,22 @@
             // 
             mitarbeiterKunden_Label_Vorname.AutoSize = true;
             mitarbeiterKunden_Label_Vorname.BackColor = Color.Transparent;
-            mitarbeiterKunden_Label_Vorname.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Label_Vorname.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiterKunden_Label_Vorname.ForeColor = SystemColors.ButtonHighlight;
-            mitarbeiterKunden_Label_Vorname.Location = new Point(129, 255);
+            mitarbeiterKunden_Label_Vorname.Location = new Point(111, 265);
             mitarbeiterKunden_Label_Vorname.Margin = new Padding(2, 0, 2, 0);
             mitarbeiterKunden_Label_Vorname.Name = "mitarbeiterKunden_Label_Vorname";
-            mitarbeiterKunden_Label_Vorname.Size = new Size(147, 39);
+            mitarbeiterKunden_Label_Vorname.Size = new Size(176, 47);
             mitarbeiterKunden_Label_Vorname.TabIndex = 12;
             mitarbeiterKunden_Label_Vorname.Text = "Vorname";
             // 
             // mitarbeiterKunden_Name
             // 
-            mitarbeiterKunden_Name.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mitarbeiterKunden_Name.Location = new Point(307, 211);
+            mitarbeiterKunden_Name.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Name.Location = new Point(356, 215);
             mitarbeiterKunden_Name.Margin = new Padding(2, 3, 2, 3);
             mitarbeiterKunden_Name.Name = "mitarbeiterKunden_Name";
-            mitarbeiterKunden_Name.Size = new Size(300, 30);
+            mitarbeiterKunden_Name.Size = new Size(300, 38);
             mitarbeiterKunden_Name.TabIndex = 16;
             mitarbeiterKunden_Name.TextAlign = HorizontalAlignment.Center;
             mitarbeiterKunden_Name.MouseEnter += mitarbeiter_Kunden_MouseEnter;
@@ -137,11 +137,11 @@
             // 
             // mitarbeiterKunden_Vorname
             // 
-            mitarbeiterKunden_Vorname.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mitarbeiterKunden_Vorname.Location = new Point(307, 262);
+            mitarbeiterKunden_Vorname.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Vorname.Location = new Point(356, 273);
             mitarbeiterKunden_Vorname.Margin = new Padding(2, 3, 2, 3);
             mitarbeiterKunden_Vorname.Name = "mitarbeiterKunden_Vorname";
-            mitarbeiterKunden_Vorname.Size = new Size(300, 30);
+            mitarbeiterKunden_Vorname.Size = new Size(300, 38);
             mitarbeiterKunden_Vorname.TabIndex = 17;
             mitarbeiterKunden_Vorname.TextAlign = HorizontalAlignment.Center;
             mitarbeiterKunden_Vorname.MouseEnter += mitarbeiter_Kunden_MouseEnter;
@@ -151,12 +151,12 @@
             // 
             mitarbeiterKunden_Speichern.BackColor = Color.Transparent;
             mitarbeiterKunden_Speichern.FlatStyle = FlatStyle.Popup;
-            mitarbeiterKunden_Speichern.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Speichern.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiterKunden_Speichern.ForeColor = SystemColors.Control;
-            mitarbeiterKunden_Speichern.Location = new Point(75, 464);
+            mitarbeiterKunden_Speichern.Location = new Point(72, 470);
             mitarbeiterKunden_Speichern.Margin = new Padding(2, 3, 2, 3);
             mitarbeiterKunden_Speichern.Name = "mitarbeiterKunden_Speichern";
-            mitarbeiterKunden_Speichern.Size = new Size(193, 77);
+            mitarbeiterKunden_Speichern.Size = new Size(208, 64);
             mitarbeiterKunden_Speichern.TabIndex = 23;
             mitarbeiterKunden_Speichern.Text = "Speichern";
             mitarbeiterKunden_Speichern.UseVisualStyleBackColor = false;
@@ -168,12 +168,12 @@
             // 
             mitarbeiterKunden_Zurueck.BackColor = Color.Transparent;
             mitarbeiterKunden_Zurueck.FlatStyle = FlatStyle.Popup;
-            mitarbeiterKunden_Zurueck.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Zurueck.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiterKunden_Zurueck.ForeColor = SystemColors.Control;
-            mitarbeiterKunden_Zurueck.Location = new Point(520, 464);
+            mitarbeiterKunden_Zurueck.Location = new Point(524, 470);
             mitarbeiterKunden_Zurueck.Margin = new Padding(2, 3, 2, 3);
             mitarbeiterKunden_Zurueck.Name = "mitarbeiterKunden_Zurueck";
-            mitarbeiterKunden_Zurueck.Size = new Size(193, 77);
+            mitarbeiterKunden_Zurueck.Size = new Size(193, 64);
             mitarbeiterKunden_Zurueck.TabIndex = 25;
             mitarbeiterKunden_Zurueck.Text = "Zurück";
             mitarbeiterKunden_Zurueck.UseVisualStyleBackColor = false;
@@ -185,12 +185,12 @@
             // 
             mitarbeiterKunden_Info.BackColor = Color.Transparent;
             mitarbeiterKunden_Info.FlatStyle = FlatStyle.Popup;
-            mitarbeiterKunden_Info.Font = new Font("Vacaciones", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Info.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiterKunden_Info.ForeColor = SystemColors.Control;
-            mitarbeiterKunden_Info.Location = new Point(287, 464);
+            mitarbeiterKunden_Info.Location = new Point(287, 470);
             mitarbeiterKunden_Info.Margin = new Padding(2, 3, 2, 3);
             mitarbeiterKunden_Info.Name = "mitarbeiterKunden_Info";
-            mitarbeiterKunden_Info.Size = new Size(233, 77);
+            mitarbeiterKunden_Info.Size = new Size(233, 64);
             mitarbeiterKunden_Info.TabIndex = 27;
             mitarbeiterKunden_Info.Text = "Info";
             mitarbeiterKunden_Info.UseVisualStyleBackColor = false;
@@ -200,11 +200,11 @@
             // 
             // mitarbeiterKunden_Passwort
             // 
-            mitarbeiterKunden_Passwort.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mitarbeiterKunden_Passwort.Location = new Point(307, 375);
+            mitarbeiterKunden_Passwort.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Passwort.Location = new Point(356, 395);
             mitarbeiterKunden_Passwort.Margin = new Padding(2, 3, 2, 3);
             mitarbeiterKunden_Passwort.Name = "mitarbeiterKunden_Passwort";
-            mitarbeiterKunden_Passwort.Size = new Size(300, 30);
+            mitarbeiterKunden_Passwort.Size = new Size(300, 38);
             mitarbeiterKunden_Passwort.TabIndex = 29;
             mitarbeiterKunden_Passwort.TextAlign = HorizontalAlignment.Center;
             // 
@@ -212,12 +212,12 @@
             // 
             mitarbeiterKunden_Label_Passwort.AutoSize = true;
             mitarbeiterKunden_Label_Passwort.BackColor = Color.Transparent;
-            mitarbeiterKunden_Label_Passwort.Font = new Font("Vacaciones", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mitarbeiterKunden_Label_Passwort.Font = new Font("Vacaciones", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mitarbeiterKunden_Label_Passwort.ForeColor = SystemColors.ButtonHighlight;
-            mitarbeiterKunden_Label_Passwort.Location = new Point(129, 368);
+            mitarbeiterKunden_Label_Passwort.Location = new Point(121, 387);
             mitarbeiterKunden_Label_Passwort.Margin = new Padding(2, 0, 2, 0);
             mitarbeiterKunden_Label_Passwort.Name = "mitarbeiterKunden_Label_Passwort";
-            mitarbeiterKunden_Label_Passwort.Size = new Size(151, 39);
+            mitarbeiterKunden_Label_Passwort.Size = new Size(184, 47);
             mitarbeiterKunden_Label_Passwort.TabIndex = 28;
             mitarbeiterKunden_Label_Passwort.Text = "Passwort";
             // 

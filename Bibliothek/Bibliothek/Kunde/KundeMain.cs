@@ -22,8 +22,7 @@ namespace Bibliothek.Kunde
         }
 
         static Font überschrift = CustomFonts.GetCustomFont("Vacaciones", 24, FontStyle.Regular);
-        static Font label = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
-        static Font button = CustomFonts.GetCustomFont("Vacaciones", 18, FontStyle.Regular);
+        static Font button = CustomFonts.GetCustomFont("Vacaciones", 20, FontStyle.Regular);
 
         string _username = string.Empty;
         public KundeMain(string userName)
