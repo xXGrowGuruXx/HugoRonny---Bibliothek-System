@@ -125,6 +125,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Hintergrund800x600;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(432, 203);
             Controls.Add(login_Login);
             Controls.Add(login_RememberMe);
@@ -144,6 +145,7 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            FormClosing += Login_FormClosing;
             Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();

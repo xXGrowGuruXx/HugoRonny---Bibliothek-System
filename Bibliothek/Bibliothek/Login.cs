@@ -120,5 +120,10 @@ namespace Bibliothek
             login_Login.BackColor = Color.FromArgb(0);
             login_Login.ForeColor = Color.White;
         }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

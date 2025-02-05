@@ -13,15 +13,9 @@ namespace Bibliothek
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            CustomFonts.LoadSchriftarten();
-
-            Task.Run(() => Database.LoadDatabase());
-
-            Application.Run(new Login());
+            Application.Run(new SplashScreen());
         }
     }
 }
